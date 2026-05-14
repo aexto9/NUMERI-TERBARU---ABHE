@@ -1,0 +1,48 @@
+{
+	"name": "ES_Lvl14_PA-Finish",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 285313272442062
+				}
+			],
+			"actions": [
+				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 404045681782036,
+					"parameters": {
+						"key": "\"Level_14\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 895144254606399,
+					"parameters": {
+						"seconds": "2.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "winGame",
+					"sid": 414109945559599,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
+				}
+			],
+			"sid": 184663629347704
+		}
+	],
+	"sid": 868716875028411
+}

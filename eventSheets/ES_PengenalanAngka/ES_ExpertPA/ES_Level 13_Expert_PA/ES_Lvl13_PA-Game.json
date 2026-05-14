@@ -1,0 +1,931 @@
+{
+	"name": "ES_Lvl13_PA-Game",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "variable",
+			"name": "target_Angka",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 512441683508692
+		},
+		{
+			"eventType": "variable",
+			"name": "Target_Puluhan",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 812443715848484
+		},
+		{
+			"eventType": "variable",
+			"name": "Target_Satuan",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 583237616660551
+		},
+		{
+			"eventType": "variable",
+			"name": "Current_Puluhan",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 728209668270165
+		},
+		{
+			"eventType": "variable",
+			"name": "Current_Satuan",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 793509549318992
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 200284019556364
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "BtnBalokPuluhan_Lvl13_PA",
+					"sid": 106872370599116,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "BtnBalokPuluhan_Lvl13_PA",
+					"sid": 427999183047335,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "BtnBalokSatuan_Lvl13_PA",
+					"sid": 711305181817098,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "BtnBalokSatuan_Lvl13_PA",
+					"sid": 900705122126806,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "HapusBalok_Lvl13_PA",
+					"sid": 444158603347412,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "HapusBalok_Lvl13_PA",
+					"sid": 795408182867568,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Btn_Next_Lvl13_PA",
+					"sid": 415302507475141,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Btn_Next_Lvl13_PA",
+					"sid": 480563474827334,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "AlasPuluhan_Lvl13_PA",
+					"sid": 177402565261021,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "AlasSatuan_Lvl13_PA2",
+					"sid": 653216215417387,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Btn_Next_Lvl13_PA",
+					"sid": 984886315711299,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Angka_Lvl13_PA",
+					"sid": 595911607182376,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "AngkaText_Lvl13_PA",
+					"sid": 298277466417162,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TextNuma_Lvl13_PA",
+					"sid": 238238276930573,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 537207282962390,
+					"parameters": {
+						"variable": "Current_Puluhan"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 469837064210146,
+					"parameters": {
+						"variable": "Current_Satuan"
+					}
+				}
+			],
+			"sid": 927951990957597,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 274683532280220,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl13_PA-1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BtnBalokPuluhan_Lvl13_PA",
+							"sid": 874475917487366,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BtnBalokSatuan_Lvl13_PA",
+							"sid": 432223407656655,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "HapusBalok_Lvl13_PA",
+							"sid": 115891747312459,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 741622743562072
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 464945267731783,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 382759586596815,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 213569460319312,
+							"parameters": {
+								"seconds": "5.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BtnBalokPuluhan_Lvl13_PA",
+							"sid": 309439251936409,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "BtnBalokSatuan_Lvl13_PA",
+							"sid": 668897157097179,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "HapusBalok_Lvl13_PA",
+							"sid": 769629586375636,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 843219319957067
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 366720643296180,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BtnBalokPuluhan_Lvl13_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BtnBalokPuluhan_Lvl13_PA",
+					"sid": 410475400980446,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 879972547186458,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "BtnBalokPuluhan_Lvl13_PA",
+					"sid": 145892501088311,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 690204588471336,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "BtnBalokPuluhan_Lvl13_PA",
+					"sid": 570546164422748,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 943863274995598,
+					"parameters": {
+						"object-to-create": "BalokPuluhan_Lvl13_PA",
+						"layer": "\"Balok\"",
+						"x": "AlasPuluhan_Lvl13_PA.X",
+						"y": "AlasPuluhan_Lvl13_PA.Y  -(Current_Puluhan*BalokPuluhan_Lvl13_PA.Height )",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "BalokPuluhan_Lvl13_PA",
+					"sid": 219396771842192
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 743279579940622,
+					"parameters": {
+						"variable": "Current_Puluhan",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 619152282499366
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 393342374179563,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BtnBalokSatuan_Lvl13_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BtnBalokSatuan_Lvl13_PA",
+					"sid": 551194011041647,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 650375754211148,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "BtnBalokSatuan_Lvl13_PA",
+					"sid": 724903661370473,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 786572066259345,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "BtnBalokSatuan_Lvl13_PA",
+					"sid": 169803655696741,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 657832958560496,
+					"parameters": {
+						"object-to-create": "BalokSatuan_Lvl13_PA",
+						"layer": "\"Balok\"",
+						"x": "AlasSatuan_Lvl13_PA2.X",
+						"y": "AlasSatuan_Lvl13_PA2.Y -(Current_Satuan*BalokSatuan_Lvl13_PA.Height)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "BalokSatuan_Lvl13_PA",
+					"sid": 829369676421633
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 692152320790099,
+					"parameters": {
+						"variable": "Current_Satuan",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 786469797359392
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 223467874152655,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "HapusBalok_Lvl13_PA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 592838057138800,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 959438215023403,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-topbottom",
+							"objectClass": "BalokSatuan_Lvl13_PA",
+							"sid": 378418518640194,
+							"parameters": {
+								"which": "top"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 576164763528430,
+							"parameters": {
+								"variable": "Current_Satuan",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BalokSatuan_Lvl13_PA",
+							"sid": 215103162603291
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 404418394015618,
+							"parameters": {
+								"variable": "Current_Satuan",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 572976605223203
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-topbottom",
+							"objectClass": "BalokPuluhan_Lvl13_PA",
+							"sid": 393048318766591,
+							"parameters": {
+								"which": "top"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 631713225849961,
+							"parameters": {
+								"variable": "Current_Satuan",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 128878496769978,
+							"parameters": {
+								"variable": "Current_Puluhan",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BalokPuluhan_Lvl13_PA",
+							"sid": 312836606787127
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 137335780985360,
+							"parameters": {
+								"variable": "Current_Puluhan",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 782120782028451
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 700397482606011,
+					"parameters": {
+						"variable": "Current_Puluhan",
+						"comparison": 0,
+						"value": "Intruction_Lvl13_PA.Id_Puluhan"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 512616928509152,
+					"parameters": {
+						"variable": "Current_Satuan",
+						"comparison": 0,
+						"value": "Intruction_Lvl13_PA.Id_Satuan"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 707752340606942
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 347592135944329,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Correct_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "TextNumi_Lvl13_PA",
+					"sid": 365295694900116,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Angka_Lvl13_PA",
+					"sid": 607206622040174,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "AngkaText_Lvl13_PA",
+					"sid": 897718584306862,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "BtnBalokPuluhan_Lvl13_PA",
+					"sid": 782745876174394,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "BtnBalokSatuan_Lvl13_PA",
+					"sid": 643750481589004,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "HapusBalok_Lvl13_PA",
+					"sid": 317804926880899,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 785782712927098,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 729076032058907,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl13_PA-6\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-key",
+							"objectClass": "DataReward",
+							"sid": 198082869359018,
+							"parameters": {
+								"key": "\"Level_13\"",
+								"value": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 404586010895886,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "winGame",
+							"sid": 223953782217838,
+							"parameters": [
+								"\"Lay_RoadMap_Pengenalan_Angka\""
+							]
+						}
+					],
+					"sid": 323400396668970
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 615831603608486,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 1,
+								"second-value": "\"Lay_Lvl13_PA-6\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Btn_Next_Lvl13_PA",
+							"sid": 666447882583285,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Btn_Next_Lvl13_PA",
+							"sid": 218261286722215,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 187547098614954
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 416665243585696,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Next_Lvl13_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Btn_Next_Lvl13_PA",
+					"sid": 899285717375001,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 645834702697663,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Btn_Next_Lvl13_PA",
+					"sid": 566974967093806,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 892484235803282,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Btn_Next_Lvl13_PA",
+					"sid": 845842466011524,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 223449073108794,
+					"parameters": {
+						"which": "next"
+					}
+				}
+			],
+			"sid": 126997288164444
+		}
+	],
+	"sid": 677507431564353
+}

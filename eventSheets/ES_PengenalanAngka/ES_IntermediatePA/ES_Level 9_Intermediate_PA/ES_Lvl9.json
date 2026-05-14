@@ -1,0 +1,196 @@
+{
+	"name": "ES_Lvl9",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Lvl9_PA_Game"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 571624318130096
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Bubble_Lvl9_PA",
+					"sid": 537975118644799,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Bubble_Lvl9_PA",
+					"sid": 202707332393207,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				}
+			],
+			"sid": 501567909963636,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 402730047392583,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl9_PA-1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 964988602406762,
+							"parameters": {
+								"variable": "score",
+								"value": "0"
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Bubble_Lvl9_PA",
+							"sid": 139858378185458,
+							"parameters": {
+								"instance-variable": "answer",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 410889802513966
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 913603166284065,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 586404623645177,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 798745307802596,
+							"parameters": {
+								"seconds": "5.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Bubble_Lvl9_PA",
+							"sid": 793889558802561,
+							"parameters": {
+								"instance-variable": "answer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 531919406864927
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 938088768822690,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 230339268237146,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 454068454541553
+				}
+			],
+			"sid": 623839683492358
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 715548226099222,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "10"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 187666472194978,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 897211579731163,
+					"parameters": {
+						"key": "\"Level_9\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 626988009357734,
+					"parameters": {
+						"layout": "Lay_Lvl9_PA-11"
+					}
+				}
+			],
+			"sid": 410570001362244
+		}
+	],
+	"sid": 179605079219124
+}

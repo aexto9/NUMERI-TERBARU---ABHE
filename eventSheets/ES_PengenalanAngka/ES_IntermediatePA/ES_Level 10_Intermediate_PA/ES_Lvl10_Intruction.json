@@ -1,0 +1,63 @@
+{
+	"name": "ES_Lvl10_Intruction",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 628592822956957
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 899159888783432,
+					"parameters": {
+						"seconds": "5",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 199994035113130,
+					"parameters": [
+						"\"Lay_Lvl10_PA-1\""
+					]
+				}
+			],
+			"sid": 993030431340254
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 866491405327074,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 915791797918883,
+					"parameters": [
+						"\"Lay_Lvl10_PA-1\""
+					]
+				}
+			],
+			"sid": 227957487434057
+		}
+	],
+	"sid": 994727380327380
+}

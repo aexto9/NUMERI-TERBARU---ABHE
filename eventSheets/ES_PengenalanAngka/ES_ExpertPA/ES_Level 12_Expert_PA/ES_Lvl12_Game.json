@@ -1,0 +1,781 @@
+{
+	"name": "ES_Lvl12_Game",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "variable",
+			"name": "InputCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 605398083703311
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 115674754267587
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "AngkaRemote_Lvl12_PA",
+					"sid": 734158609320924,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "AngkaRemote_Lvl12_PA",
+					"sid": 901468442643719,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 457181896884332,
+					"parameters": {
+						"variable": "Current_Puluhan"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 586710508637239,
+					"parameters": {
+						"variable": "Current_Satuan"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 959330423099347,
+					"parameters": {
+						"variable": "InputCount"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "ChatNuma_Lvl12_PA",
+					"sid": 868002668665635,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "clear",
+					"objectClass": "AngkaAcak",
+					"sid": 141002747397454,
+					"parameters": {
+						"value": "0"
+					}
+				}
+			],
+			"sid": 335169127418172,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 224557457090099,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "0",
+								"end-index": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-at-xy",
+							"objectClass": "AngkaAcak",
+							"sid": 583070295505709,
+							"parameters": {
+								"x": "loopindex",
+								"y": "0",
+								"value": "loopindex"
+							}
+						}
+					],
+					"sid": 861205793641720
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "shuffle",
+							"objectClass": "AngkaAcak",
+							"sid": 314813323130133,
+							"parameters": {
+								"axis": "x"
+							}
+						}
+					],
+					"sid": 328996116237632
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 684842769547044,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl12_PA-Game-1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "startGame",
+							"sid": 132289606736982
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 110764160502074,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 469463921444376,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 180038940837779,
+							"parameters": {
+								"seconds": "5.3",
+								"use-timescale": true
+							}
+						}
+					],
+					"sid": 368679482769649
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 587798325029606,
+					"parameters": {
+						"name": "\"tata\"",
+						"start-index": "0",
+						"end-index": "9"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 204860403763089,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nth-instance",
+							"objectClass": "System",
+							"sid": 223472253304179,
+							"parameters": {
+								"object": "AngkaRemote_Lvl12_PA",
+								"instance": "loopindex"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "AngkaRemote_Lvl12_PA",
+							"sid": 338827719821880,
+							"parameters": {
+								"frame-number": "AngkaAcak.At(loopindex)"
+							}
+						}
+					],
+					"sid": 688059815953213
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 839155760042251,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "AngkaRemote_Lvl12_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "AngkaRemote_Lvl12_PA",
+					"sid": 329592139176113,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 977085692469270,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "AngkaRemote_Lvl12_PA",
+					"sid": 285464596992216,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 703461181356768,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "AngkaRemote_Lvl12_PA",
+					"sid": 690995830282763,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 125580946223985,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 550738832657062,
+							"parameters": {
+								"variable": "InputCount",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 619181569055477,
+							"parameters": {
+								"variable": "Current_Puluhan",
+								"value": "int(AngkaRemote_Lvl12_PA.AnimationFrameTag)"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "ChatNuma_Lvl12_PA",
+							"sid": 693321476413359,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "ChatNumi_Lvl12_PA",
+							"sid": 417987882941943,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 508068908937960,
+							"parameters": {
+								"variable": "InputCount",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TextPuluhan_Lvl12_PA",
+							"sid": 838476534262694,
+							"parameters": {
+								"text": "Current_Puluhan"
+							}
+						}
+					],
+					"sid": 459796818678285
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 466326878704655
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 741446093830948,
+							"parameters": {
+								"variable": "Current_Satuan",
+								"value": "int(AngkaRemote_Lvl12_PA.AnimationFrameTag)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 772901776906808,
+							"parameters": {
+								"variable": "InputCount",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TextSatuan_Lvl12_PA",
+							"sid": 877230168472266,
+							"parameters": {
+								"text": "Current_Satuan"
+							}
+						}
+					],
+					"sid": 877397554020910,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 591852912238593,
+									"parameters": {
+										"first-value": "(Current_Puluhan*10) + Current_Satuan",
+										"comparison": 0,
+										"second-value": "int(Chanel_Lvl12_PA.AnimationFrameTag)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 128082331038777,
+									"parameters": {
+										"seconds": "1.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "AngkaRemote_Lvl12_PA",
+									"sid": 497795060845038,
+									"parameters": {
+										"instance-variable": "isClickable",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Bg_Lvl12_PA",
+									"sid": 566962565805508,
+									"parameters": {
+										"frame-number": "4"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 214073477366139,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Correct_PA"
+										},
+										"loop": "not-looping",
+										"volume": "1",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "ChatNuma_Lvl12_PA",
+									"sid": 425780780244367,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Chanel_Lvl12_PA",
+									"sid": 725026886774324,
+									"parameters": {
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "TextSatuan_Lvl12_PA",
+									"sid": 405254232544778,
+									"parameters": {
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "TextPuluhan_Lvl12_PA",
+									"sid": 457009907044787,
+									"parameters": {
+										"opacity": "0"
+									}
+								}
+							],
+							"sid": 866642845909063,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 957485774148543,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"Lay_Lvl12_PA-Game-11\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DataReward",
+											"sid": 608502741386217,
+											"parameters": {
+												"key": "\"Level_12\"",
+												"value": "1"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 312611375613475,
+											"parameters": {
+												"seconds": "2.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "winGame",
+											"sid": 899488921582870,
+											"parameters": [
+												"\"Lay_RoadMap_Pengenalan_Angka\""
+											]
+										}
+									],
+									"sid": 428679307244690
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 582580600693123,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 1,
+												"second-value": "\"Lay_Lvl12_PA-Game-11\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 980955406144370,
+											"parameters": {
+												"seconds": "2.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "go-to-nextprevious-layout",
+											"objectClass": "System",
+											"sid": 245858811391043,
+											"parameters": {
+												"which": "next"
+											}
+										}
+									],
+									"sid": 148002800308061
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 771802891753886,
+									"parameters": {
+										"first-value": "(Current_Puluhan*10) + Current_Satuan",
+										"comparison": 1,
+										"second-value": "int(Chanel_Lvl12_PA.AnimationFrameTag)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 837579319182012,
+									"parameters": {
+										"seconds": "1.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "AngkaRemote_Lvl12_PA",
+									"sid": 889484278703023,
+									"parameters": {
+										"instance-variable": "isClickable",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Bg_Lvl12_PA",
+									"sid": 757293374368036,
+									"parameters": {
+										"frame-number": "5"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 369414153963655,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Wrong_PA"
+										},
+										"loop": "not-looping",
+										"volume": "1",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "ChatNuma_Lvl12_PA",
+									"sid": 880418894516506,
+									"parameters": {
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "ChatNumi_Lvl12_PA",
+									"sid": 191331152866826,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "ChatNumi_Lvl12_PA",
+									"sid": 629789912334727,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Chanel_Lvl12_PA",
+									"sid": 987150047415278,
+									"parameters": {
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "TextSatuan_Lvl12_PA",
+									"sid": 157990760820302,
+									"parameters": {
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "TextPuluhan_Lvl12_PA",
+									"sid": 699510997171363,
+									"parameters": {
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 499830938129080,
+									"parameters": {
+										"seconds": "2.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Bg_Lvl12_PA",
+									"sid": 142455785892287,
+									"parameters": {
+										"frame-number": "3"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "AngkaRemote_Lvl12_PA",
+									"sid": 796689284737315,
+									"parameters": {
+										"instance-variable": "isClickable",
+										"value": "true"
+									}
+								},
+								{
+									"id": "reset-eventvar",
+									"objectClass": "System",
+									"sid": 270919009315637,
+									"parameters": {
+										"variable": "Current_Puluhan"
+									}
+								},
+								{
+									"id": "reset-eventvar",
+									"objectClass": "System",
+									"sid": 947819483506414,
+									"parameters": {
+										"variable": "Current_Satuan"
+									}
+								},
+								{
+									"id": "reset-eventvar",
+									"objectClass": "System",
+									"sid": 245694875979701,
+									"parameters": {
+										"variable": "InputCount"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Chanel_Lvl12_PA",
+									"sid": 730097670720623,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TextPuluhan_Lvl12_PA",
+									"sid": 213511380478031,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TextSatuan_Lvl12_PA",
+									"sid": 529510351294379,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "TextSatuan_Lvl12_PA",
+									"sid": 718623213141993,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "TextPuluhan_Lvl12_PA",
+									"sid": 354058411029192,
+									"parameters": {
+										"opacity": "100"
+									}
+								}
+							],
+							"sid": 739255559420643
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 961495511877650
+}

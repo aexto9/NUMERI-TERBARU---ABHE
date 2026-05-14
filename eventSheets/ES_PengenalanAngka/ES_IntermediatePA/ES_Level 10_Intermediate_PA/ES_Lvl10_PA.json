@@ -1,0 +1,532 @@
+{
+	"name": "ES_Lvl10_PA",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 147189766864183
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 927225246146561,
+					"parameters": {
+						"instance-variable": "PostX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 104663362563784,
+					"parameters": {
+						"instance-variable": "PostY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 914661268651689,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 156131421807469,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				}
+			],
+			"sid": 888502788532920,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 521672022178459,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl10_PA-1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 743561398741837,
+							"parameters": {
+								"variable": "score",
+								"value": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 570209925426848,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/dikamar tidur"
+								},
+								"loop": "not-looping",
+								"volume": "1.5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DragSabun_Lvl10_PA",
+							"sid": 181031316445706,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 506073884735061
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 353904247403009,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 515400165376975,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 175942365177115,
+							"parameters": {
+								"seconds": "5.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DragSabun_Lvl10_PA",
+							"sid": 533393461429864,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 489105511819597
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drag-start",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 158459337014452,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 640655906875061
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 679638889962872,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX/2",
+						"end-y": "Self.SizeY/2",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 892372132847701
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 194269345138745,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [],
+			"sid": 645780777234799,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "DragSabun_Lvl10_PA",
+							"sid": 541271743961499,
+							"parameters": {
+								"object": "DropSabun_Lvl10_PA"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 232615842232217,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "DragSabun_Lvl10_PA",
+									"sid": 712938256197469,
+									"parameters": {
+										"comparison": 0,
+										"number": "DropSabun_Lvl10_PA.AnimationFrame"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 107410332833403,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Correct_PA"
+										},
+										"loop": "not-looping",
+										"volume": "1",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "DragSabun_Lvl10_PA",
+									"sid": 803311802802416,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "DropSabun_Lvl10_PA.X",
+										"end-y": "DropSabun_Lvl10_PA.Y",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "DragSabun_Lvl10_PA",
+									"sid": 771489430256911,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "DropSabun_Lvl10_PA.Width",
+										"end-y": "DropSabun_Lvl10_PA.Height",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "DragSabun_Lvl10_PA",
+									"sid": 297969304629574,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 436982916850030,
+									"parameters": {
+										"variable": "score",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 795235030896181,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 158906937274451,
+											"parameters": {
+												"variable": "score",
+												"comparison": 1,
+												"value": "12"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-nextprevious-layout",
+											"objectClass": "System",
+											"sid": 372118823155138,
+											"parameters": {
+												"which": "next"
+											}
+										}
+									],
+									"sid": 639792171825753
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 631640237522872
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 384149205759773,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Wrong_PA"
+										},
+										"loop": "not-looping",
+										"volume": "1",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "DragSabun_Lvl10_PA",
+									"sid": 609047349474969,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Self.PostX",
+										"end-y": "Self.PostY",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "DragSabun_Lvl10_PA",
+									"sid": 664873158316336,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Self.SizeX",
+										"end-y": "Self.SizeY\n",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 493979676828210
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 212128398231950
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 442817015034707,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Wrong_PA"
+								},
+								"loop": "not-looping",
+								"volume": "1",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "DragSabun_Lvl10_PA",
+							"sid": 846534818766363,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "Self.PostX",
+								"end-y": "Self.PostY",
+								"time": "1",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "DragSabun_Lvl10_PA",
+							"sid": 246679759928133,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX",
+								"end-y": "Self.SizeY\n",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 906071373577004
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 181670156491380,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 928371114030258,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 337924723383914
+				}
+			],
+			"sid": 296490446237447
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 485291474786066,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "12"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 907346956909254,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 840260158776319,
+					"parameters": {
+						"key": "\"Level_10\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 774066797997174,
+					"parameters": {
+						"layout": "Lay_Lvl10_PA-13"
+					}
+				}
+			],
+			"sid": 333843838973735
+		}
+	],
+	"sid": 716211919995134
+}

@@ -1,0 +1,39 @@
+{
+	"name": "ES_Lvl14_PA-Intruction",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 647864060069254
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 975311817380079,
+					"parameters": {
+						"seconds": "5",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 758170874241159,
+					"parameters": [
+						"\"Lay_Lvl14_PA-1\""
+					]
+				}
+			],
+			"sid": 629689807328860
+		}
+	],
+	"sid": 266817655850784
+}

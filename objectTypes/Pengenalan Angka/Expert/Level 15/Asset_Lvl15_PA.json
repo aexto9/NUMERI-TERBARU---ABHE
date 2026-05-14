@@ -1,0 +1,122 @@
+{
+	"name": "Asset_Lvl15_PA",
+	"plugin-id": "Sprite",
+	"sid": 648644577967661,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 130,
+						"height": 179,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 434249,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 304,
+						"height": 734,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5956878,
+						"collisionPoly": {
+							"points": [
+								0.04276315789473684,
+								0,
+								1,
+								0.017711171662125342,
+								0.9572368421052632,
+								1,
+								0,
+								0.9822888283378747
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1298,
+						"height": 716,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3754887,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.9992295839753467,
+								0,
+								0.9992295839753467,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 1388,
+						"height": 776,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2848804,
+						"collisionPoly": {
+							"points": [
+								0.3868876080691643,
+								0.002577319587628866,
+								0.9935158501440923,
+								0.04768041237113402,
+								0.9603746397694525,
+								0.990979381443299,
+								0.4920749279538905,
+								0.9948453608247423,
+								0.004322766570605188,
+								0.970360824742268,
+								0.051152737752161385,
+								0.005154639175257732
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 181594300325554,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

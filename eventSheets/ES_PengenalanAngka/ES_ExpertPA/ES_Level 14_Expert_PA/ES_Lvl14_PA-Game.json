@@ -1,0 +1,525 @@
+{
+	"name": "ES_Lvl14_PA-Game",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 561891980719660
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 945057638186366,
+					"parameters": {
+						"instance-variable": "PostX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 139621601913596,
+					"parameters": {
+						"instance-variable": "PostY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 644485187286924,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 234393145280558,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 617375440018536,
+					"parameters": {
+						"variable": "score",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 257775389881944,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 593561490539960,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl14_PA-1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 678047533944907,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/dikamar tidur"
+								},
+								"loop": "not-looping",
+								"volume": "1.5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Drag_Card_Lvl14_PA",
+							"sid": 870616827877721,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 829630723114303
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 354181994759740,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 198526155678560,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 840797788180016,
+							"parameters": {
+								"seconds": "5.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Drag_Card_Lvl14_PA",
+							"sid": 816828331937115,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 669155417283528
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drag-start",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 980723866375103,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 680835651949073
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 390115721878038,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX/2",
+						"end-y": "Self.SizeY/2",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 395802721218526
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 869198382938886,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [],
+			"sid": 486986722541233,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Drag_Card_Lvl14_PA",
+							"sid": 209647738828106,
+							"parameters": {
+								"object": "Drop_Card_Lvl14_PA2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 964719934046919,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Drag_Card_Lvl14_PA",
+									"sid": 340901231973446,
+									"parameters": {
+										"comparison": 0,
+										"number": "Drop_Card_Lvl14_PA2.AnimationFrame"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 117036181918248,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Correct_PA"
+										},
+										"loop": "not-looping",
+										"volume": "1",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Card_Lvl14_PA",
+									"sid": 387125814308327,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Drop_Card_Lvl14_PA2.X",
+										"end-y": "Drop_Card_Lvl14_PA2.Y",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Card_Lvl14_PA",
+									"sid": 758970726080853,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Drop_Card_Lvl14_PA2.Width",
+										"end-y": "Drop_Card_Lvl14_PA2.Height",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Drag_Card_Lvl14_PA",
+									"sid": 970037798282806,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 539080946737005,
+									"parameters": {
+										"variable": "score",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 380025416494507,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 100040004387716,
+											"parameters": {
+												"variable": "score",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-nextprevious-layout",
+											"objectClass": "System",
+											"sid": 270132719492031,
+											"parameters": {
+												"which": "next"
+											}
+										}
+									],
+									"sid": 294206385573288,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 409170871716277,
+													"parameters": {
+														"first-value": "LayoutName",
+														"comparison": 0,
+														"second-value": "\"Lay_Lvl14_PA-5\""
+													}
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 921255607517246,
+													"parameters": {
+														"variable": "IsGameOver"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 440009358992838,
+													"parameters": {
+														"which": "next"
+													}
+												}
+											],
+											"sid": 900455437012920
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 450033367009010
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 718050769547748,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Wrong_PA"
+										},
+										"loop": "not-looping",
+										"volume": "1",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Card_Lvl14_PA",
+									"sid": 865431092168761,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Self.PostX",
+										"end-y": "Self.PostY",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Card_Lvl14_PA",
+									"sid": 262770283202130,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Self.SizeX",
+										"end-y": "Self.SizeY\n",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 253143053335600
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 407675604731654
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 324714900452641,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Wrong_PA"
+								},
+								"loop": "not-looping",
+								"volume": "1",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Drag_Card_Lvl14_PA",
+							"sid": 788446136005376,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "Self.PostX",
+								"end-y": "Self.PostY",
+								"time": "1",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Drag_Card_Lvl14_PA",
+							"sid": 778679580415156,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX",
+								"end-y": "Self.SizeY\n",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 314031538437211
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 180639965735669,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 202536733085282,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 780465794943726
+				}
+			],
+			"sid": 426314713169474
+		}
+	],
+	"sid": 620154243073205
+}

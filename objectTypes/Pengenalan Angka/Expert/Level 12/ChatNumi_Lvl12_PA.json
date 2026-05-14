@@ -1,0 +1,80 @@
+{
+	"name": "ChatNumi_Lvl12_PA",
+	"plugin-id": "Sprite",
+	"sid": 351226917056237,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 553,
+						"height": 252,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5349838,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 553,
+						"height": 252,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6787708,
+						"collisionPoly": {
+							"points": [
+								0.189873417721519,
+								0,
+								0.44665461121157324,
+								0,
+								0.9584086799276673,
+								0.21825396825396826,
+								0.9783001808318263,
+								0.2619047619047619,
+								1,
+								0.373015873015873,
+								1,
+								0.7976190476190477,
+								0.9783001808318263,
+								0.9087301587301587,
+								0.9077757685352622,
+								1,
+								0.13743218806509946,
+								0.9523809523809523,
+								0.11754068716094032,
+								0.9087301587301587,
+								0.0054249547920434,
+								0.5238095238095238
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 105493733185492,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

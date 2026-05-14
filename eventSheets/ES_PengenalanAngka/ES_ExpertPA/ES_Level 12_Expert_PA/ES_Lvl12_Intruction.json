@@ -1,0 +1,64 @@
+{
+	"name": "ES_Lvl12_Intruction",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 362786014692201
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 286446777055133,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 791219158388656,
+					"parameters": {
+						"seconds": "3",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 134063710694728,
+					"parameters": {
+						"frame-number": "2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 839208989666034,
+					"parameters": {
+						"seconds": "3",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 976028057483837,
+					"parameters": [
+						"\"Lay_Lvl12_PA-Game-1\""
+					]
+				}
+			],
+			"sid": 599564849858860
+		}
+	],
+	"sid": 863884475276183
+}

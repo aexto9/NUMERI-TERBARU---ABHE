@@ -1,0 +1,195 @@
+{
+	"name": "ES_Lvl 7_PA",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Lvl7_PA_Game"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 342534698545966
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "bebek_lvl7",
+					"sid": 874075533064907,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "bebek_lvl7",
+					"sid": 549190648856026,
+					"parameters": {
+						"instance-variable": "sizeX",
+						"value": "Self.Width"
+					}
+				}
+			],
+			"sid": 125616771938002,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 848654459087711,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl7_PA-1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "bebek_lvl7",
+							"sid": 893607952205643,
+							"parameters": {
+								"instance-variable": "Answer",
+								"value": "-1"
+							}
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 902081107152631
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 812312215652041,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 486695142187361,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 966907509226205,
+							"parameters": {
+								"seconds": "5.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "bebek_lvl7",
+							"sid": 445791898067420,
+							"parameters": {
+								"instance-variable": "Answer",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 162449250292379
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 569381391543527,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 925211915021587,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 496772493407393
+				}
+			],
+			"sid": 354778983266966
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 900844300906646,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "5"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 722463284136633,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 314309234571615,
+					"parameters": {
+						"key": "\"Level_7\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 418132438734914,
+					"parameters": {
+						"seconds": "0.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "winGame",
+					"sid": 397610436382343,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
+				}
+			],
+			"sid": 937446210838148
+		}
+	],
+	"sid": 848486261580211
+}

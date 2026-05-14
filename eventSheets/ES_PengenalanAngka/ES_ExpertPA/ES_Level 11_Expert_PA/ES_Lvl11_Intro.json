@@ -1,0 +1,100 @@
+{
+	"name": "ES_Lvl11_Intro",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 359244377995402
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BG_Lvl11",
+					"sid": 333545510151787,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 297326479918414,
+					"parameters": {
+						"seconds": "2.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BG_Lvl11",
+					"sid": 569460145726557,
+					"parameters": {
+						"frame-number": "2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 358248966004397,
+					"parameters": {
+						"seconds": "2.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BG_Lvl11",
+					"sid": 752141200109884,
+					"parameters": {
+						"frame-number": "3"
+					}
+				}
+			],
+			"sid": 303785162418290,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "BG_Lvl11",
+							"sid": 498222741495618,
+							"parameters": {
+								"comparison": 0,
+								"number": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 488292743218140,
+							"parameters": {
+								"seconds": "2.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "GoToLayoutFunction",
+							"sid": 417576612721018,
+							"parameters": [
+								"\"Lay_Lvl11_PA-Game\""
+							]
+						}
+					],
+					"sid": 815921342711759
+				}
+			]
+		}
+	],
+	"sid": 750244350214398
+}

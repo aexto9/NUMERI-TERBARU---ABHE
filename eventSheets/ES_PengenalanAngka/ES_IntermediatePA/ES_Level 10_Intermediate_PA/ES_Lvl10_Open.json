@@ -1,0 +1,39 @@
+{
+	"name": "ES_Lvl10_Open",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 962241306859594
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 330098924259769,
+					"parameters": {
+						"seconds": "2",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 779068657691092,
+					"parameters": [
+						"\"Lay_Lvl10_PA-Play\""
+					]
+				}
+			],
+			"sid": 465895196840445
+		}
+	],
+	"sid": 347425325090659
+}

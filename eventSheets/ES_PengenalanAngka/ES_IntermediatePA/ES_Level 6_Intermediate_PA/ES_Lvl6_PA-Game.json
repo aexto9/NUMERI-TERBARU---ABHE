@@ -1,0 +1,566 @@
+{
+	"name": "ES_Lvl6_PA-Game",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "TargetAngka",
+			"type": "number",
+			"initialValue": "21",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 292096485165481
+		},
+		{
+			"eventType": "variable",
+			"name": "Nyawa",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 832380614642410
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 422033351917891
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 534962652298502,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 345369082808676,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 599901103157724,
+					"parameters": {
+						"instance-variable": "PostX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 610437928523459,
+					"parameters": {
+						"instance-variable": "PostY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "LantaiBenar_Lvl6_PA",
+					"sid": 571442876626041,
+					"parameters": {
+						"instance-variable": "PostX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "LantaiBenar_Lvl6_PA",
+					"sid": 171947719686612,
+					"parameters": {
+						"instance-variable": "PostY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Numi_Lvl6_PA",
+					"sid": 408491521218588,
+					"parameters": {
+						"instance-variable": "PostX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Numi_Lvl6_PA",
+					"sid": 530535494630475,
+					"parameters": {
+						"instance-variable": "PostY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 968721092617665,
+					"parameters": {
+						"instance-variable": "isCLickable",
+						"value": "false"
+					}
+				},
+				{
+					"callFunction": "startGame",
+					"sid": 214354134398985
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 954947549106778,
+					"parameters": {
+						"seconds": "0.3",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "Timer",
+					"sid": 136534565041720,
+					"parameters": [
+						"120"
+					]
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 327409480720767,
+					"parameters": {
+						"seconds": "5.3",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 660943447791633,
+					"parameters": {
+						"instance-variable": "isCLickable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 493251526676970
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 799831429138458,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Lantai_Lvl6_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 219579329676935,
+					"parameters": {
+						"instance-variable": "isCLickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 842411995618461
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 731461669757018,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 945756146473029,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Lantai_Lvl6_PA",
+					"sid": 264595196857452,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 716279784015686,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "JarakLompat",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 174566824037375
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 577241896724228,
+							"parameters": {
+								"first-value": "Lantai_Lvl6_PA.NilaiAngka",
+								"comparison": 0,
+								"second-value": "TargetAngka"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 722753327358213,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Correct_PA"
+								},
+								"loop": "not-looping",
+								"volume": "1",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Numi_Lvl6_PA",
+							"sid": 160861295042078,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "Lantai_Lvl6_PA.X",
+								"end-y": "Lantai_Lvl6_PA.Y - 100",
+								"time": "0.5",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 979082482866577,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 133958352510385,
+							"parameters": {
+								"variable": "TargetAngka",
+								"value": "1"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Lantai_Lvl6_PA",
+							"sid": 925242685038145,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "0",
+								"end-y": "0",
+								"time": "0.8",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 760781615535036,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Lantai_Lvl6_PA",
+							"sid": 960751275118753,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Lantai_Lvl6_PA",
+							"sid": 167367599693875,
+							"parameters": {
+								"instance-variable": "isCLickable",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 497276077947639,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 661920762794930,
+									"parameters": {
+										"object": "Fam_Lvl6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 200441782684912,
+									"parameters": {
+										"seconds": "1.0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 851048232035474,
+									"parameters": {
+										"variable": "JarakLompat",
+										"value": "Numi_Lvl6_PA.Y - Lantai_Lvl6_PA.Y"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Fam_Lvl6",
+									"sid": 557171701964562,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Self.X ",
+										"end-y": "Self.Y - JarakLompat",
+										"time": "0.5",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 530600063147175
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 735605780703750,
+							"parameters": {
+								"first-value": "Lantai_Lvl6_PA.NilaiAngka",
+								"comparison": 1,
+								"second-value": "TargetAngka"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 465069628433580,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Wrong_PA"
+								},
+								"loop": "not-looping",
+								"volume": "1",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 888640567550229,
+							"parameters": {
+								"variable": "Nyawa",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 301976540434229
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 368835190456939,
+					"parameters": {
+						"seconds": "1.5",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 541067508390629
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 845496723956448,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 708776653564325,
+					"parameters": {
+						"variable": "Nyawa",
+						"comparison": 2,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 903165906119963,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 758529643752058
+				}
+			],
+			"sid": 433261644412752
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 940400277849154,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "10"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 389983605485491,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 751778871073135,
+					"parameters": {
+						"key": "\"Level_15\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 823934746106388,
+					"parameters": {
+						"seconds": "1",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "winGame",
+					"sid": 187389639839121,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
+				}
+			],
+			"sid": 984302275724788
+		}
+	],
+	"sid": 303389109085064
+}

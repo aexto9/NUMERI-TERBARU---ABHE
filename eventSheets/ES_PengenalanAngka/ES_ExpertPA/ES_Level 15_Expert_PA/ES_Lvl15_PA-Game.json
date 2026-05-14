@@ -1,0 +1,422 @@
+{
+	"name": "ES_Lvl15_PA-Game",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Lvl7_PA_Game"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 362726733393361
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Card_Lvl15_PA",
+					"sid": 317690500895117,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Card_Lvl15_PA",
+					"sid": 135251751878345,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "NextShowCard_Lvl15_PA3",
+					"sid": 740277115337791,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "NextShowCard_Lvl15_PA3",
+					"sid": 389192298589653,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "ShowCard_Lvl15_PA2",
+					"sid": 458245080164447,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "ShowCard_Lvl15_PA2",
+					"sid": 100739236862228,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "NextShowCard_Lvl15_PA3",
+					"sid": 788849796458591,
+					"parameters": {
+						"frame-number": "NextShowCard_Lvl15_PA3.AnimationFrame + 1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Btn_Next_Lvl15_PA",
+					"sid": 489265063465638,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Btn_Next_Lvl15_PA",
+					"sid": 954728715622236,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"callFunction": "startGame",
+					"sid": 572983048835520
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 592553682718220,
+					"parameters": {
+						"seconds": "0.3",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "Timer",
+					"sid": 542691141006576,
+					"parameters": [
+						"120"
+					]
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 974762982358229,
+					"parameters": {
+						"seconds": "5.3",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 826401388680329
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 621366944761854,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Card_Lvl15_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Card_Lvl15_PA",
+					"sid": 977203054975898,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "Card_Lvl15_PA",
+					"sid": 249830970316190
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Card_Lvl15_PA",
+					"sid": 291930408990837,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 939974665298543,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Card_Lvl15_PA",
+					"sid": 386167052438381,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 712997866105471,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 362533481193927,
+							"parameters": {
+								"first-value": "Card_Lvl15_PA.ID_Number",
+								"comparison": 0,
+								"second-value": "int(ShowCard_Lvl15_PA2.AnimationFrameTag)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 831582438780413,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Correct_PA"
+								},
+								"loop": "not-looping",
+								"volume": "1",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 197713281837179,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Card_Lvl15_PA",
+							"sid": 803075560272863,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "0",
+								"end-y": "0",
+								"time": "0.5",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 311531387284072,
+							"parameters": {
+								"seconds": "0.2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Card_Lvl15_PA",
+							"sid": 712075396017612,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Card_Lvl15_PA",
+							"sid": 974208342342922,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "ShowCard_Lvl15_PA2",
+							"sid": 932233196539133,
+							"parameters": {
+								"frame-number": "Self.AnimationFrame + 1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "NextShowCard_Lvl15_PA3",
+							"sid": 881433428878422,
+							"parameters": {
+								"frame-number": "NextShowCard_Lvl15_PA3.AnimationFrame + 1"
+							}
+						}
+					],
+					"sid": 484714657858334
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 161413462285983,
+							"parameters": {
+								"first-value": "Card_Lvl15_PA.ID_Number",
+								"comparison": 1,
+								"second-value": "int(ShowCard_Lvl15_PA2.AnimationFrameTag)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 704675570187818,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Wrong_PA"
+								},
+								"loop": "not-looping",
+								"volume": "1",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 992871817454066
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 330819898647680,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 313175018120162,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 282364500231506
+				}
+			],
+			"sid": 598962364048774
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 933309578467102,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "40"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 982211005403949,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 409543523349585,
+					"parameters": {
+						"key": "\"Level_15\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 271000092832886,
+					"parameters": {
+						"layout": "Lay_Lvl15_PA-Finish"
+					}
+				}
+			],
+			"sid": 362161864251902
+		}
+	],
+	"sid": 718567126565813
+}

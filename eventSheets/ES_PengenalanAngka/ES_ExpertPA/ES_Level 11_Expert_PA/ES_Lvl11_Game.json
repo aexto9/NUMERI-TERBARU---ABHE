@@ -1,0 +1,904 @@
+{
+	"name": "ES_Lvl11_Game",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "KartuPertama_ID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 474975720482478
+		},
+		{
+			"eventType": "variable",
+			"name": "KartuKedua_ID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 848637309687271
+		},
+		{
+			"eventType": "variable",
+			"name": "KartuTerbuka",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 989029900100820
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 761570468339290
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 997738637399189,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 994363223754423,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Text_Lvl11",
+					"sid": 202923557046116,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Text_Lvl11",
+					"sid": 322719094235876,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 474537049403537,
+					"parameters": {
+						"audio-file": {
+							"path": "Level2/dikamar tidur"
+						},
+						"loop": "not-looping",
+						"volume": "1.5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 317665884750047,
+					"parameters": {
+						"variable": "score",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "startGame",
+					"sid": 578534163903432
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 771994645408430,
+					"parameters": {
+						"seconds": "0.3",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "Timer",
+					"sid": 537988632645791,
+					"parameters": [
+						"120"
+					]
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 236644599270830,
+					"parameters": {
+						"seconds": "5.3",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 772885851890074
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 906037951866193,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Card_Lvl11_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 506468290455915,
+					"parameters": {
+						"instance-variable": "isMatched"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 578681773603978,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 195802878951848,
+							"parameters": {
+								"instance-variable": "isFlipped"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 854622583988106,
+							"parameters": {
+								"variable": "KartuTerbuka",
+								"comparison": 2,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 991048440176809,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX + 20",
+								"end-y": "Self.SizeY + 20",
+								"time": "0.2",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 826967929785484,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Pop_PA"
+								},
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 834595295495688,
+							"parameters": {
+								"seconds": "0.2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 690076370815575,
+							"parameters": {
+								"frame-number": "Self.Id_Angka"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 293443273289766,
+							"parameters": {
+								"instance-variable": "isFlipped",
+								"value": "true"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 403906105439652,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX",
+								"end-y": "Self.SizeY",
+								"time": "0.2",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 382058587230907,
+							"parameters": {
+								"variable": "KartuTerbuka",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 369540736156431,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 844991673415636,
+									"parameters": {
+										"variable": "KartuTerbuka",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 218991207361574,
+									"parameters": {
+										"variable": "KartuPertama_ID",
+										"value": "Card_Lvl11_PA.Id_Angka"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Text_Lvl11",
+									"sid": 370679514078968,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Self.SizeX + 20",
+										"end-y": "Self.SizeY + 20",
+										"time": "0.2",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 478325994061742,
+									"parameters": {
+										"seconds": "0.2",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Text_Lvl11",
+									"sid": 938075219968687,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Text_Lvl11",
+									"sid": 950665427263859,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Self.SizeX",
+										"end-y": "Self.SizeY",
+										"time": "0.2",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 814629845035691
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 745320235961306,
+									"parameters": {
+										"variable": "KartuTerbuka",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 332054357134022,
+									"parameters": {
+										"variable": "KartuKedua_ID",
+										"value": "Card_Lvl11_PA.Id_Angka"
+									}
+								}
+							],
+							"sid": 220427464566391
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 707888111615076,
+							"parameters": {
+								"instance-variable": "isFlipped"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 282171773536794,
+							"parameters": {
+								"variable": "KartuTerbuka",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 909810488224604,
+							"parameters": {
+								"instance-variable": "isFlipped",
+								"value": "false"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 274955516279779,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX + 20",
+								"end-y": "Self.SizeY + 20",
+								"time": "0.2",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Text_Lvl11",
+							"sid": 684744045271322,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX + 20",
+								"end-y": "Self.SizeY + 20",
+								"time": "0.2",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 760713538634868,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Pop_PA"
+								},
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 410533476158844,
+							"parameters": {
+								"seconds": "0.2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 637526857251768,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Card_Lvl11_PA",
+							"sid": 607425877670020,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX",
+								"end-y": "Self.SizeY",
+								"time": "0.2",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Text_Lvl11",
+							"sid": 322198887802247,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Text_Lvl11",
+							"sid": 371141940763311,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX",
+								"end-y": "Self.SizeY",
+								"time": "0.2",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 295360545028161,
+							"parameters": {
+								"variable": "KartuPertama_ID",
+								"value": "0"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 426607157379744,
+							"parameters": {
+								"variable": "KartuTerbuka",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 618021613284748
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 661430517000648,
+					"parameters": {
+						"variable": "KartuTerbuka",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 415455343764176,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 516525412457825,
+							"parameters": {
+								"first-value": "KartuPertama_ID",
+								"comparison": 0,
+								"second-value": "KartuKedua_ID"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 696821904936865
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 896972571413616,
+							"parameters": {
+								"variable": "KartuTerbuka",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 544887639605559,
+							"parameters": {
+								"variable": "KartuPertama_ID",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 431926063617663,
+							"parameters": {
+								"variable": "KartuKedua_ID",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 159697991736614,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Lvl11_PA",
+									"sid": 200635686993669,
+									"parameters": {
+										"instance-variable": "isFlipped"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card_Lvl11_PA",
+									"sid": 952426987588546,
+									"parameters": {
+										"instance-variable": "isMatched",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 753557508163401
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 583741829665252,
+							"parameters": {
+								"first-value": "KartuPertama_ID",
+								"comparison": 1,
+								"second-value": "KartuKedua_ID"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 619318617836112
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 167360143657512,
+							"parameters": {
+								"variable": "KartuTerbuka",
+								"value": "0"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Text_Lvl11",
+							"sid": 351466963674681,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX + 20",
+								"end-y": "Self.SizeY + 20",
+								"time": "0.2",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 492607380586595,
+							"parameters": {
+								"seconds": "0.2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Text_Lvl11",
+							"sid": 776183331756118,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Text_Lvl11",
+							"sid": 365325240187441,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX",
+								"end-y": "Self.SizeY",
+								"time": "0.2",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 564036954609168,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Card_Lvl11_PA",
+									"sid": 479505349371639,
+									"parameters": {
+										"comparison": 1,
+										"number": "0"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Card_Lvl11_PA",
+									"sid": 413935138875190,
+									"parameters": {
+										"instance-variable": "isMatched"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 857904854486201,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Pop_PA"
+										},
+										"loop": "not-looping",
+										"volume": "-10",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Card_Lvl11_PA",
+									"sid": 160576336153714,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Self.SizeX + 20",
+										"end-y": "Self.SizeY + 20",
+										"time": "0.2",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 293928558467876,
+									"parameters": {
+										"seconds": "0.2",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Card_Lvl11_PA",
+									"sid": 264926818103373,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Card_Lvl11_PA",
+									"sid": 376603123095256,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Self.SizeX",
+										"end-y": "Self.SizeY",
+										"time": "0.2",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Card_Lvl11_PA",
+									"sid": 156541529839473,
+									"parameters": {
+										"instance-variable": "isFlipped",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 540726111838924
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 650581521010223,
+					"parameters": {
+						"instance-variable": "isMatched"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 269132002161905,
+					"parameters": {
+						"first-value": "Card_Lvl11_PA.PickedCount",
+						"comparison": 0,
+						"second-value": "20"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 930143995614982
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 670590285265568,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 296002971275319,
+					"parameters": {
+						"key": "\"Level_11\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 785250712482173,
+					"parameters": {
+						"seconds": "1",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "winGame",
+					"sid": 126585121746057,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
+				}
+			],
+			"sid": 710393639097195
+		}
+	],
+	"sid": 972654532860676
+}

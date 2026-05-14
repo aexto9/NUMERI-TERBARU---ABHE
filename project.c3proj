@@ -1,0 +1,1865 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 47604,
+	"name": "NUMERI",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "SVGPicture",
+			"name": "SVG Picture",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "742k8d8ei2v",
+	"objectTypes": {
+		"items": [
+			"Mouse",
+			"Keyboard",
+			"Audio",
+			"Touch",
+			"LocalStorage",
+			"DataReward",
+			"Sprite2",
+			"level",
+			"level2",
+			"anima",
+			"UntitledDesign"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Awan1",
+					"Awan2",
+					"Awan3",
+					"AwanRumah",
+					"BG_RoadMap",
+					"BG_RoadMap2",
+					"BTN_1",
+					"BTN_10",
+					"BTN_11",
+					"BTN_12",
+					"BTN_13",
+					"BTN_14",
+					"BTN_15",
+					"BTN_2",
+					"BTN_3",
+					"BTN_4",
+					"BTN_5",
+					"BTN_6",
+					"BTN_7",
+					"BTN_8",
+					"BTN_9",
+					"BTN_MusicOff",
+					"BTN_MusicOn",
+					"BTN_SoundOff",
+					"BTN_SoundOn",
+					"CameraFocus",
+					"PulauKamarTidur",
+					"PulauKebunBinatang",
+					"PulauKelas"
+				],
+				"subfolders": [],
+				"name": "Roadmap"
+			},
+			{
+				"items": [
+					"MainTitle",
+					"Numa",
+					"Numi",
+					"StartButton",
+					"BG_MainMenu"
+				],
+				"subfolders": [],
+				"name": "MainMenu"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"Group",
+									"Drop",
+									"Drag",
+									"Banner",
+									"Tema_KamarTidurLV1TKB",
+									"Sprite",
+									"Drag_2",
+									"Drop_2",
+									"Bg_Lvl1_Open"
+								],
+								"subfolders": [],
+								"name": "Level 1"
+							},
+							{
+								"items": [
+									"Bg_Level2_T2",
+									"Drag_Lvl2",
+									"Bg_Level2_Open",
+									"Drop_Lvl2"
+								],
+								"subfolders": [],
+								"name": "Level 2"
+							},
+							{
+								"items": [
+									"Bg_lvl3_Basic_PA",
+									"Btn_Lvl3_Play",
+									"Angka_lvl3_PA"
+								],
+								"subfolders": [],
+								"name": "Level 3"
+							},
+							{
+								"items": [
+									"Bg_Lvl4_Basic_PA",
+									"Judul_Lvl4_PA",
+									"Btn_Play_Lvl4_Basic_PA",
+									"Karakter_Lvl4_Basic_PA",
+									"Drag_Lvl4_PA",
+									"Papan_Lvl4_PA",
+									"Buku_Lvl4_PA",
+									"Judul_Lvl4_PA_Game",
+									"Drop_Lvl4_PA",
+									"LEMARI_lVL4_pa",
+									"Dialog_Lvl4_PA",
+									"Drag_Buku_Lvl4_PA",
+									"Drop_Buku_Lvl4_PA",
+									"Btn_Back_Lvl4_PA",
+									"Kartu_Buku_Lvl4_PA",
+									"DataLevel4_PA"
+								],
+								"subfolders": [],
+								"name": "Level 4"
+							},
+							{
+								"items": [
+									"Bg_Lvl5_PA",
+									"Play_BTN_Lvl5_PA",
+									"Drag_Lvl5_PA",
+									"Dialog_Lvl5_PA",
+									"Lanjut_Lvl5_PA",
+									"Header_Lvl5_PA",
+									"Drop_Lvl5_PA"
+								],
+								"subfolders": [],
+								"name": "Level 5"
+							}
+						],
+						"name": "Basic"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"Btb_Play_Lvl7",
+									"Group3",
+									"bebek_lvl7",
+									"Sprite3",
+									"BTN_Play_Lvl7",
+									"Sprite4"
+								],
+								"subfolders": [],
+								"name": "Level 7"
+							},
+							{
+								"items": [
+									"Drag_Bubble_Lvl8_PA",
+									"Bg_Lvl8_PA",
+									"Asset_Lvl8_PA",
+									"Btn_Play_Lvl8_PA",
+									"Drop_Bubble_Lvl8_PA"
+								],
+								"subfolders": [],
+								"name": "Level 8"
+							},
+							{
+								"items": [
+									"checklist_lvl9_PA",
+									"bebek_lvl9_PA",
+									"Text_Lvl9_PA",
+									"BubbleClr_Lvl9_PA",
+									"Bubble_Lvl9_PA",
+									"Number_Level9_PA",
+									"bg_Lvl9_PA",
+									"bgfull_Lvl9_PA",
+									"bgfix_Lvl9_PA",
+									"BtnPlay_Lvl9_PA"
+								],
+								"subfolders": [],
+								"name": "Level 9"
+							},
+							{
+								"items": [
+									"Bg_Lvl10_PA",
+									"Btn_Play_Lvl10",
+									"DragSabun_Lvl10_PA",
+									"DropSabun_Lvl10_PA"
+								],
+								"subfolders": [],
+								"name": "Level 10"
+							},
+							{
+								"items": [
+									"Bg_Lvl6_PA",
+									"Btn_Play_Lvl6_PA",
+									"Lantai_Lvl6_PA",
+									"LantaiBenar_Lvl6_PA",
+									"Numi_Lvl6_PA"
+								],
+								"subfolders": [],
+								"name": "Level 6"
+							}
+						],
+						"name": "Intermediate"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"Bg_Lvl14_PA",
+									"Drag_Card_Lvl14_PA",
+									"Btn_Play_Lvl14_Pa",
+									"Btn_Next_Lvl14_PA",
+									"Drop_Card_Lvl14_PA2"
+								],
+								"subfolders": [],
+								"name": "Level 14"
+							},
+							{
+								"items": [
+									"Asset_Lvl11",
+									"BG_Lvl11",
+									"Btn_Play_Lvl11_PA",
+									"Card_Lvl11_PA",
+									"Text_Lvl11"
+								],
+								"subfolders": [],
+								"name": "Level 11"
+							},
+							{
+								"items": [
+									"Btn_Next_Lvl15_PA",
+									"Card_Lvl15_PA",
+									"Bg_Lvl15_PA",
+									"Asset_Lvl15_PA",
+									"Btn_Play_Lvl15_PA",
+									"Sprite5",
+									"ShowCard_Lvl15_PA2",
+									"NextShowCard_Lvl15_PA3",
+									"Karakter_Lvl15_PA",
+									"Text_Finish_Lvl15PA"
+								],
+								"subfolders": [],
+								"name": "Level 15"
+							},
+							{
+								"items": [
+									"Chanel_Lvl12_PA",
+									"Btn_Play_Lvl12_PA",
+									"AngkaRemote_Lvl12_PA",
+									"ChatNumi_Lvl12_PA",
+									"ChatNuma_Lvl12_PA",
+									"Asset_Lvl12_PA",
+									"Bg_Lvl12_PA",
+									"TextPuluhan_Lvl12_PA",
+									"TextSatuan_Lvl12_PA",
+									"AngkaAcak"
+								],
+								"subfolders": [],
+								"name": "Level 12"
+							},
+							{
+								"items": [
+									"BalokSatuan_Lvl13_PA",
+									"Intruction_Lvl13_PA",
+									"TextNumi_Lvl13_PA",
+									"TextNuma_Lvl13_PA",
+									"HapusBalok_Lvl13_PA",
+									"Btn_Next_Lvl13_PA",
+									"BtnBalokSatuan_Lvl13_PA",
+									"Btn_Play_Lvl13_PA",
+									"Bg_Lvl13_PA",
+									"Numa_Lvl13_PA",
+									"Numi_Lvl13_PA",
+									"BalokPuluhan_Lvl13_PA",
+									"BtnBalokPuluhan_Lvl13_PA",
+									"AngkaText_Lvl13_PA",
+									"Angka_Lvl13_PA",
+									"AlasPuluhan_Lvl13_PA",
+									"AlasSatuan_Lvl13_PA2"
+								],
+								"subfolders": [],
+								"name": "Level 13"
+							}
+						],
+						"name": "Expert"
+					}
+				],
+				"name": "Pengenalan Angka"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"bg_level2_t1",
+							"full_level2_t1",
+							"judul_level2_t1"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"gagal_level2_t1",
+									"info_level2_t1",
+									"berhasil_level2_t1"
+								],
+								"subfolders": [],
+								"name": "Notifications"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"kotak_lingkaran_t1",
+											"kotak_persegi_t1",
+											"kotak_segitiga_t1"
+										],
+										"subfolders": [],
+										"name": "Group_1"
+									},
+									{
+										"items": [
+											"belah_ketupat_t1",
+											"persegi_panjang_t1",
+											"trapesium_t1"
+										],
+										"subfolders": [],
+										"name": "Group_2"
+									},
+									{
+										"items": [
+											"jajar_t1",
+											"layang_t1",
+											"segilima_t1"
+										],
+										"subfolders": [],
+										"name": "Group_3"
+									}
+								],
+								"name": "Hamper"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"ling_bola_level2_t1",
+											"ling_cermin_level2_t1",
+											"ling_jam_level2_t1",
+											"persegi_buku_level2_t1",
+											"persegi_jendela_level2_t1",
+											"persegi_whiteboard_level2_t1",
+											"segitiga_level2_t1",
+											"segitiga_penggariskuning_level2_t1",
+											"segitiga_penggarispink_level2_t1"
+										],
+										"subfolders": [],
+										"name": "Group_1"
+									},
+									{
+										"items": [],
+										"subfolders": [],
+										"name": "Group_2"
+									},
+									{
+										"items": [],
+										"subfolders": [],
+										"name": "Group_3"
+									}
+								],
+								"name": "Items"
+							},
+							{
+								"items": [
+									"tempat_waktu_level2"
+								],
+								"subfolders": [],
+								"name": "Time"
+							}
+						],
+						"name": "Level_2_T1"
+					},
+					{
+						"items": [
+							"bg_level_2_t2"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"jikaBenar_level_2_t2",
+									"jikaWaktuHabis_level_2_t2",
+									"jikaSalahpilih_level_2_t2",
+									"finish_level_2_t2",
+									"motivasi_level_2_t2"
+								],
+								"subfolders": [],
+								"name": "Notifications"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"bener_level_2_t2",
+											"salah2_level_2_t2",
+											"salah3_level_2_t2"
+										],
+										"subfolders": [],
+										"name": "Persegi"
+									}
+								],
+								"name": "Pilihan"
+							},
+							{
+								"items": [
+									"soal_persegi_level_2_t2"
+								],
+								"subfolders": [],
+								"name": "Soal"
+							},
+							{
+								"items": [
+									"dialog_level_2_t2_2",
+									"dialog_level_2_t2_1"
+								],
+								"subfolders": [],
+								"name": "Dialog"
+							},
+							{
+								"items": [
+									"PETUNJUKPERSEGI_level_2_t2"
+								],
+								"subfolders": [],
+								"name": "Petunjuk"
+							},
+							{
+								"items": [
+									"tempat_waktu_level3"
+								],
+								"subfolders": [],
+								"name": "Time"
+							}
+						],
+						"name": "Level_2_T2"
+					},
+					{
+						"items": [
+							"dialog_level_2_t3",
+							"rumahselesaidisusun_level_2_t3",
+							"bghitam_level_2_t3",
+							"bg_level_2_t3",
+							"judul_level_2_t3"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"layang_level_2_t3",
+									"jendela_level_2_t3",
+									"pintu_level_2_t3",
+									"atas_stiga_level_2_t3",
+									"polygon_level_2_t3",
+									"atap_pg_level_2_t3",
+									"tangga_level_2_t3",
+									"kunci_level_2_t3",
+									"dinding_level_2_t3"
+								],
+								"subfolders": [],
+								"name": "Items"
+							},
+							{
+								"items": [
+									"tap2_sering_level_2_t3",
+									"berhasil_level_2_t3",
+									"benar_level_2_t3",
+									"cobalagi_level_2_t3"
+								],
+								"subfolders": [],
+								"name": "Notifications"
+							},
+							{
+								"items": [
+									"numa_level_2_t3",
+									"numi_level_2_t3"
+								],
+								"subfolders": [],
+								"name": "Maskot"
+							},
+							{
+								"items": [
+									"target_level_2_t3",
+									"target_level_2_t3_selesai"
+								],
+								"subfolders": [],
+								"name": "Target"
+							},
+							{
+								"items": [
+									"tempat_waktu_level2_t3"
+								],
+								"subfolders": [],
+								"name": "Time"
+							}
+						],
+						"name": "Level_2_T3"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"dialog_level_2_t4"
+								],
+								"subfolders": [],
+								"name": "Dialog"
+							},
+							{
+								"items": [
+									"finish_level_2_t4",
+									"motivasi_level_2_t4",
+									"jikaBenar_level_2_t4",
+									"jikaSalah_level_2_t4"
+								],
+								"subfolders": [],
+								"name": "Notifications"
+							},
+							{
+								"items": [
+									"screenpage1_level_2_t4",
+									"screenpage2_level_2_t4",
+									"screenpage3_level_2_t4",
+									"screenpage4_level_2_t4",
+									"screenpage5_level_2_t4",
+									"screenpage6_level_2_t4",
+									"screenpage7_level_2_t4",
+									"screenpage8_level_2_t4"
+								],
+								"subfolders": [],
+								"name": "Screen"
+							},
+							{
+								"items": [
+									"belakang_level_2_t4",
+									"depan_level_2_t4",
+									"kanan_level_2_t4",
+									"kiri_level_2_t4"
+								],
+								"subfolders": [],
+								"name": "Pola"
+							},
+							{
+								"items": [
+									"screenview",
+									"tempat_waktu_level4"
+								],
+								"subfolders": [],
+								"name": "Side"
+							}
+						],
+						"name": "Level_2_T4"
+					},
+					{
+						"items": [
+							"hasil_akhir_t5"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"bg_level2_t5",
+									"bg_item_level_t5",
+									"bg_target_level2_t5"
+								],
+								"subfolders": [],
+								"name": "Background"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"item_1_level2_t5",
+											"item_2_level2_t5",
+											"item_3_level2_t5"
+										],
+										"subfolders": [],
+										"name": "Belah_Ketupat"
+									}
+								],
+								"name": "Items"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"soal_level2_t5"
+										],
+										"subfolders": [],
+										"name": "Belah_Ketupat"
+									}
+								],
+								"name": "Soal"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"target_1_level2_t5",
+											"target_2_level2_t5",
+											"target_3_level2_t5"
+										],
+										"subfolders": [],
+										"name": "Belah_Ketupat"
+									}
+								],
+								"name": "Target"
+							},
+							{
+								"items": [
+									"tempat_waktu_level2_t5"
+								],
+								"subfolders": [],
+								"name": "Time"
+							},
+							{
+								"items": [
+									"finish",
+									"jikasalah",
+									"petunjuk",
+									"motivasi"
+								],
+								"subfolders": [],
+								"name": "Notifications"
+							}
+						],
+						"name": "Level_2_T5"
+					}
+				],
+				"name": "Level_2"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"bg_level3_t1",
+							"Frame_Gajah",
+							"Frame_capybara",
+							"Frame_rabbit",
+							"Plate",
+							"Rabbit",
+							"Capybara",
+							"Gajah",
+							"Notif1"
+						],
+						"subfolders": [],
+						"name": "Level_3_T1"
+					},
+					{
+						"items": [
+							"background",
+							"babi",
+							"instruksi",
+							"kadal",
+							"kelinci",
+							"kucing",
+							"kurakura",
+							"monyet",
+							"numaT2",
+							"numiT2",
+							"pause",
+							"referensi2",
+							"BabiB2",
+							"anjingLaut",
+							"flaminggo",
+							"Kurakurab2",
+							"jerapah",
+							"unta",
+							"teksKakiPanjang",
+							"TeksKakiPendek",
+							"Instruksi2",
+							"referensi3",
+							"singa",
+							"SosisKecil",
+							"SosisSedang",
+							"SosisBesar",
+							"Instruksi3",
+							"check",
+							"check2",
+							"check3",
+							"wrong",
+							"wrong2",
+							"wrong3",
+							"heart",
+							"heartCount"
+						],
+						"subfolders": [],
+						"name": "Level_3_T2"
+					},
+					{
+						"items": [
+							"backgroundT3",
+							"referensitT31",
+							"JerapahBesar",
+							"JerapahKecil",
+							"instruksiT31"
+						],
+						"subfolders": [],
+						"name": "Level_3_T3"
+					}
+				],
+				"name": "Level_3"
+			},
+			{
+				"items": [
+					"TransparantOverlay",
+					"WinNotif",
+					"Wipe1",
+					"Wipe2",
+					"Ready",
+					"Retry",
+					"PuzzleHolder",
+					"BannerTimer",
+					"Go",
+					"home",
+					"LoseNotif",
+					"TImer",
+					"next",
+					"close"
+				],
+				"subfolders": [],
+				"name": "ShareAsset"
+			},
+			{
+				"items": [
+					"Layer_Pengenalan_Angka",
+					"Btn_Lvl",
+					"Pulau",
+					"Bg_Pengenalan_Angka",
+					"Awan",
+					"Sound",
+					"Music",
+					"Dev_Info",
+					"Achievment",
+					"Next_Lay_Roadmap"
+				],
+				"subfolders": [],
+				"name": "Roadmap_Pengenalan_Angka"
+			},
+			{
+				"items": [
+					"Header_Reward",
+					"Bg_Used",
+					"Box",
+					"BG_Full_Reward",
+					"Reward_PA"
+				],
+				"subfolders": [],
+				"name": "Reward"
+			}
+		]
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Fam_Lvl6"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Lay_MainMenu",
+			"Lay_RoadMap",
+			"Lay_RoadMap_Pengenalan_Angka",
+			"Lay_Reward"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [],
+						"subfolders": [],
+						"name": "T1"
+					},
+					{
+						"items": [],
+						"subfolders": [],
+						"name": "T2"
+					},
+					{
+						"items": [],
+						"subfolders": [],
+						"name": "T3"
+					}
+				],
+				"name": "Lay_Level1"
+			},
+			{
+				"items": [
+					"Lay_Level2_T1",
+					"Lay_Level2_T2",
+					"Lay_Level2_T3",
+					"Lay_Level2_T4",
+					"Lay_Level2_T5"
+				],
+				"subfolders": [],
+				"name": "Lay_Level2"
+			},
+			{
+				"items": [
+					"Lay_Level3_T1",
+					"Lay_Level3_T2",
+					"Lay_Level3_T3"
+				],
+				"subfolders": [],
+				"name": "Lay_Level3"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"Lay_Lvl1_PA",
+									"Lay_Lvl1_PA1",
+									"Lay_Lvl1_PA2",
+									"Lay_Lvl1_PA3",
+									"Lay_Lvl1_PA4",
+									"Lay_Lvl1_PA5",
+									"Lay_Lvl1_PA6"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 1_Basic_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl2_PA",
+									"Lay_Lvl2_PA2",
+									"Lay_Lvl2_PA3",
+									"Lay_Lvl2_PA4",
+									"Lay_Lvl2_PA5",
+									"Lay_Lvl2_PA6",
+									"Lay_Lvl2_PA7",
+									"Lay_Lvl2_PA8",
+									"Lay_Lvl2_PA9",
+									"Lay_Lvl2_PA10",
+									"Lay_Lvl2_PA11",
+									"Lay_Lvl2_PA12"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 2_Basic_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl3_PA",
+									"Lay_Lvl3_PA-1",
+									"Lay_Lvl3_PA-2",
+									"Lay_Lvl3_PA-3"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 3_Basic_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl4_PA",
+									"Lay_Lvl4_PA1",
+									"Lay_Lvl4_PA2",
+									"Lay_Lvl4_PA3",
+									"Lay_Lvl4_PA4",
+									"Lay_Lvl4_PA5",
+									"Lay_Lvl4_PA6",
+									"Lay_Lvl4_Kue",
+									"Lay_Lvl4_Telur",
+									"Lay_Lvl4_Mobil",
+									"Lay_Lvl4_Balon",
+									"Lay_Lvl4_Bintang"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 4_Basic_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl5_PA",
+									"Lay_Lvl5_PA1",
+									"Lay_Lvl5_PA2"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 5_Basic_PA"
+							}
+						],
+						"name": "Lay_Basic_PA"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"Lay_Lvl6_PA",
+									"Lay_Lvl6_PA-Game"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 6_Intermediate_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl7_PA",
+									"Lay_Lvl7_PA-1",
+									"Lay_Lvl7_PA-2",
+									"Lay_Lvl7_PA-3",
+									"Lay_Lvl7_PA-4",
+									"Lay_Lvl7_PA-5"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 7_Intermediate_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl8_PA",
+									"Lay_Lvl8_PA-1"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 8_Intermediate_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl9_PA",
+									"Lay_Lvl9_PA-1",
+									"Lay_Lvl9_PA-2",
+									"Lay_Lvl9_PA-3",
+									"Lay_Lvl9_PA-4",
+									"Lay_Lvl9_PA-5",
+									"Lay_Lvl9_PA-6",
+									"Lay_Lvl9_PA-7",
+									"Lay_Lvl9_PA-8",
+									"Lay_Lvl9_PA-9",
+									"Lay_Lvl9_PA-10",
+									"Lay_Lvl9_PA-11"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 9_Intermediate_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl10_PA",
+									"Lay_Lvl10_PA-Play",
+									"Lay_Lvl10_PA-Instruction",
+									"Lay_Lvl10_PA-1",
+									"Lay_Lvl10_PA-2",
+									"Lay_Lvl10_PA-3",
+									"Lay_Lvl10_PA-4",
+									"Lay_Lvl10_PA-5",
+									"Lay_Lvl10_PA-6",
+									"Lay_Lvl10_PA-7",
+									"Lay_Lvl10_PA-8",
+									"Lay_Lvl10_PA-9",
+									"Lay_Lvl10_PA-10",
+									"Lay_Lvl10_PA-11",
+									"Lay_Lvl10_PA-12",
+									"Lay_Lvl10_PA-13"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 10_Intermediate_PA"
+							}
+						],
+						"name": "Lay_Intermediate_PA"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"Lay_Lvl11_PA",
+									"Lay_Lvl11_PA-Intruction",
+									"Lay_Lvl11_PA-Game"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 11_Expert_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl12_PA",
+									"Lay_Lvl12_Intruction",
+									"Lay_Lvl12_PA-Game-1",
+									"Lay_Lvl12_PA-Game-2",
+									"Lay_Lvl12_PA-Game-3",
+									"Lay_Lvl12_PA-Game-4",
+									"Lay_Lvl12_PA-Game-5",
+									"Lay_Lvl12_PA-Game-6",
+									"Lay_Lvl12_PA-Game-7",
+									"Lay_Lvl12_PA-Game-8",
+									"Lay_Lvl12_PA-Game-9",
+									"Lay_Lvl12_PA-Game-10",
+									"Lay_Lvl12_PA-Game-11"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 12_Expert_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl13_PA",
+									"Lay_Lvl13_PA-1",
+									"Lay_Lvl13_PA-2",
+									"Lay_Lvl13_PA-3",
+									"Lay_Lvl13_PA-4",
+									"Lay_Lvl13_PA-5",
+									"Lay_Lvl13_PA-6"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 13_Expert_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl14_PA",
+									"Lay_Lvl14_PA-Instruction",
+									"Lay_Lvl14_PA-1",
+									"Lay_Lvl14_PA-2",
+									"Lay_Lvl14_PA-3",
+									"Lay_Lvl14_PA-4",
+									"Lay_Lvl14_PA-5",
+									"Lay_Lvl14_PA-6",
+									"Lay_Lvl14_PA-7"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 14_Expert_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl15_PA",
+									"Lay_Lvl15_PA-Instruction",
+									"Lay_Lvl15_PA-Game",
+									"Lay_Lvl15_PA-Finish"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 15_Expert_PA"
+							}
+						],
+						"name": "Lay_Expert_PA"
+					}
+				],
+				"name": "Lay_PengenalanAngka"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"ES_RoadMap",
+			"ES_MainMenu",
+			"ES_Global",
+			"ES_RoadMap_Pengenalan_Angka",
+			"ES_Reward"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [],
+						"subfolders": [],
+						"name": "T3"
+					},
+					{
+						"items": [],
+						"subfolders": [],
+						"name": "T2"
+					},
+					{
+						"items": [
+							"ES_Level1_T1-10",
+							"ES_Level1_T1-6",
+							"ES_Level1_T1-7",
+							"ES_Level1_T1-8",
+							"ES_Level1_T1-9"
+						],
+						"subfolders": [],
+						"name": "T1"
+					}
+				],
+				"name": "ES_Level1"
+			},
+			{
+				"items": [
+					"ES_Level2_T1",
+					"ES_Level2_T5",
+					"ES_Level2_T4",
+					"ES_Level2_T3",
+					"ES_Level2_T2"
+				],
+				"subfolders": [],
+				"name": "ES_Level2"
+			},
+			{
+				"items": [
+					"ES_Level3_T1",
+					"ES_Level3_T3",
+					"ES_Level3_T2"
+				],
+				"subfolders": [],
+				"name": "ES_Level3"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"ES_Lvl1_PA1",
+									"ES_Lvl1_PA2",
+									"ES_Lvl1_PA_Open"
+								],
+								"subfolders": [],
+								"name": "ES_Level1_Basic_PA"
+							},
+							{
+								"items": [
+									"ES_Level2_PA_Open",
+									"ES_Level2_PA2_Game",
+									"ES_Level2_PA",
+									"ES_Level2_Finish"
+								],
+								"subfolders": [],
+								"name": "ES_Level2_Basic_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl3_PA_Open",
+									"ES_Lvl3_PA_Game",
+									"ES_Lvl3_PA"
+								],
+								"subfolders": [],
+								"name": "ES_Level3_Basic_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl4_PA_Open",
+									"ES_Lvl4_PA",
+									"ES_Lvl4_PA_Game",
+									"ES_Lvl4_PA_Game2",
+									"ES_Lvl4_PA2"
+								],
+								"subfolders": [],
+								"name": "ES_Level4_Basic_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl5_PA_Open",
+									"ES_Lvl5_PA_Game"
+								],
+								"subfolders": [],
+								"name": "ES_Level5_Basic_PA"
+							}
+						],
+						"name": "ES_BasicPA"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"ES_Lvl7_PA_Open",
+									"ES_Lvl 7_PA",
+									"ES_Lvl7_PA_Game"
+								],
+								"subfolders": [],
+								"name": "ES_Level 7_Intermediate_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl6_PA-Open",
+									"ES_Lvl6_PA-Game"
+								],
+								"subfolders": [],
+								"name": "ES_Level 6_Intermediate_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl8_Open",
+									"Es_Lvl8"
+								],
+								"subfolders": [],
+								"name": "ES_Level 8_Intermediate_PA"
+							},
+							{
+								"items": [
+									"ES_LVL9_Open",
+									"ES_Lvl9",
+									"ES_Lvl9_PA_Game",
+									"ES_Lvl9_PA_Finish"
+								],
+								"subfolders": [],
+								"name": "ES_Level 9_Intermediate_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl10_Open",
+									"ES_Lvl10_Open-1",
+									"ES_Lvl10_Intruction",
+									"ES_Lvl10_PA",
+									"ES_Lvl10_Finish"
+								],
+								"subfolders": [],
+								"name": "ES_Level 10_Intermediate_PA"
+							}
+						],
+						"name": "ES_IntermediatePA"
+					},
+					{
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"ES_Lvl11_Open",
+									"ES_Lvl11_Intro",
+									"ES_Lvl11_Game"
+								],
+								"subfolders": [],
+								"name": "ES_Level 11_Expert_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl12_Open",
+									"ES_Lvl12_Intruction",
+									"ES_Lvl12_Game"
+								],
+								"subfolders": [],
+								"name": "ES_Level 12_Expert_PA"
+							},
+							{
+								"items": [
+									"ES_lVL13_PA_Open",
+									"ES_Lvl13_PA-Game"
+								],
+								"subfolders": [],
+								"name": "ES_Level 13_Expert_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl14_PA-Open",
+									"ES_Lvl14_PA-Intruction",
+									"ES_Lvl14_PA-Game",
+									"ES_Lvl14_PA-Next",
+									"ES_Lvl14_PA-Finish"
+								],
+								"subfolders": [],
+								"name": "ES_Level 14_Expert_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl15_PA-Open",
+									"ES_Lvl15_PA-Instruction",
+									"ES_Lvl15_PA-Game",
+									"ES_Lvl15_PA-Finish"
+								],
+								"subfolders": [],
+								"name": "ES_Level 15_Expert_PA"
+							}
+						],
+						"name": "ES_ExpertPA"
+					}
+				],
+				"name": "ES_PengenalanAngka"
+			}
+		]
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "MainTheme.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 194585541451060,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "go.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 290134138538550,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ready.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 257057198552987,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "Success.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 182023544196584,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "PuzzlePiece.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 507180209305181,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [
+						{
+							"items": [
+								{
+									"name": "satu.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 300687750867791,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "dua.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 570682507159495,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "tiga.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 458110482023566,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "empat.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 298559615019083,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "lima.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 182491752373597,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "enam.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 923774906254270,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "tujuh.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 141068367973082,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "delapan.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 249383860515928,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "sembilan.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 153400858809219,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "sepuluh.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 828844936276443,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "Success_T2.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 340532623646136,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Tahap2"
+						}
+					],
+					"name": "Level1"
+				},
+				{
+					"items": [
+						{
+							"name": "jawaban benar.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 582715293704821,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "drop jawaban.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 406612889123411,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "klik button.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 466413590858912,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "jawaban salah-variasi-1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 530213514496148,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "menang.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 329227322251608,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "diruang kelas.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 465892525888670,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "dikamar tidur.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 888832293408123,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "puzzle salah.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 927330224047062,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Level2"
+				},
+				{
+					"items": [
+						{
+							"name": "latar kebun binatang.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 229801295253583,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Level3"
+				},
+				{
+					"items": [
+						{
+							"name": "Correct_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 351845163181401,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Click_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 957724997657649,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Wrong_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 124040105223672,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Pop_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 913374188331143,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Yay_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 521033442978325,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Yay2_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 721484564056853,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Pengenalan_Angka"
+				}
+			]
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 543068297291334,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 721248517199736,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 150660167640782,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 140481376245103,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 256035783547493,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 193316248966264,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 565355495993257,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "level 104.svg",
+					"type": "image/svg+xml",
+					"sid": 171947820482545,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"models3d": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "scale-inner",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"fixedFramerate": 30,
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress-logo",
+		"preloadSounds": true,
+		"uidAllocationMode": "increment",
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"scriptsType": "module"
+	},
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
+	"firstLayout": "Lay_MainMenu"
+}

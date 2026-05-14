@@ -1,0 +1,39 @@
+{
+	"name": "ES_Lvl15_PA-Instruction",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 427974232833955
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 471656810822436,
+					"parameters": {
+						"seconds": "5",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 886326201436937,
+					"parameters": [
+						"\"Lay_Lvl15_PA-Game\""
+					]
+				}
+			],
+			"sid": 848654387876476
+		}
+	],
+	"sid": 628791580399487
+}
