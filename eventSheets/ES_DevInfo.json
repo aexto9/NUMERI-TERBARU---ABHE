@@ -1,5 +1,5 @@
 {
-	"name": "ES_Reward",
+	"name": "ES_DevInfo",
 	"events": [
 		{
 			"eventType": "include",
@@ -11,14 +11,14 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 679285251720780
+					"sid": 628074043533731
 				}
 			],
 			"actions": [
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 538813866419609,
+					"sid": 101535131103264,
 					"parameters": {
 						"audio-file": {
 							"path": "MainTheme"
@@ -32,7 +32,7 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "close",
-					"sid": 882859859042246,
+					"sid": 741147113425521,
 					"parameters": {
 						"instance-variable": "SizeX",
 						"value": "Self.Width"
@@ -41,66 +41,23 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "close",
-					"sid": 107912400489138,
+					"sid": 320975126938736,
 					"parameters": {
 						"instance-variable": "SizeY",
 						"value": "Self.Height"
 					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "close",
+					"sid": 257638087795419,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
 				}
 			],
-			"sid": 325895407994144,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 697957138275593,
-							"parameters": {
-								"object": "Reward_PA"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Reward_PA",
-							"sid": 635680087553343,
-							"parameters": {
-								"frame-number": "0"
-							}
-						}
-					],
-					"sid": 527952072609088,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-key",
-									"objectClass": "DataReward",
-									"sid": 980861637699792,
-									"parameters": {
-										"key": "\"Level_\"&Reward_PA.Reward_Pengenalan_Angka"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Reward_PA",
-									"sid": 951030602059478,
-									"parameters": {
-										"frame-number": "Reward_PA.Reward_Pengenalan_Angka"
-									}
-								}
-							],
-							"sid": 895407786509393
-						}
-					]
-				}
-			]
+			"sid": 452924355245060
 		},
 		{
 			"eventType": "block",
@@ -108,19 +65,36 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 490576284345344,
+					"sid": 213212591570135,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
 						"object-clicked": "close"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "close",
+					"sid": 293768227715401,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "close",
+					"sid": 303075242960896,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 209541866145286,
+					"sid": 270191525360043,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -134,7 +108,7 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "close",
-					"sid": 342714990111943,
+					"sid": 129583707992188,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -152,7 +126,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 577578806357030,
+					"sid": 128852483415029,
 					"parameters": {
 						"seconds": "0.2",
 						"use-timescale": true
@@ -161,7 +135,7 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "close",
-					"sid": 308046757632139,
+					"sid": 935221949186477,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -178,14 +152,14 @@
 				},
 				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 909685082025209,
+					"sid": 360424151408153,
 					"parameters": [
 						"\"Lay_RoadMap_Pengenalan_Angka\""
 					]
 				}
 			],
-			"sid": 779693798559621
+			"sid": 238081912733472
 		}
 	],
-	"sid": 589446781339147
+	"sid": 906037819537379
 }

@@ -542,9 +542,9 @@
 				},
 				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 727821281522510,
+					"sid": 577744588589301,
 					"parameters": [
-						"\"Lay_Reward\""
+						"\"Lay_Reward_PengenalanAngka\""
 					]
 				}
 			],
@@ -640,6 +640,13 @@
 						"ping-pong": "no",
 						"repeat-count": "1"
 					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 173789366307835,
+					"parameters": [
+						"\"Lay_DevInfo\""
+					]
 				}
 			],
 			"sid": 492943945530457

@@ -146,7 +146,8 @@
 			"level",
 			"level2",
 			"anima",
-			"UntitledDesign"
+			"UntitledDesign",
+			"InfoPengembang"
 		],
 		"subfolders": [
 			{
@@ -912,7 +913,8 @@
 			"Lay_MainMenu",
 			"Lay_RoadMap",
 			"Lay_RoadMap_Pengenalan_Angka",
-			"Lay_Reward"
+			"Lay_Reward_PengenalanAngka",
+			"Lay_DevInfo"
 		],
 		"subfolders": [
 			{
@@ -1189,8 +1191,9 @@
 			"ES_RoadMap",
 			"ES_MainMenu",
 			"ES_Global",
-			"ES_RoadMap_Pengenalan_Angka",
-			"ES_Reward"
+			"ES_Reward_PengenalanAngka",
+			"ES_DevInfo",
+			"ES_RoadMap_Pengenalan_Angka"
 		],
 		"subfolders": [
 			{

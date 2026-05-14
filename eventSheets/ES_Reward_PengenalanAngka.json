@@ -1,0 +1,217 @@
+{
+	"name": "ES_Reward_PengenalanAngka",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 679285251720780
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 538813866419609,
+					"parameters": {
+						"audio-file": {
+							"path": "MainTheme"
+						},
+						"loop": "looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"MainTheme\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "close",
+					"sid": 882859859042246,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "close",
+					"sid": 107912400489138,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "close",
+					"sid": 891850312668793,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 325895407994144,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 697957138275593,
+							"parameters": {
+								"object": "Reward_PA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Reward_PA",
+							"sid": 635680087553343,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 527952072609088,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-key",
+									"objectClass": "DataReward",
+									"sid": 980861637699792,
+									"parameters": {
+										"key": "\"Level_\"&Reward_PA.Reward_Pengenalan_Angka"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Reward_PA",
+									"sid": 951030602059478,
+									"parameters": {
+										"frame-number": "Reward_PA.Reward_Pengenalan_Angka"
+									}
+								}
+							],
+							"sid": 895407786509393
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 490576284345344,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "close"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "close",
+					"sid": 396324825957643,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "close",
+					"sid": 691976232425989,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 209541866145286,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "close",
+					"sid": 342714990111943,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 577578806357030,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "close",
+					"sid": 308046757632139,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 909685082025209,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
+				}
+			],
+			"sid": 779693798559621
+		}
+	],
+	"sid": 589446781339147
+}

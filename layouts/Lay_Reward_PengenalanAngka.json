@@ -1,5 +1,5 @@
 {
-	"name": "Lay_Reward",
+	"name": "Lay_Reward_PengenalanAngka",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -277,7 +277,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1048,5 +1049,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "ES_Reward"
+	"eventSheet": "ES_Reward_PengenalanAngka"
 }
