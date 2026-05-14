@@ -543,6 +543,15 @@
 					}
 				},
 				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 433560006081277,
+					"parameters": {
+						"key": "\"SaveData\"",
+						"value": "DataReward.AsJSON"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 823934746106388,

@@ -335,6 +335,24 @@
 			],
 			"actions": [
 				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 876433828599860,
+					"parameters": {
+						"key": "\"Level_1\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 513475622871779,
+					"parameters": {
+						"key": "\"SaveData\"",
+						"value": "DataReward.AsJSON"
+					}
+				},
+				{
 					"id": "set-enabled",
 					"objectClass": "Drag_2",
 					"sid": 118945657773926,
@@ -349,15 +367,6 @@
 					"parameters": [
 						"\"Lay_RoadMap_Pengenalan_Angka\""
 					]
-				},
-				{
-					"id": "add-key",
-					"objectClass": "DataReward",
-					"sid": 590191009964780,
-					"parameters": {
-						"key": "\"Level_1\"",
-						"value": "1"
-					}
 				}
 			],
 			"sid": 638771924813578

@@ -172,6 +172,15 @@
 					}
 				},
 				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 139109764153546,
+					"parameters": {
+						"key": "\"SaveData\"",
+						"value": "DataReward.AsJSON"
+					}
+				},
+				{
 					"callFunction": "winGame",
 					"sid": 272323427901714,
 					"parameters": [
@@ -179,36 +188,7 @@
 					]
 				}
 			],
-			"sid": 360950720041332,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 901793173870223,
-							"parameters": {
-								"variable": "Level_Pengenalan_Angka",
-								"comparison": 3,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 212570916751718,
-							"parameters": {
-								"variable": "Level_Pengenalan_Angka",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 871517702454611
-				}
-			]
+			"sid": 360950720041332
 		}
 	],
 	"sid": 844308227122282

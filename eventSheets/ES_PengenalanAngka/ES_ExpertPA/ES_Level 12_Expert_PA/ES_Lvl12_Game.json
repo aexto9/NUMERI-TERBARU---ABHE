@@ -530,6 +530,15 @@
 											}
 										},
 										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 957599802883166,
+											"parameters": {
+												"key": "\"SaveData\"",
+												"value": "DataReward.AsJSON"
+											}
+										},
+										{
 											"callFunction": "winGame",
 											"sid": 899488921582870,
 											"parameters": [

@@ -34,6 +34,24 @@
 					}
 				},
 				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 994355813519700,
+					"parameters": {
+						"key": "\"Level_2\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 437004206811383,
+					"parameters": {
+						"key": "\"SaveData\"",
+						"value": "DataReward.AsJSON"
+					}
+				},
+				{
 					"callFunction": "winGame",
 					"sid": 877462170104892,
 					"parameters": [

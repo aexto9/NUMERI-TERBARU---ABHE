@@ -374,6 +374,15 @@
 											}
 										},
 										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 893364243802822,
+											"parameters": {
+												"key": "\"SaveData\"",
+												"value": "DataReward.AsJSON"
+											}
+										},
+										{
 											"id": "play",
 											"objectClass": "Audio",
 											"sid": 435202929647062,

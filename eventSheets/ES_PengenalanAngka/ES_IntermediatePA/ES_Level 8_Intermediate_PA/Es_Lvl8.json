@@ -487,13 +487,6 @@
 			],
 			"actions": [
 				{
-					"callFunction": "winGame",
-					"sid": 832034339361350,
-					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
-					]
-				},
-				{
 					"id": "add-key",
 					"objectClass": "DataReward",
 					"sid": 475148509142692,
@@ -501,6 +494,22 @@
 						"key": "\"Level_8\"",
 						"value": "1"
 					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 720025257868458,
+					"parameters": {
+						"key": "\"SaveData\"",
+						"value": "DataReward.AsJSON"
+					}
+				},
+				{
+					"callFunction": "winGame",
+					"sid": 808944883346383,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
 				}
 			],
 			"sid": 588961361483154
