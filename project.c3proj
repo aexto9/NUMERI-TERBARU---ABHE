@@ -144,10 +144,7 @@
 			"DataReward",
 			"Sprite2",
 			"level",
-			"level2",
-			"anima",
-			"UntitledDesign",
-			"InfoPengembang"
+			"level2"
 		],
 		"subfolders": [
 			{
@@ -332,7 +329,9 @@
 									"Btn_Play_Lvl6_PA",
 									"Lantai_Lvl6_PA",
 									"LantaiBenar_Lvl6_PA",
-									"Numi_Lvl6_PA"
+									"Numi_Lvl6_PA",
+									"Nyawa_Lvl6_PA",
+									"NyawaText_Lvl6_PA"
 								],
 								"subfolders": [],
 								"name": "Level 6"
@@ -392,7 +391,9 @@
 									"Bg_Lvl12_PA",
 									"TextPuluhan_Lvl12_PA",
 									"TextSatuan_Lvl12_PA",
-									"AngkaAcak"
+									"AngkaAcak",
+									"anima",
+									"UntitledDesign"
 								],
 								"subfolders": [],
 								"name": "Level 12"
@@ -896,6 +897,13 @@
 				],
 				"subfolders": [],
 				"name": "Reward"
+			},
+			{
+				"items": [
+					"InfoPengembang"
+				],
+				"subfolders": [],
+				"name": "DevInfo"
 			}
 		]
 	},
@@ -912,8 +920,6 @@
 		"items": [
 			"Lay_MainMenu",
 			"Lay_RoadMap",
-			"Lay_RoadMap_Pengenalan_Angka",
-			"Lay_Reward_PengenalanAngka",
 			"Lay_DevInfo"
 		],
 		"subfolders": [
@@ -1135,7 +1141,8 @@
 									"Lay_Lvl12_PA-Game-8",
 									"Lay_Lvl12_PA-Game-9",
 									"Lay_Lvl12_PA-Game-10",
-									"Lay_Lvl12_PA-Game-11"
+									"Lay_Lvl12_PA-Game-11",
+									"Lay_Lvl12_PA-Finish"
 								],
 								"subfolders": [],
 								"name": "Lay_Level 12_Expert_PA"
@@ -1180,6 +1187,20 @@
 							}
 						],
 						"name": "Lay_Expert_PA"
+					},
+					{
+						"items": [
+							"Lay_RoadMap_Pengenalan_Angka"
+						],
+						"subfolders": [],
+						"name": "Lay_RoadMap_PengenalanAngka"
+					},
+					{
+						"items": [
+							"Lay_Reward_PengenalanAngka"
+						],
+						"subfolders": [],
+						"name": "Lay_Reward_PengenalanAngka"
 					}
 				],
 				"name": "Lay_PengenalanAngka"
@@ -1191,9 +1212,8 @@
 			"ES_RoadMap",
 			"ES_MainMenu",
 			"ES_Global",
-			"ES_Reward_PengenalanAngka",
 			"ES_DevInfo",
-			"ES_RoadMap_Pengenalan_Angka"
+			"ES_AudioManage"
 		],
 		"subfolders": [
 			{
@@ -1322,7 +1342,7 @@
 							{
 								"items": [
 									"ES_Lvl8_Open",
-									"Es_Lvl8"
+									"Es_Lvl8_PA"
 								],
 								"subfolders": [],
 								"name": "ES_Level 8_Intermediate_PA"
@@ -1367,7 +1387,8 @@
 								"items": [
 									"ES_Lvl12_Open",
 									"ES_Lvl12_Intruction",
-									"ES_Lvl12_Game"
+									"ES_Lvl12_Game",
+									"ES_Lvl12-Finish"
 								],
 								"subfolders": [],
 								"name": "ES_Level 12_Expert_PA"
@@ -1403,6 +1424,20 @@
 							}
 						],
 						"name": "ES_ExpertPA"
+					},
+					{
+						"items": [
+							"ES_RoadMap_Pengenalan_Angka"
+						],
+						"subfolders": [],
+						"name": "ES_RoadMap_PengenalanAngka"
+					},
+					{
+						"items": [
+							"ES_Reward_PengenalanAngka"
+						],
+						"subfolders": [],
+						"name": "ES_Reward_PengenalanAngka"
 					}
 				],
 				"name": "ES_PengenalanAngka"

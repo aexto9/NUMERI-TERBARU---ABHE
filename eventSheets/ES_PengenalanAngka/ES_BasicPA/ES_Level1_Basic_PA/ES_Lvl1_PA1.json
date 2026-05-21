@@ -81,16 +81,20 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 944447329436521,
+							"sid": 774832009729615,
 							"parameters": {
 								"audio-file": {
 									"path": "Level2/dikamar tidur"
 								},
 								"loop": "not-looping",
-								"volume": "1.5",
+								"volume": "-10",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"bgm\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 430614781484655
 						},
 						{
 							"id": "set-enabled",
@@ -226,7 +230,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 469526822780202,
+									"sid": 370070154130553,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -234,8 +238,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 590877281403870
 								},
 								{
 									"id": "tween-two-properties",
@@ -315,7 +323,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 938375399290524,
+									"sid": 828965333260731,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Wrong_PA"
@@ -323,8 +331,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 356913695108596
 								},
 								{
 									"id": "tween-two-properties",
@@ -380,7 +392,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 869233825169895,
+							"sid": 264118333693233,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -388,8 +400,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 125039850261323
 						},
 						{
 							"id": "tween-two-properties",
@@ -499,7 +515,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 474802651421974,
+					"sid": 530663530438262,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Yay2_PA"
@@ -507,8 +523,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"WinStepSFX\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 438258494750807
 				},
 				{
 					"id": "go-to-nextprevious-layout",

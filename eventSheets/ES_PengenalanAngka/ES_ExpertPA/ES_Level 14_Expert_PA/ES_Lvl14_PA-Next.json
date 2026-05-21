@@ -40,13 +40,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 330164019476164,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 851874367714802,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Btn_Next_Lvl14_PA"
+						"object": "Btn_Next_Lvl14_PA"
 					}
 				}
 			],
@@ -54,7 +52,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 216046769945479,
+					"sid": 788058528672873,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -62,8 +60,12 @@
 						"loop": "not-looping",
 						"volume": "2",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 179177820519817
 				},
 				{
 					"id": "tween-two-properties",

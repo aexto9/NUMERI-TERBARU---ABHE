@@ -1,0 +1,224 @@
+{
+	"name": "ES_AudioManage",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "isMusicOn",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 897826269144730
+		},
+		{
+			"eventType": "variable",
+			"name": "isSFXon",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 465711223667009
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 497727278156083
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Sound",
+					"sid": 578181104800699,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Sound",
+					"sid": 892964511083384,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Music",
+					"sid": 904326875798204,
+					"parameters": {
+						"instance-variable": "SIzeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Music",
+					"sid": 479329805497293,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				}
+			],
+			"sid": 423465358425520
+		},
+		{
+			"functionName": "SyncAudio",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 190172584565914,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 308454700261442,
+							"parameters": {
+								"variable": "isMusicOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 808760890123090,
+							"parameters": {
+								"tag": "\"bgm\"",
+								"state": "unmuted"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Music",
+							"sid": 599781756417912,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 787779193286644
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 241584674664435,
+							"parameters": {
+								"variable": "isMusicOn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 481161871096006,
+							"parameters": {
+								"tag": "\"bgm\"",
+								"state": "muted"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Music",
+							"sid": 832754048146322,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 485589520723625
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 997914449538089,
+							"parameters": {
+								"variable": "isSFXon"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 914547647264735,
+							"parameters": {
+								"tag": "\"sfx\"",
+								"state": "unmuted"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Sound",
+							"sid": 593659702191450,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 542951271157190
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 421709057153380,
+							"parameters": {
+								"variable": "isSFXon"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 311906582997530,
+							"parameters": {
+								"tag": "\"sfx\"",
+								"state": "muted"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Sound",
+							"sid": 442378490667337,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 879976403669192
+				}
+			]
+		}
+	],
+	"sid": 848508197455261
+}

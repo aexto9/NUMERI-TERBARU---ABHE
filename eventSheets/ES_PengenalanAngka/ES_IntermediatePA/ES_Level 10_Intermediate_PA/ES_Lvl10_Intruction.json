@@ -14,37 +14,16 @@
 					"sid": 628592822956957
 				}
 			],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 899159888783432,
-					"parameters": {
-						"seconds": "5",
-						"use-timescale": true
-					}
-				},
-				{
-					"callFunction": "GoToLayoutFunction",
-					"sid": 199994035113130,
-					"parameters": [
-						"\"Lay_Lvl10_PA-1\""
-					]
-				}
-			],
+			"actions": [],
 			"sid": 993030431340254
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
-					"objectClass": "Mouse",
-					"sid": 866491405327074,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 499755669609539
 				}
 			],
 			"actions": [

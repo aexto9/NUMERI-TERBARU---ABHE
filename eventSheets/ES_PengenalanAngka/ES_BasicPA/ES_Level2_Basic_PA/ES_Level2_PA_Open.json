@@ -9,16 +9,16 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-any-click",
-					"objectClass": "Mouse",
-					"sid": 235123052459853
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 722792331750988
 				}
 			],
 			"actions": [
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 633550584380581,
+					"sid": 493353928956999,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -26,8 +26,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 568616591918255
 				},
 				{
 					"callFunction": "GoToLayoutFunction",
@@ -38,30 +42,6 @@
 				}
 			],
 			"sid": 998914361976706
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-time",
-					"objectClass": "System",
-					"sid": 821100852968501,
-					"parameters": {
-						"comparison": 0,
-						"time-seconds": "3.0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "GoToLayoutFunction",
-					"sid": 466261094488440,
-					"parameters": [
-						"\"Lay_Lvl2_PA2\""
-					]
-				}
-			],
-			"sid": 633774172063372
 		}
 	],
 	"sid": 709309562545077

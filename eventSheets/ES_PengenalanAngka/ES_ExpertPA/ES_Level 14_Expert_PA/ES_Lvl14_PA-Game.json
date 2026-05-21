@@ -81,7 +81,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 678047533944907,
+							"sid": 644854207527751,
 							"parameters": {
 								"audio-file": {
 									"path": "Level2/dikamar tidur"
@@ -89,8 +89,12 @@
 								"loop": "not-looping",
 								"volume": "1.5",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 397909269768225
 						},
 						{
 							"id": "set-enabled",
@@ -226,7 +230,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 117036181918248,
+									"sid": 614833583555712,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -234,8 +238,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 342798074244061
 								},
 								{
 									"id": "tween-two-properties",
@@ -372,7 +380,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 718050769547748,
+									"sid": 138222109250486,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Wrong_PA"
@@ -380,8 +388,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 154804056964568
 								},
 								{
 									"id": "tween-two-properties",
@@ -437,7 +449,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 324714900452641,
+							"sid": 724148399887199,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -445,8 +457,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 406665379946581
 						},
 						{
 							"id": "tween-two-properties",

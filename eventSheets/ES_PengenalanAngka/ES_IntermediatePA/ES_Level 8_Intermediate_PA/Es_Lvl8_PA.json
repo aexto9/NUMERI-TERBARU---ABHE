@@ -1,5 +1,5 @@
 {
-	"name": "Es_Lvl8",
+	"name": "Es_Lvl8_PA",
 	"events": [
 		{
 			"eventType": "include",
@@ -58,20 +58,6 @@
 					"parameters": {
 						"variable": "score",
 						"value": "0"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 949613201146682,
-					"parameters": {
-						"audio-file": {
-							"path": "Level2/dikamar tidur"
-						},
-						"loop": "not-looping",
-						"volume": "1.5",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
 					}
 				},
 				{
@@ -225,7 +211,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 864439621564770,
+									"sid": 816796331539291,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -233,8 +219,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 799884680526702
 								},
 								{
 									"id": "tween-two-properties",
@@ -314,7 +304,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 480857493251186,
+									"sid": 649664097170728,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Wrong_PA"
@@ -322,8 +312,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 442243994353667
 								},
 								{
 									"id": "tween-two-properties",
@@ -379,7 +373,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 644419979696035,
+							"sid": 642950029479865,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -387,8 +381,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 952154370385516
 						},
 						{
 							"id": "tween-two-properties",
@@ -498,9 +496,9 @@
 				{
 					"id": "set-item",
 					"objectClass": "LocalStorage",
-					"sid": 720025257868458,
+					"sid": 219714949272422,
 					"parameters": {
-						"key": "\"SaveData\"",
+						"key": "\"SaveDataReward\"",
 						"value": "DataReward.AsJSON"
 					}
 				},

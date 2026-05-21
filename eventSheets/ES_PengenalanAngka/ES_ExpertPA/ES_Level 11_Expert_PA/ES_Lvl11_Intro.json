@@ -22,78 +22,107 @@
 					"parameters": {
 						"frame-number": "1"
 					}
+				}
+			],
+			"sid": 303785162418290
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 248070103297952
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 297326479918414,
+					"id": "compare-animation-frame",
+					"objectClass": "BG_Lvl11",
+					"sid": 979672942060638,
 					"parameters": {
-						"seconds": "2.5",
-						"use-timescale": true
+						"comparison": 0,
+						"number": "1"
 					}
-				},
+				}
+			],
+			"actions": [
 				{
 					"id": "set-animation-frame",
 					"objectClass": "BG_Lvl11",
-					"sid": 569460145726557,
+					"sid": 760992994492886,
 					"parameters": {
 						"frame-number": "2"
 					}
+				}
+			],
+			"sid": 501731617405431
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 965600596337590
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 358248966004397,
+					"id": "compare-animation-frame",
+					"objectClass": "BG_Lvl11",
+					"sid": 437157170508870,
 					"parameters": {
-						"seconds": "2.5",
-						"use-timescale": true
+						"comparison": 0,
+						"number": "2"
 					}
-				},
+				}
+			],
+			"actions": [
 				{
 					"id": "set-animation-frame",
 					"objectClass": "BG_Lvl11",
-					"sid": 752141200109884,
+					"sid": 633879051381801,
 					"parameters": {
 						"frame-number": "3"
 					}
 				}
 			],
-			"sid": 303785162418290,
-			"children": [
+			"sid": 746582051042404
+		},
+		{
+			"eventType": "block",
+			"conditions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "BG_Lvl11",
-							"sid": 498222741495618,
-							"parameters": {
-								"comparison": 0,
-								"number": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 488292743218140,
-							"parameters": {
-								"seconds": "2.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"callFunction": "GoToLayoutFunction",
-							"sid": 417576612721018,
-							"parameters": [
-								"\"Lay_Lvl11_PA-Game\""
-							]
-						}
-					],
-					"sid": 815921342711759
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 218284149833352
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "BG_Lvl11",
+					"sid": 481610959634447,
+					"parameters": {
+						"comparison": 0,
+						"number": "3"
+					}
 				}
-			]
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 237104421319970,
+					"parameters": {
+						"seconds": "2.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 636985663102691,
+					"parameters": [
+						"\"Lay_Lvl11_PA-Game\""
+					]
+				}
+			],
+			"sid": 377806751014447
 		}
 	],
 	"sid": 750244350214398

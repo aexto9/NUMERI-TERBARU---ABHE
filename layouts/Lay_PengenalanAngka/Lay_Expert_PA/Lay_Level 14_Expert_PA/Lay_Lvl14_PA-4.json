@@ -46,7 +46,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
-						"initial-frame": 3,
+						"initial-frame": 5,
 						"enable-collisions": true,
 						"live-preview": false
 					},

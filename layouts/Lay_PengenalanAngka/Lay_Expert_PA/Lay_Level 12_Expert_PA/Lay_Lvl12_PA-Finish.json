@@ -1,5 +1,5 @@
 {
-	"name": "Lay_Lvl15_PA",
+	"name": "Lay_Lvl12_PA-Finish",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,28 +7,28 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Bg_Lvl15_PA",
+					"type": "Bg_Lvl12_PA",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
+						"initial-animation": "Animation 1",
+						"initial-frame": 6,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 511,
-					"sid": 282543120871793,
+					"uid": 1663,
+					"sid": 897875251925548,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 282543120871793,
+						"sid": 897875251925548,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 640,
-						"y": 361,
+						"x": 639.860194602186,
+						"y": 359.8364239949152,
 						"width": 1280,
 						"height": 720,
 						"originX": 0.5,
@@ -42,56 +42,9 @@
 						"z": 0,
 						"angle": 0
 					}
-				},
-				{
-					"type": "Btn_Play_Lvl15_PA",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 549,
-					"sid": 402882932536662,
-					"tags": "",
-					"instanceVariables": {
-						"SizeY": 0,
-						"SizeX": 0,
-						"isClickable": true
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 402882932536662,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 640,
-						"y": 488,
-						"width": 461.29350458078324,
-						"height": 92.99285503485285,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
 				}
 			],
-			"sid": 289475428929757,
+			"sid": 557294120914912,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -122,11 +75,46 @@
 			"global": false
 		},
 		{
+			"name": "OverlayInGame",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 414316562940798,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "TransitionLayer",
 			"overriden": 1,
 			"subLayers": [],
 			"instances": [],
-			"sid": 323165592900003,
+			"sid": 975666481439509,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -161,7 +149,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 904227990022117,
+	"sid": 272816428854099,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2560,
@@ -171,5 +159,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "ES_Lvl15_PA-Open"
+	"eventSheet": "ES_Lvl12-Finish"
 }

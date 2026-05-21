@@ -9,13 +9,19 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 975881107555593,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 803912224350641,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Angka_lvl3_PA"
+						"object": "Angka_lvl3_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Angka_lvl3_PA",
+					"sid": 981989172267920,
+					"parameters": {
+						"instance-variable": "isClickable"
 					}
 				}
 			],
@@ -113,7 +119,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 302950352518720,
+									"sid": 229574675833616,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -121,8 +127,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 306514701641965
 								},
 								{
 									"id": "wait",
@@ -164,7 +174,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 849814981733344,
+							"sid": 588162482637200,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -172,7 +182,7 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
 						}
 					],

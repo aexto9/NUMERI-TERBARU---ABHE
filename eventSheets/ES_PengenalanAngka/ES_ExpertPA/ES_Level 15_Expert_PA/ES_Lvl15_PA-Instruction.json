@@ -9,30 +9,30 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 427974232833955
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 639057456430286
 				}
 			],
 			"actions": [
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 471656810822436,
+					"sid": 635663088013177,
 					"parameters": {
-						"seconds": "5",
+						"seconds": "1",
 						"use-timescale": true
 					}
 				},
 				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 886326201436937,
+					"sid": 903576889308693,
 					"parameters": [
 						"\"Lay_Lvl15_PA-Game\""
 					]
 				}
 			],
-			"sid": 848654387876476
+			"sid": 186962255794837
 		}
 	],
 	"sid": 628791580399487

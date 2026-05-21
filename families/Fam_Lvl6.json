@@ -2,7 +2,15 @@
 	"name": "Fam_Lvl6",
 	"plugin-id": "Sprite",
 	"sid": 387666779785691,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "isClickable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 684760871052566
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",

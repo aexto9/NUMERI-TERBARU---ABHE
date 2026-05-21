@@ -22,42 +22,68 @@
 					"parameters": {
 						"frame-number": "1"
 					}
+				}
+			],
+			"sid": 599564849858860
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 398165110823107
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 791219158388656,
+					"id": "compare-animation-frame",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 619188829570112,
 					"parameters": {
-						"seconds": "3",
-						"use-timescale": true
+						"comparison": 0,
+						"number": "1"
 					}
-				},
+				}
+			],
+			"actions": [
 				{
 					"id": "set-animation-frame",
 					"objectClass": "Bg_Lvl12_PA",
-					"sid": 134063710694728,
+					"sid": 757223209578014,
 					"parameters": {
 						"frame-number": "2"
 					}
+				}
+			],
+			"sid": 615138079359624
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 890889849365682
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 839208989666034,
+					"id": "compare-animation-frame",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 176555339775382,
 					"parameters": {
-						"seconds": "3",
-						"use-timescale": true
+						"comparison": 0,
+						"number": "2"
 					}
-				},
+				}
+			],
+			"actions": [
 				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 976028057483837,
+					"sid": 886663890468248,
 					"parameters": [
 						"\"Lay_Lvl12_PA-Game-1\""
 					]
 				}
 			],
-			"sid": 599564849858860
+			"sid": 703542353923212
 		}
 	],
 	"sid": 863884475276183

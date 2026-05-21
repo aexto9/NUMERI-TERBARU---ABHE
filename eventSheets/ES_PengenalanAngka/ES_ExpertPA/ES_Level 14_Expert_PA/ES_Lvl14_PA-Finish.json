@@ -27,9 +27,9 @@
 				{
 					"id": "set-item",
 					"objectClass": "LocalStorage",
-					"sid": 882115111152169,
+					"sid": 690342469654672,
 					"parameters": {
-						"key": "\"SaveData\"",
+						"key": "\"SaveDataReward\"",
 						"value": "DataReward.AsJSON"
 					}
 				},

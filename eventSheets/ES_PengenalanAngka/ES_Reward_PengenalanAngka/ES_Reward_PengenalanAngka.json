@@ -16,9 +16,17 @@
 			],
 			"actions": [
 				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 103403483619269,
+					"parameters": {
+						"key": "\"SaveDataReward\""
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 538813866419609,
+					"sid": 631655813604251,
 					"parameters": {
 						"audio-file": {
 							"path": "MainTheme"
@@ -26,8 +34,12 @@
 						"loop": "looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"MainTheme\""
+						"tag-optional": "\"bgm\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 577085597744005
 				},
 				{
 					"id": "set-instvar-value",
@@ -50,24 +62,114 @@
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "close",
-					"sid": 891850312668793,
+					"sid": 117049756911635,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 515048253964798,
+					"parameters": {
+						"seconds": "1.7",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "close",
+					"sid": 815203718915851,
 					"parameters": {
 						"instance-variable": "isClickable",
 						"value": "true"
 					}
 				}
 			],
-			"sid": 325895407994144,
+			"sid": 325895407994144
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 565312449153824,
+					"parameters": {
+						"key": "\"SaveDataReward\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 892128501188982,
+					"parameters": {
+						"key": "\"SaveDataReward\""
+					}
+				}
+			],
+			"sid": 462927024474330
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 187872414929995,
+					"parameters": {
+						"key": "\"SaveDataReward\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "DataReward",
+					"sid": 458084672736689,
+					"parameters": {
+						"json": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 124324727679976
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 135442985289702,
+					"parameters": {
+						"object": "Reward_PA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Reward_PA",
+					"sid": 748366148804870,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 352777784219445,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 697957138275593,
+							"id": "has-key",
+							"objectClass": "DataReward",
+							"sid": 461663847576996,
 							"parameters": {
-								"object": "Reward_PA"
+								"key": "\"Level_\"&Reward_PA.Reward_Pengenalan_Angka"
 							}
 						}
 					],
@@ -75,39 +177,13 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "Reward_PA",
-							"sid": 635680087553343,
+							"sid": 306108324983995,
 							"parameters": {
-								"frame-number": "0"
+								"frame-number": "Reward_PA.Reward_Pengenalan_Angka"
 							}
 						}
 					],
-					"sid": 527952072609088,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "has-key",
-									"objectClass": "DataReward",
-									"sid": 980861637699792,
-									"parameters": {
-										"key": "\"Level_\"&Reward_PA.Reward_Pengenalan_Angka"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Reward_PA",
-									"sid": 951030602059478,
-									"parameters": {
-										"frame-number": "Reward_PA.Reward_Pengenalan_Angka"
-									}
-								}
-							],
-							"sid": 895407786509393
-						}
-					]
+					"sid": 986458984289222
 				}
 			]
 		},
@@ -115,13 +191,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 490576284345344,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 773719132840858,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "close"
+						"object": "close"
 					}
 				},
 				{
@@ -146,7 +220,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 209541866145286,
+					"sid": 895627353197849,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -154,8 +228,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 476330726226493
 				},
 				{
 					"id": "tween-two-properties",

@@ -76,7 +76,7 @@
 					"world": {
 						"x": 456,
 						"y": 492,
-						"width": 476.651933584113,
+						"width": 476.65193358411307,
 						"height": 96.08898395860103,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -103,6 +103,7 @@
 					"sid": 173483751924138,
 					"tags": "",
 					"instanceVariables": {
+						"isClickable": true,
 						"PostY": 0,
 						"PostX": 0
 					},
@@ -149,7 +150,7 @@
 					"sid": 576826360203038,
 					"tags": "",
 					"instanceVariables": {
-						"isCLickable": true,
+						"isClickable": true,
 						"SizeX": 0,
 						"SizeY": 0,
 						"NilaiAngka": 0,

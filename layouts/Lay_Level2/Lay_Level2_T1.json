@@ -1394,36 +1394,7 @@
 		"subfolders": []
 	},
 	"sid": 389660528344518,
-	"nonworld-instances": [
-		{
-			"type": "DataReward",
-			"properties": {},
-			"uid": 497,
-			"sid": 374771263243252,
-			"tags": "",
-			"instanceVariables": {}
-		},
-		{
-			"type": "DataLevel4_PA",
-			"properties": {},
-			"uid": 1348,
-			"sid": 881342100230992,
-			"tags": "",
-			"instanceVariables": {}
-		},
-		{
-			"type": "AngkaAcak",
-			"properties": {
-				"width": 10,
-				"height": 1,
-				"depth": 1
-			},
-			"uid": 1661,
-			"sid": 729598934073076,
-			"tags": "",
-			"instanceVariables": {}
-		}
-	],
+	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2560,
 	"height": 1440,

@@ -94,7 +94,8 @@
 					"instanceVariables": {
 						"SizeX": 0,
 						"SizeY": 0,
-						"Answer": 0
+						"Answer": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -141,7 +142,8 @@
 					"instanceVariables": {
 						"SizeX": 0,
 						"SizeY": 0,
-						"Answer": 0
+						"Answer": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -188,7 +190,8 @@
 					"instanceVariables": {
 						"SizeX": 0,
 						"SizeY": 0,
-						"Answer": 1
+						"Answer": 1,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {

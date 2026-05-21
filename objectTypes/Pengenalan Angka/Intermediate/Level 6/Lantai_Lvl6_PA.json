@@ -6,13 +6,6 @@
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
-			"name": "isCLickable",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 264359259950236
-		},
-		{
 			"name": "SizeX",
 			"type": "number",
 			"desc": "",

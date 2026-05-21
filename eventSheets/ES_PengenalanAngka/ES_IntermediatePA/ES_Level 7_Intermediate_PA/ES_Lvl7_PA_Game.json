@@ -9,13 +9,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 744363286166037,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 103371876654776,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "bebek_lvl7"
+						"object": "bebek_lvl7"
 					}
 				},
 				{
@@ -130,7 +128,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 799761551950856,
+									"sid": 500635045468275,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -138,8 +136,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 887873087702388
 								},
 								{
 									"id": "wait",
@@ -181,7 +183,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 899834916827203,
+							"sid": 482409625255048,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -189,8 +191,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 942787101236146
 						}
 					],
 					"sid": 262333664907998

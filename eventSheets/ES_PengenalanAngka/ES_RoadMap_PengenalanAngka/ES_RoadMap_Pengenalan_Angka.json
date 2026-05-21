@@ -12,6 +12,26 @@
 			"sid": 343069287079863
 		},
 		{
+			"eventType": "variable",
+			"name": "StartTouchY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 836576539371457
+		},
+		{
+			"eventType": "variable",
+			"name": "StartScrollY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 104722048155284
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "ES_Global"
 		},
@@ -26,17 +46,48 @@
 			],
 			"actions": [
 				{
+					"callFunction": "SyncAudio",
+					"sid": 527765174540375
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Btn_Lvl",
+					"sid": 922907801153159,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Achievment",
+					"sid": 137165395764490,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Dev_Info",
+					"sid": 176635153632747,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 421564990182250,
+					"sid": 826112180483237,
 					"parameters": {
 						"audio-file": {
 							"path": "MainTheme"
 						},
 						"loop": "looping",
-						"volume": "1",
+						"volume": "-8",
 						"stereo-pan": "0",
-						"tag-optional": "\"MainTheme\""
+						"tag-optional": "\"bgm\""
 					}
 				},
 				{
@@ -128,69 +179,90 @@
 						"instance-variable": "SizeY",
 						"value": "Self.Height"
 					}
-				}
-			],
-			"sid": 320807395798665,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-any-playing",
-							"objectClass": "Audio",
-							"sid": 300172623458842
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Music",
-							"sid": 184597199427499,
-							"parameters": {
-								"frame-number": "0"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Sound",
-							"sid": 166068946273276,
-							"parameters": {
-								"frame-number": "0"
-							}
-						}
-					],
-					"sid": 772220536323473
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-silent",
-							"objectClass": "Audio",
-							"sid": 263923465618086
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Music",
-							"sid": 280174641896695,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Sound",
-							"sid": 906226982609491,
-							"parameters": {
-								"frame-number": "1"
-							}
-						}
-					],
-					"sid": 835551808296264
+					"id": "set-instvar-value",
+					"objectClass": "Next_Lay_Roadmap",
+					"sid": 377229917587542,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Next_Lay_Roadmap",
+					"sid": 673663682326856,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Btn_Lvl",
+					"sid": 598371575699840,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Achievment",
+					"sid": 656728093536029,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Dev_Info",
+					"sid": 630333995085035,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 264366320735737,
+					"parameters": {
+						"seconds": "1.7",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Btn_Lvl",
+					"sid": 347219797028870,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Achievment",
+					"sid": 683070427780810,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Dev_Info",
+					"sid": 331305371976347,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
 				}
-			]
+			],
+			"sid": 320807395798665
 		},
 		{
 			"eventType": "block",
@@ -222,13 +294,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 642579888064768,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 325942149219778,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Btn_Lvl"
+						"object": "Btn_Lvl"
 					}
 				},
 				{
@@ -270,6 +340,10 @@
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 899360615311313
 						},
 						{
 							"id": "tween-two-properties",
@@ -345,7 +419,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 154631560342297,
+							"sid": 892798735693070,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Click_PA"
@@ -353,8 +427,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 826960800728906
 						},
 						{
 							"id": "tween-two-properties",
@@ -453,13 +531,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 948564942430316,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 554713104206783,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Achievment"
+						"object": "Achievment"
 					}
 				},
 				{
@@ -484,7 +560,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 811086781678296,
+					"sid": 914368437002258,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -492,8 +568,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 445439710612504
 				},
 				{
 					"id": "tween-two-properties",
@@ -554,13 +634,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 472382591902709,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 149832369235592,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Dev_Info"
+						"object": "Dev_Info"
 					}
 				},
 				{
@@ -585,7 +663,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 805120824273193,
+					"sid": 985978928007268,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -593,8 +671,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 608602035643507
 				},
 				{
 					"id": "tween-two-properties",
@@ -655,325 +737,262 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 165654916327771,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 790054034373988,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Music"
+						"object": "Next_Lay_Roadmap"
 					}
 				}
 			],
-			"actions": [],
-			"sid": 655220636834187,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "Music",
-							"sid": 797278595742124,
-							"parameters": {
-								"comparison": 0,
-								"number": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 584814806804561,
-							"parameters": {
-								"seconds": "0.1",
-								"use-timescale": true
-							}
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 173872070142080,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
 						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Music",
-							"sid": 303887982010751,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
-							"id": "set-muted",
-							"objectClass": "Audio",
-							"sid": 723326071878244,
-							"parameters": {
-								"tag": "\"MainTheme\"",
-								"state": "muted"
-							}
-						}
-					],
-					"sid": 461557295798688
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"sfx\""
+					}
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "Music",
-							"sid": 125479523211813,
-							"parameters": {
-								"comparison": 0,
-								"number": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 359164151044059,
-							"parameters": {
-								"seconds": "0.1",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Music",
-							"sid": 618374804184523,
-							"parameters": {
-								"frame-number": "0"
-							}
-						},
-						{
-							"id": "set-muted",
-							"objectClass": "Audio",
-							"sid": 891267165818047,
-							"parameters": {
-								"tag": "\"MainTheme\"",
-								"state": "unmuted"
-							}
-						}
-					],
-					"sid": 447079369549137
+					"callFunction": "SyncAudio",
+					"sid": 266485531117234
 				},
 				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 241819751241720,
-							"parameters": {
-								"audio-file": {
-									"path": "Pengenalan_Angka/Click_PA"
-								},
-								"loop": "not-looping",
-								"volume": "1",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
-						},
-						{
-							"id": "tween-two-properties",
-							"objectClass": "Music",
-							"sid": 531620425365738,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "size",
-								"end-x": "Self.SizeX + 20",
-								"end-y": "Self.SizeY + 20",
-								"time": "0.2",
-								"ease": "easeoutback",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 897760736490788,
-							"parameters": {
-								"seconds": "0.2",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "tween-two-properties",
-							"objectClass": "Music",
-							"sid": 120282449791372,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "size",
-								"end-x": "Self.SizeX",
-								"end-y": "Self.SizeY",
-								"time": "0.2",
-								"ease": "easeoutback",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						}
-					],
-					"sid": 905378370268938
+					"id": "tween-two-properties",
+					"objectClass": "Next_Lay_Roadmap",
+					"sid": 233095954608894,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 700485540890957,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Next_Lay_Roadmap",
+					"sid": 526576426092746,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
 				}
-			]
+			],
+			"sid": 268566441441827
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 858098688948393,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 923160464079019,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Sound"
+						"object": "Music"
 					}
 				}
 			],
-			"actions": [],
-			"sid": 734446539530871,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "Sound",
-							"sid": 654014373815638,
-							"parameters": {
-								"comparison": 0,
-								"number": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 734085303477394,
-							"parameters": {
-								"seconds": "0.1",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Sound",
-							"sid": 414719758816863,
-							"parameters": {
-								"frame-number": "1"
-							}
-						}
-					],
-					"sid": 976012611352419
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 663911672928884,
+					"parameters": {
+						"variable": "isMusicOn"
+					}
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "Sound",
-							"sid": 856393846017594,
-							"parameters": {
-								"comparison": 0,
-								"number": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 596911981347842,
-							"parameters": {
-								"seconds": "0.1",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Sound",
-							"sid": 675491604597235,
-							"parameters": {
-								"frame-number": "0"
-							}
-						}
-					],
-					"sid": 311162916694961
+					"callFunction": "SyncAudio",
+					"sid": 457094448669436
 				},
 				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 865129108148403,
-							"parameters": {
-								"audio-file": {
-									"path": "Pengenalan_Angka/Click_PA"
-								},
-								"loop": "not-looping",
-								"volume": "1",
-								"stereo-pan": "0",
-								"tag-optional": "\"\""
-							}
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 833323676266448,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
 						},
-						{
-							"id": "tween-two-properties",
-							"objectClass": "Sound",
-							"sid": 786134254249738,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "size",
-								"end-x": "Self.SizeX + 20",
-								"end-y": "Self.SizeY + 20",
-								"time": "0.2",
-								"ease": "easeoutback",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 903786026746522,
-							"parameters": {
-								"seconds": "0.2",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "tween-two-properties",
-							"objectClass": "Sound",
-							"sid": 873889136815378,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "size",
-								"end-x": "Self.SizeX",
-								"end-y": "Self.SizeY",
-								"time": "0.2",
-								"ease": "easeoutback",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						}
-					],
-					"sid": 600969562362090
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"sfx\""
+					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 939272054253329
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Music",
+					"sid": 958277767052070,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 998143289489408,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Music",
+					"sid": 961891444741366,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
 				}
-			]
+			],
+			"sid": 931397013547071
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 400642544213590,
+					"parameters": {
+						"object": "Sound"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 340826192488999,
+					"parameters": {
+						"variable": "isSFXon"
+					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 133423995165037
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 137877403199275,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"sfx\""
+					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 148390188948834
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Sound",
+					"sid": 170578191164091,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 779084861837183,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Sound",
+					"sid": 293538978707009,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 188739823116072
 		},
 		{
 			"eventType": "block",
@@ -1073,9 +1092,55 @@
 		},
 		{
 			"eventType": "block",
-			"conditions": [],
-			"actions": [],
-			"sid": 235815233593883
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 323805900105515
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 533922901604334,
+					"parameters": {
+						"variable": "StartTouchY",
+						"value": "Touch.AbsoluteY"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 536130675201799,
+					"parameters": {
+						"variable": "StartScrollY",
+						"value": "CameraFocus.Y"
+					}
+				}
+			],
+			"sid": 385102734665011
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-in-touch",
+					"objectClass": "Touch",
+					"sid": 704090936828416
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "CameraFocus",
+					"sid": 883165562471178,
+					"parameters": {
+						"y": "StartScrollY + (StartTouchY - Touch.AbsoluteY)"
+					}
+				}
+			],
+			"sid": 649315665295456
 		}
 	],
 	"sid": 829161385103042

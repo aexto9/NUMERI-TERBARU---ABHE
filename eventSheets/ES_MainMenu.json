@@ -9,9 +9,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-any-click",
-					"objectClass": "Mouse",
-					"sid": 527586182403074
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 413696860300534
 				}
 			],
 			"actions": [

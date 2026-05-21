@@ -311,13 +311,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 366720643296180,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 234168699996595,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "BtnBalokPuluhan_Lvl13_PA"
+						"object": "BtnBalokPuluhan_Lvl13_PA"
 					}
 				},
 				{
@@ -333,7 +331,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 879972547186458,
+					"sid": 390484167940539,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -341,8 +339,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 303036082639933
 				},
 				{
 					"id": "tween-two-properties",
@@ -423,13 +425,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 393342374179563,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 385377870172528,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "BtnBalokSatuan_Lvl13_PA"
+						"object": "BtnBalokSatuan_Lvl13_PA"
 					}
 				},
 				{
@@ -445,7 +445,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 650375754211148,
+					"sid": 393264317716222,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -453,8 +453,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 164891767816042
 				},
 				{
 					"id": "tween-two-properties",
@@ -535,13 +539,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 223467874152655,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 413333683043290,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "HapusBalok_Lvl13_PA"
+						"object": "HapusBalok_Lvl13_PA"
 					}
 				}
 			],
@@ -549,7 +551,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 592838057138800,
+					"sid": 432271188408733,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -557,12 +559,66 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 864991732975610
 				}
 			],
 			"sid": 959438215023403,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-topbottom",
+							"objectClass": "BalokPuluhan_Lvl13_PA",
+							"sid": 214506238019110,
+							"parameters": {
+								"which": "top"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 333196587822152,
+							"parameters": {
+								"variable": "Current_Satuan",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 668669447879237,
+							"parameters": {
+								"variable": "Current_Puluhan",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "BalokPuluhan_Lvl13_PA",
+							"sid": 134882564176279
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 989404688913228,
+							"parameters": {
+								"variable": "Current_Puluhan",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 247680177526074
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -602,56 +658,6 @@
 						}
 					],
 					"sid": 572976605223203
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-topbottom",
-							"objectClass": "BalokPuluhan_Lvl13_PA",
-							"sid": 393048318766591,
-							"parameters": {
-								"which": "top"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 631713225849961,
-							"parameters": {
-								"variable": "Current_Satuan",
-								"comparison": 0,
-								"value": "0"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 128878496769978,
-							"parameters": {
-								"variable": "Current_Puluhan",
-								"comparison": 4,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "BalokPuluhan_Lvl13_PA",
-							"sid": 312836606787127
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 137335780985360,
-							"parameters": {
-								"variable": "Current_Puluhan",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 782120782028451
 				}
 			]
 		},
@@ -688,7 +694,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 347592135944329,
+					"sid": 132672313213641,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Correct_PA"
@@ -696,8 +702,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 687210233764965
 				},
 				{
 					"id": "set-opacity",
@@ -765,6 +775,15 @@
 								"comparison": 0,
 								"second-value": "\"Lay_Lvl13_PA-6\""
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 438787876878428,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -780,9 +799,9 @@
 						{
 							"id": "set-item",
 							"objectClass": "LocalStorage",
-							"sid": 930629684872470,
+							"sid": 356679107832698,
 							"parameters": {
-								"key": "\"SaveData\"",
+								"key": "\"SaveDataReward\"",
 								"value": "DataReward.AsJSON"
 							}
 						},
@@ -846,13 +865,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 416665243585696,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 586293703864354,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Btn_Next_Lvl13_PA"
+						"object": "Btn_Next_Lvl13_PA"
 					}
 				},
 				{
@@ -868,7 +885,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 645834702697663,
+					"sid": 794088723000422,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -876,8 +893,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 234833853946574
 				},
 				{
 					"id": "tween-two-properties",
@@ -934,6 +955,37 @@
 				}
 			],
 			"sid": 126997288164444
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 826817201407151,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 488049604249210,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 830985548565197
+				}
+			],
+			"sid": 908978724585528
 		}
 	],
 	"sid": 677507431564353

@@ -50,7 +50,25 @@
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "close",
-					"sid": 257638087795419,
+					"sid": 241083806772865,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 255554313298641,
+					"parameters": {
+						"seconds": "1.7",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "close",
+					"sid": 664957868476612,
 					"parameters": {
 						"instance-variable": "isClickable",
 						"value": "true"
@@ -63,13 +81,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 213212591570135,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 963872932104122,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "close"
+						"object": "close"
 					}
 				},
 				{

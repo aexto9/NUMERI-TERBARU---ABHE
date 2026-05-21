@@ -1,5 +1,5 @@
 {
-	"name": "ES_Lvl14_PA-Intruction",
+	"name": "ES_Lvl12-Finish",
 	"events": [
 		{
 			"eventType": "include",
@@ -9,31 +9,31 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap",
-					"objectClass": "Touch",
-					"sid": 952456464792040
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 210748181699174
 				}
 			],
 			"actions": [
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 207476014583357,
+					"sid": 836816613495947,
 					"parameters": {
-						"seconds": "1.0",
+						"seconds": "5",
 						"use-timescale": true
 					}
 				},
 				{
-					"callFunction": "GoToLayoutFunction",
-					"sid": 364752139278116,
+					"callFunction": "winGame",
+					"sid": 352974582692297,
 					"parameters": [
-						"\"Lay_Lvl14_PA-1\""
+						"\"Lay_RoadMap_Pengenalan_Angka\""
 					]
 				}
 			],
-			"sid": 148682758645760
+			"sid": 437487189199231
 		}
 	],
-	"sid": 266817655850784
+	"sid": 367599803817436
 }

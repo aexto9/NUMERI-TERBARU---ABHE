@@ -9,13 +9,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 624977283876440,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 603584962659450,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Bubble_Lvl9_PA"
+						"object": "Bubble_Lvl9_PA"
 					}
 				},
 				{
@@ -130,7 +128,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 701031919463659,
+									"sid": 284788863843131,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -138,8 +136,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 750033284836350
 								},
 								{
 									"id": "go-to-nextprevious-layout",
@@ -172,7 +174,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 812339196071481,
+							"sid": 562777099652618,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -180,8 +182,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 306326040609791
 						}
 					],
 					"sid": 674352229493623

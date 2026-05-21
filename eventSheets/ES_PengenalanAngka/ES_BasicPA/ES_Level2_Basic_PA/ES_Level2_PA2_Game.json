@@ -114,7 +114,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 471474085283228,
+									"sid": 401329768372724,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -122,8 +122,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 309632148854496
 								},
 								{
 									"id": "add-to-eventvar",
@@ -223,7 +227,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 706328842473527,
+									"sid": 783718921971874,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Wrong_PA"
@@ -231,8 +235,12 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 424661693550272
 								}
 							],
 							"sid": 153917860072854
@@ -252,7 +260,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 433404869387848,
+							"sid": 288612215656514,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -260,8 +268,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 950618523360242
 						},
 						{
 							"id": "tween-two-properties",

@@ -9,16 +9,16 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 318627622476779
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 821233980825035
 				}
 			],
 			"actions": [
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 154503058591690,
+					"sid": 913902198298780,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -26,27 +26,22 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 447294957414269,
-					"parameters": {
-						"seconds": "3",
-						"use-timescale": true
-					}
+					"callFunction": "SyncAudio",
+					"sid": 483402805250014
 				},
 				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 687250201868978,
+					"sid": 611396828924416,
 					"parameters": [
 						"\"Lay_Lvl1_PA1\""
 					]
 				}
 			],
-			"sid": 414380687709620
+			"sid": 590243226176035
 		}
 	],
 	"sid": 878623787361411

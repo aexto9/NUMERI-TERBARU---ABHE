@@ -2,6 +2,10 @@
 	"name": "ES_Global",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "ES_AudioManage"
+		},
+		{
 			"eventType": "variable",
 			"name": "NextLayoutName",
 			"type": "string",

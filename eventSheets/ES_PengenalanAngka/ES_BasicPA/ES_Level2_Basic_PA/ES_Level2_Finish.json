@@ -16,6 +16,24 @@
 			],
 			"actions": [
 				{
+					"id": "add-key",
+					"objectClass": "DataReward",
+					"sid": 693856276748848,
+					"parameters": {
+						"key": "\"Level_2\"",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 883594803259891,
+					"parameters": {
+						"key": "\"SaveDataReward\"",
+						"value": "DataReward.AsJSON"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 570884009206809,
@@ -31,24 +49,6 @@
 					"behaviorType": "DragDrop",
 					"parameters": {
 						"state": "disabled"
-					}
-				},
-				{
-					"id": "add-key",
-					"objectClass": "DataReward",
-					"sid": 994355813519700,
-					"parameters": {
-						"key": "\"Level_2\"",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-item",
-					"objectClass": "LocalStorage",
-					"sid": 437004206811383,
-					"parameters": {
-						"key": "\"SaveData\"",
-						"value": "DataReward.AsJSON"
 					}
 				},
 				{

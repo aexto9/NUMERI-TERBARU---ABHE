@@ -226,13 +226,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 839155760042251,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 839065510364184,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "AngkaRemote_Lvl12_PA"
+						"object": "AngkaRemote_Lvl12_PA"
 					}
 				},
 				{
@@ -248,7 +246,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 977085692469270,
+					"sid": 706250698908466,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -256,8 +254,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 686979708698281
 				},
 				{
 					"id": "tween-two-properties",
@@ -450,7 +452,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 214073477366139,
+									"sid": 834184252921662,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -458,7 +460,7 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
 								},
 								{
@@ -508,6 +510,15 @@
 												"comparison": 0,
 												"second-value": "\"Lay_Lvl12_PA-Game-11\""
 											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 991108059920182,
+											"parameters": {
+												"variable": "IsGameOver"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -521,29 +532,21 @@
 											}
 										},
 										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 312611375613475,
-											"parameters": {
-												"seconds": "2.5",
-												"use-timescale": true
-											}
-										},
-										{
 											"id": "set-item",
 											"objectClass": "LocalStorage",
-											"sid": 957599802883166,
+											"sid": 558374299536820,
 											"parameters": {
-												"key": "\"SaveData\"",
+												"key": "\"SaveDataReward\"",
 												"value": "DataReward.AsJSON"
 											}
 										},
 										{
-											"callFunction": "winGame",
-											"sid": 899488921582870,
-											"parameters": [
-												"\"Lay_RoadMap_Pengenalan_Angka\""
-											]
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 946030024736296,
+											"parameters": {
+												"layout": "Lay_Lvl12_PA-Finish"
+											}
 										}
 									],
 									"sid": 428679307244690
@@ -629,7 +632,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 369414153963655,
+									"sid": 317262362648580,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Wrong_PA"
@@ -637,7 +640,7 @@
 										"loop": "not-looping",
 										"volume": "1",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
 								},
 								{
@@ -784,6 +787,37 @@
 					]
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 803895715817646,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 119297508126420,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 583703342762066
+				}
+			],
+			"sid": 484909738860057
 		}
 	],
 	"sid": 961495511877650

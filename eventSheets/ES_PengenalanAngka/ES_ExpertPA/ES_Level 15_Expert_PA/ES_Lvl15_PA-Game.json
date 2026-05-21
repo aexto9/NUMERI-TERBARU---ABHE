@@ -135,13 +135,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 621366944761854,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 129933108491417,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Card_Lvl15_PA"
+						"object": "Card_Lvl15_PA"
 					}
 				},
 				{
@@ -225,7 +223,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 831582438780413,
+							"sid": 442558263229333,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Correct_PA"
@@ -233,8 +231,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 719597857120410
 						},
 						{
 							"id": "add-to-eventvar",
@@ -326,7 +328,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 704675570187818,
+							"sid": 622417850472149,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -334,8 +336,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 552250550229986
 						}
 					],
 					"sid": 992871817454066
@@ -409,9 +415,9 @@
 				{
 					"id": "set-item",
 					"objectClass": "LocalStorage",
-					"sid": 224315553619786,
+					"sid": 968823254486369,
 					"parameters": {
-						"key": "\"SaveData\"",
+						"key": "\"SaveDataReward\"",
 						"value": "DataReward.AsJSON"
 					}
 				},

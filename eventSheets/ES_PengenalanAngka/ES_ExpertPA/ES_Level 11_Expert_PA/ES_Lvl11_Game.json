@@ -84,16 +84,20 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 474537049403537,
+					"sid": 957878187354036,
 					"parameters": {
 						"audio-file": {
 							"path": "Level2/dikamar tidur"
 						},
 						"loop": "not-looping",
-						"volume": "1.5",
+						"volume": "-8",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"bgm\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 893116192954566
 				},
 				{
 					"id": "set-eventvar-value",
@@ -140,13 +144,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 906037951866193,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 205005951435240,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Card_Lvl11_PA"
+						"object": "Card_Lvl11_PA"
 					}
 				},
 				{
@@ -207,7 +209,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 826967929785484,
+							"sid": 835835769409589,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Pop_PA"
@@ -215,8 +217,12 @@
 								"loop": "not-looping",
 								"volume": "-10",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 649979057155211
 						},
 						{
 							"id": "wait",
@@ -454,7 +460,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 760713538634868,
+							"sid": 894237213596036,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Pop_PA"
@@ -462,8 +468,12 @@
 								"loop": "not-looping",
 								"volume": "-10",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 619652342738037
 						},
 						{
 							"id": "wait",
@@ -883,9 +893,9 @@
 				{
 					"id": "set-item",
 					"objectClass": "LocalStorage",
-					"sid": 644132516454502,
+					"sid": 434496228046453,
 					"parameters": {
-						"key": "\"SaveData\"",
+						"key": "\"SaveDataReward\"",
 						"value": "DataReward.AsJSON"
 					}
 				},

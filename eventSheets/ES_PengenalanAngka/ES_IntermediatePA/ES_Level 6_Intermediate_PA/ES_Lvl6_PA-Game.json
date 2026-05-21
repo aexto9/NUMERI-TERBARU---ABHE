@@ -13,7 +13,7 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "Nyawa",
+			"name": "NyawaPengenalanAngka",
 			"type": "number",
 			"initialValue": "3",
 			"comment": "",
@@ -108,15 +108,6 @@
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Lantai_Lvl6_PA",
-					"sid": 968721092617665,
-					"parameters": {
-						"instance-variable": "isCLickable",
-						"value": "false"
-					}
-				},
-				{
 					"callFunction": "startGame",
 					"sid": 214354134398985
 				},
@@ -137,6 +128,14 @@
 					]
 				},
 				{
+					"id": "set-text",
+					"objectClass": "NyawaText_Lvl6_PA",
+					"sid": 489823046578730,
+					"parameters": {
+						"text": "NyawaPengenalanAngka"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 327409480720767,
@@ -146,12 +145,12 @@
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Lantai_Lvl6_PA",
-					"sid": 660943447791633,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 917302011970880,
 					"parameters": {
-						"instance-variable": "isCLickable",
-						"value": "true"
+						"variable": "NyawaPengenalanAngka",
+						"value": "3"
 					}
 				}
 			],
@@ -161,21 +160,19 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 799831429138458,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 560641950213528,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Lantai_Lvl6_PA"
+						"object": "Lantai_Lvl6_PA"
 					}
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "Lantai_Lvl6_PA",
-					"sid": 219579329676935,
+					"sid": 737053780394338,
 					"parameters": {
-						"instance-variable": "isCLickable"
+						"instance-variable": "isClickable"
 					}
 				}
 			],
@@ -259,9 +256,18 @@
 					],
 					"actions": [
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Fam_Lvl6",
+							"sid": 442429659466203,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "false"
+							}
+						},
+						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 722753327358213,
+							"sid": 154846934670489,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Correct_PA"
@@ -269,8 +275,12 @@
 								"loop": "not-looping",
 								"volume": "1",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 468452380047229
 						},
 						{
 							"id": "tween-two-properties",
@@ -345,10 +355,19 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Lantai_Lvl6_PA",
-							"sid": 167367599693875,
+							"objectClass": "Fam_Lvl6",
+							"sid": 548298533183813,
 							"parameters": {
-								"instance-variable": "isCLickable",
+								"instance-variable": "isClickable",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Lantai_Lvl6_PA",
+							"sid": 172481974696975,
+							"parameters": {
+								"instance-variable": "isClickable",
 								"value": "false"
 							}
 						}
@@ -368,15 +387,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 200441782684912,
-									"parameters": {
-										"seconds": "1.0",
-										"use-timescale": true
-									}
-								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
@@ -413,60 +423,96 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-two-values",
+							"id": "else",
 							"objectClass": "System",
-							"sid": 735605780703750,
-							"parameters": {
-								"first-value": "Lantai_Lvl6_PA.NilaiAngka",
-								"comparison": 1,
-								"second-value": "TargetAngka"
-							}
+							"sid": 529876518772229
 						}
 					],
 					"actions": [
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 465069628433580,
+							"sid": 796666129471192,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
 								},
 								"loop": "not-looping",
-								"volume": "1",
+								"volume": "10",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
 						},
 						{
-							"id": "subtract-from-eventvar",
+							"callFunction": "SyncAudio",
+							"sid": 886263462632050
+						},
+						{
+							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 888640567550229,
+							"sid": 778562159124638,
 							"parameters": {
-								"variable": "Nyawa",
-								"value": "1"
+								"variable": "NyawaPengenalanAngka",
+								"value": "-1"
 							}
 						}
 					],
-					"sid": 301976540434229
+					"sid": 301976540434229,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 160121507302679,
+									"parameters": {
+										"variable": "NyawaPengenalanAngka",
+										"comparison": 5,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "NyawaText_Lvl6_PA",
+									"sid": 404048099581216,
+									"parameters": {
+										"text": "NyawaPengenalanAngka"
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "NyawaText_Lvl6_PA",
+									"sid": 503702476553601,
+									"parameters": {
+										"color": "rgbEx(255, 0, 0)"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 832179918168005,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-font-color",
+									"objectClass": "NyawaText_Lvl6_PA",
+									"sid": 149254895167006,
+									"parameters": {
+										"color": "rgbEx(0,0,0)"
+									}
+								}
+							],
+							"sid": 290452802719759
+						}
+					]
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 368835190456939,
-					"parameters": {
-						"seconds": "1.5",
-						"use-timescale": true
-					}
-				}
-			],
-			"sid": 541067508390629
 		},
 		{
 			"eventType": "block",
@@ -479,16 +525,6 @@
 						"variable": "timer",
 						"comparison": 2,
 						"value": "1"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 708776653564325,
-					"parameters": {
-						"variable": "Nyawa",
-						"comparison": 2,
-						"value": "0"
 					}
 				},
 				{
@@ -508,6 +544,37 @@
 				}
 			],
 			"sid": 433261644412752
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 466986510309349,
+					"parameters": {
+						"variable": "NyawaPengenalanAngka",
+						"comparison": 2,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 677986477162045,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 207257660215429
+				}
+			],
+			"sid": 724599406438667
 		},
 		{
 			"eventType": "block",
@@ -536,18 +603,18 @@
 				{
 					"id": "add-key",
 					"objectClass": "DataReward",
-					"sid": 751778871073135,
+					"sid": 587670776176915,
 					"parameters": {
-						"key": "\"Level_15\"",
+						"key": "\"Level_6\"",
 						"value": "1"
 					}
 				},
 				{
 					"id": "set-item",
 					"objectClass": "LocalStorage",
-					"sid": 433560006081277,
+					"sid": 621816338489482,
 					"parameters": {
-						"key": "\"SaveData\"",
+						"key": "\"SaveDataReward\"",
 						"value": "DataReward.AsJSON"
 					}
 				},

@@ -18,7 +18,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 297236828388506,
+					"sid": 780277537466517,
 					"parameters": {
 						"audio-file": {
 							"path": "Level2/dikamar tidur"
@@ -26,8 +26,12 @@
 						"loop": "not-looping",
 						"volume": "1.5",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"bgm\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 572468180664936
 				},
 				{
 					"id": "set-instvar-value",
@@ -54,13 +58,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 883331089550078,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 764198775501654,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Btn_Play_Lvl4_Basic_PA"
+						"object": "Btn_Play_Lvl4_Basic_PA"
 					}
 				}
 			],
@@ -68,7 +70,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 878778768200366,
+					"sid": 799514747337043,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -76,8 +78,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 144921289948823
 				},
 				{
 					"id": "tween-two-properties",

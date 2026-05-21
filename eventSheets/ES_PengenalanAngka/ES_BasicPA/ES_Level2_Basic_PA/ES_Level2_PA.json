@@ -67,7 +67,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 709571646607708,
+							"sid": 457970328996105,
 							"parameters": {
 								"audio-file": {
 									"path": "Level2/dikamar tidur"
@@ -75,8 +75,12 @@
 								"loop": "not-looping",
 								"volume": "1.5",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"bgm\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 354267826899611
 						},
 						{
 							"callFunction": "startGame",

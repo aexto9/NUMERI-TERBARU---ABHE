@@ -154,7 +154,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 130244543393122,
+									"sid": 493235890023026,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Correct_PA"
@@ -162,8 +162,12 @@
 										"loop": "not-looping",
 										"volume": "0",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 663542395909405
 								},
 								{
 									"id": "add-to-eventvar",
@@ -198,7 +202,7 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 965579899347066,
+									"sid": 817951615989598,
 									"parameters": {
 										"audio-file": {
 											"path": "Pengenalan_Angka/Wrong_PA"
@@ -206,8 +210,12 @@
 										"loop": "not-looping",
 										"volume": "0",
 										"stereo-pan": "0",
-										"tag-optional": "\"\""
+										"tag-optional": "\"sfx\""
 									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 984158175640540
 								},
 								{
 									"id": "tween-two-properties",
@@ -245,7 +253,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 118139225466218,
+							"sid": 508426501917309,
 							"parameters": {
 								"audio-file": {
 									"path": "Pengenalan_Angka/Wrong_PA"
@@ -253,8 +261,12 @@
 								"loop": "not-looping",
 								"volume": "0",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"sfx\""
 							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 223782267604951
 						},
 						{
 							"id": "tween-two-properties",
@@ -346,9 +358,9 @@
 				{
 					"id": "set-item",
 					"objectClass": "LocalStorage",
-					"sid": 513475622871779,
+					"sid": 875262319116628,
 					"parameters": {
-						"key": "\"SaveData\"",
+						"key": "\"SaveDataReward\"",
 						"value": "DataReward.AsJSON"
 					}
 				},
