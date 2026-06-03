@@ -16,19 +16,38 @@
 			],
 			"actions": [
 				{
+					"id": "tween-two-properties",
+					"objectClass": "pause",
+					"sid": 648894570988244,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "0",
+						"end-y": "0",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 905906841773790,
+					"sid": 151800046908736,
 					"parameters": {
-						"seconds": "2",
+						"seconds": "3",
 						"use-timescale": true
 					}
 				},
 				{
 					"callFunction": "winGame",
-					"sid": 255217329256739,
+					"sid": 325447709730005,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_Lvl10_PA\"",
+						"1"
 					]
 				}
 			],

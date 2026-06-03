@@ -79,6 +79,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "DragSabun_Lvl10_PA",
+							"sid": 102742287395182,
+							"parameters": {
+								"instance-variable": "isMatched",
+								"value": "false"
+							}
+						},
+						{
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 243952837265331,
@@ -120,7 +129,7 @@
 						},
 						{
 							"callFunction": "Timer",
-							"sid": 515400165376975,
+							"sid": 525398474591300,
 							"parameters": [
 								"120"
 							]
@@ -228,6 +237,33 @@
 							],
 							"actions": [
 								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 188678797139560,
+									"parameters": {
+										"variable": "score",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "DragSabun_Lvl10_PA",
+									"sid": 763576011377782,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "DragSabun_Lvl10_PA",
+									"sid": 896715360270079,
+									"parameters": {
+										"instance-variable": "isMatched",
+										"value": "true"
+									}
+								},
+								{
 									"id": "play",
 									"objectClass": "Audio",
 									"sid": 735423136857682,
@@ -280,24 +316,6 @@
 										"ping-pong": "no",
 										"repeat-count": "1"
 									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "DragSabun_Lvl10_PA",
-									"sid": 297969304629574,
-									"behaviorType": "DragDrop",
-									"parameters": {
-										"state": "disabled"
-									}
-								},
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 436982916850030,
-									"parameters": {
-										"variable": "score",
-										"value": "1"
-									}
 								}
 							],
 							"sid": 795235030896181,
@@ -308,12 +326,21 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 158906937274451,
+											"sid": 691322458674946,
 											"parameters": {
 												"variable": "score",
 												"comparison": 1,
 												"value": "12"
 											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 978432475694749,
+											"parameters": {
+												"variable": "IsGameOver"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -493,8 +520,21 @@
 			],
 			"actions": [
 				{
+					"id": "set-enabled",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 789219509566011,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
 					"callFunction": "LoseGame",
-					"sid": 337924723383914
+					"sid": 462063660494738,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl10_PA\""
+					]
 				}
 			],
 			"sid": 296490446237447
@@ -551,6 +591,120 @@
 				}
 			],
 			"sid": 333843838973735
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 469911309542922,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 811305044944474,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 776138222580239,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 378740168081013,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl10_PA\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 667110671240413,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 712083527558225
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 325830683747797,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 229453146714899,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 794073414707428,
+					"parameters": {
+						"instance-variable": "isMatched"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 917849128933321,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 612130432300952,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "DragSabun_Lvl10_PA",
+					"sid": 985912142404422,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 771493231387910
 		}
 	],
 	"sid": 716211919995134

@@ -1963,7 +1963,8 @@
 							"callFunction": "winGame",
 							"sid": 916558364361908,
 							"parameters": [
-								"\"Lay_Level2_T4\""
+								"\"Lay_Level2_T4\"",
+								"1"
 							]
 						}
 					],
@@ -2017,7 +2018,11 @@
 					"actions": [
 						{
 							"callFunction": "LoseGame",
-							"sid": 561087139887543
+							"sid": 561087139887543,
+							"parameters": [
+								"1",
+								"\"\""
+							]
 						},
 						{
 							"id": "set-visible",

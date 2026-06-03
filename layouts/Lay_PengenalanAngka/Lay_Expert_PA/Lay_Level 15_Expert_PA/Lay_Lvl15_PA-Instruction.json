@@ -18,12 +18,10 @@
 					"uid": 548,
 					"sid": 389227057898483,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 389227057898483,
-						"expanded": true
+					"instanceVariables": {
+						"isClickable": true
 					},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -110,10 +108,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 590656361372006,
 	"nonworld-instances": [],
 	"effectTypes": [],

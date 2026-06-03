@@ -17,6 +17,15 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 384194479744340,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "Angka_lvl3_PA",
 					"sid": 981989172267920,
@@ -142,17 +151,36 @@
 										"seconds": "2.0",
 										"use-timescale": true
 									}
-								},
-								{
-									"id": "go-to-nextprevious-layout",
-									"objectClass": "System",
-									"sid": 112126114558586,
-									"parameters": {
-										"which": "next"
-									}
 								}
 							],
-							"sid": 683040887768592
+							"sid": 683040887768592,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 878541211446645,
+											"parameters": {
+												"variable": "IsGameOver"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-nextprevious-layout",
+											"objectClass": "System",
+											"sid": 757664241148873,
+											"parameters": {
+												"which": "next"
+											}
+										}
+									],
+									"sid": 307778453213691
+								}
+							]
 						}
 					]
 				},

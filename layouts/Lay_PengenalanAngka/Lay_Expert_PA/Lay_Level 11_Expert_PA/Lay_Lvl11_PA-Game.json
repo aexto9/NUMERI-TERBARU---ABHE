@@ -20,10 +20,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 508055077178681,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -57,10 +53,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 692024187288256,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -128,12 +120,10 @@
 					"uid": 1037,
 					"sid": 128386487694848,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 128386487694848,
-						"expanded": true
+					"instanceVariables": {
+						"isClickable": true
 					},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -203,10 +193,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 799970017872404,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -249,10 +235,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 490586434104231,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -286,10 +268,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 684610289935604,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -362,7 +340,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -370,10 +349,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 958221890532032,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -411,7 +386,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -419,10 +395,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 711704969632957,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -460,7 +432,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -468,10 +441,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 174731279815288,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -509,7 +478,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -517,10 +487,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 785432544255858,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -558,7 +524,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -566,10 +533,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 657624271203736,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -607,7 +570,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -615,10 +579,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 326162968692213,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -656,7 +616,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -664,10 +625,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 166373684022318,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -705,7 +662,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -713,10 +671,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 573266029531024,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -754,7 +708,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -762,10 +717,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 489836052914057,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -803,7 +754,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -811,10 +763,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 156583328379177,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -852,7 +800,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -860,10 +809,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 492958587783509,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -901,7 +846,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -909,10 +855,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 337000877175820,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -950,7 +892,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -958,10 +901,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 998886123307740,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -999,7 +938,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1007,10 +947,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 614743978449095,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1048,7 +984,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1056,10 +993,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 788568931843796,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1097,7 +1030,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1105,10 +1039,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 394192446263186,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1146,7 +1076,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1154,10 +1085,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 686684012514919,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1195,7 +1122,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1203,10 +1131,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 139731335520856,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1244,7 +1168,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1252,10 +1177,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 149917454313271,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1293,7 +1214,8 @@
 						"isFlipped": false,
 						"isMatched": false,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1301,10 +1223,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 754962134981055,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1462,10 +1380,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 512380290234472,
 	"nonworld-instances": [],
 	"effectTypes": [],

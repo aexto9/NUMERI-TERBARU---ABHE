@@ -65,6 +65,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "bebek_lvl7",
+							"sid": 960803514108432,
+							"parameters": {
+								"instance-variable": "isClick",
+								"value": "false"
+							}
+						},
+						{
 							"callFunction": "startGame",
 							"sid": 902081107152631
 						},
@@ -91,6 +100,15 @@
 							"parameters": {
 								"seconds": "5.3",
 								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "bebek_lvl7",
+							"sid": 667406842299491,
+							"parameters": {
+								"instance-variable": "isClick",
+								"value": "true"
 							}
 						},
 						{
@@ -121,6 +139,17 @@
 					}
 				},
 				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 358304631876882,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "5"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 925211915021587,
@@ -133,7 +162,11 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 496772493407393
+					"sid": 781679591611592,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl7_PA\""
+					]
 				}
 			],
 			"sid": 354778983266966
@@ -181,23 +214,49 @@
 					}
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 418132438734914,
-					"parameters": {
-						"seconds": "0.5",
-						"use-timescale": true
-					}
-				},
-				{
 					"callFunction": "winGame",
-					"sid": 397610436382343,
+					"sid": 201177937637344,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_Lvl8_PA\"",
+						"1"
 					]
 				}
 			],
 			"sid": 937446210838148
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 244333977053776,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 105549184647148,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl7_PA\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 262389121163135,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 702029955660737
 		}
 	],
 	"sid": 848486261580211

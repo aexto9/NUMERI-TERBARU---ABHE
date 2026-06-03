@@ -20,10 +20,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 909065078400120,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -67,10 +63,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 400473245621233,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -113,10 +105,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 173483751924138,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -164,10 +152,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 576826360203038,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -218,12 +202,43 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": false
+		},
+		{
+			"name": "TransitionLayer",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 350163064288106,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 732286759596127,
 	"nonworld-instances": [],
 	"effectTypes": [],

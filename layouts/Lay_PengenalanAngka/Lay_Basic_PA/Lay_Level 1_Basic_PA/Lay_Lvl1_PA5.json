@@ -55,10 +55,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 664113439008367,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -92,10 +88,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 679537573950251,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -129,10 +121,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 459083056646123,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -166,10 +154,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 649579917597701,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -203,10 +187,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 393410054810950,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -240,10 +220,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 806565007925005,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -277,10 +253,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 126230706772769,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -314,10 +286,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 563243566080131,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -353,7 +321,8 @@
 						"PostX": 0,
 						"PostY": 0,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isMatched": false
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -367,10 +336,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 764810525274352,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -407,7 +372,8 @@
 						"PostX": 0,
 						"PostY": 0,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isMatched": false
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -421,10 +387,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 628062278780509,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -461,7 +423,8 @@
 						"PostX": 0,
 						"PostY": 0,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isMatched": false
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -475,10 +438,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 463447593131789,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -515,7 +474,8 @@
 						"PostX": 0,
 						"PostY": 0,
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isMatched": false
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -529,10 +489,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 669351463670734,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -690,10 +646,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 996150245207300,
 	"nonworld-instances": [],
 	"effectTypes": [],

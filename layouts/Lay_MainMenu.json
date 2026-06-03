@@ -20,10 +20,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 804229955393603,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -117,10 +113,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 385632780753766,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -152,7 +144,9 @@
 					"uid": 103,
 					"sid": 913387213840606,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"isClickable": true
+					},
 					"behaviors": {
 						"Anchor": {
 							"properties": {
@@ -163,10 +157,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 913387213840606,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -211,10 +201,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 743495454152715,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -257,10 +243,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 777299957719096,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -351,7 +333,74 @@
 			"name": "TransitionLayer",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Sprite6",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1664,
+					"sid": 904245421812588,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 368,
+						"y": 756,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Sprite4",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1682,
+					"sid": 806273815799768,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": false,
+					"locked": false,
+					"world": {
+						"x": -106,
+						"y": 381,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
 			"sid": 491496149742872,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -383,10 +432,6 @@
 			"global": true
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 883395717346071,
 	"nonworld-instances": [
 		{

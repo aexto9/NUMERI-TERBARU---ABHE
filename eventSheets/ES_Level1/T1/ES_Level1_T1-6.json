@@ -254,7 +254,11 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 530120305880793
+					"sid": 530120305880793,
+					"parameters": [
+						"1",
+						"\"\""
+					]
 				}
 			],
 			"sid": 956800619297028
@@ -296,7 +300,8 @@
 					"callFunction": "winGame",
 					"sid": 991666750165197,
 					"parameters": [
-						"\"Lay_Level2_T1\""
+						"\"Lay_Level2_T1\"",
+						"1"
 					]
 				}
 			],

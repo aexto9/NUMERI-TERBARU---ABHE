@@ -58,6 +58,24 @@
 						"instance-variable": "SizeY",
 						"value": "Self.Height"
 					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Lanjut_Lvl5_PA",
+					"sid": 211780538824538,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 960385094593158,
+					"parameters": {
+						"instance-variable": "isMatched",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 954605747867614,
@@ -264,10 +282,19 @@
 								{
 									"id": "set-enabled",
 									"objectClass": "Drag_Lvl5_PA",
-									"sid": 105151226966476,
+									"sid": 528262923149030,
 									"behaviorType": "DragDrop",
 									"parameters": {
 										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Drag_Lvl5_PA",
+									"sid": 724787721524867,
+									"parameters": {
+										"instance-variable": "isMatched",
+										"value": "true"
 									}
 								},
 								{
@@ -339,6 +366,15 @@
 										{
 											"callFunction": "SyncAudio",
 											"sid": 950408701861888
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Lanjut_Lvl5_PA",
+											"sid": 435764481141626,
+											"parameters": {
+												"instance-variable": "isClickable",
+												"value": "true"
+											}
 										},
 										{
 											"id": "set-opacity",
@@ -446,9 +482,10 @@
 										},
 										{
 											"callFunction": "winGame",
-											"sid": 998566061293913,
+											"sid": 596251276614326,
 											"parameters": [
-												"\"Lay_RoadMap_Pengenalan_Angka\""
+												"\"Lay_Lvl6_PA\"",
+												"1"
 											]
 										}
 									],
@@ -568,9 +605,26 @@
 					"parameters": {
 						"object": "Lanjut_Lvl5_PA"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Lanjut_Lvl5_PA",
+					"sid": 245642219508162,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Lanjut_Lvl5_PA",
+					"sid": 291425242656856,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
@@ -642,17 +696,36 @@
 						"seconds": "0.3",
 						"use-timescale": true
 					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 695413877332806,
-					"parameters": {
-						"layout": "Lay_Lvl5_PA2"
-					}
 				}
 			],
-			"sid": 715404400323104
+			"sid": 715404400323104,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 573431297162710,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 891318626979390,
+							"parameters": {
+								"layout": "Lay_Lvl5_PA2"
+							}
+						}
+					],
+					"sid": 262704939673148
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -668,6 +741,17 @@
 					}
 				},
 				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 985166315803359,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "10"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 758623549631190,
@@ -679,11 +763,138 @@
 			],
 			"actions": [
 				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 339099946421868,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
 					"callFunction": "LoseGame",
-					"sid": 926050154863204
+					"sid": 436989614060300,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl5_PA\""
+					]
 				}
 			],
 			"sid": 987097186428588
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 234790381579865,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 767904385003653,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 462233748433586,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 280316842257294,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl5_PA\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 595252311758070,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 300944191538369
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 745647395358762,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 975879490421921,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 889117163629712,
+					"parameters": {
+						"instance-variable": "isMatched"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 367940010677666,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 370285076620153,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 338725196900467,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 849937722997978
 		}
 	],
 	"sid": 972615697437790

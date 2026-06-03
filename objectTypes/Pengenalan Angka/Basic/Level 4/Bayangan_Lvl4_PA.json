@@ -1,0 +1,156 @@
+{
+	"name": "Bayangan_Lvl4_PA",
+	"plugin-id": "Sprite",
+	"sid": 420006886710519,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1433231,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5473290,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4484403,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1687496,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3991036,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 868902085305899,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

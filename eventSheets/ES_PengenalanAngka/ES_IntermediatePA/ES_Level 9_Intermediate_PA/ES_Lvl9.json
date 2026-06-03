@@ -130,6 +130,17 @@
 					}
 				},
 				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 477440757872568,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "10"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 230339268237146,
@@ -142,7 +153,11 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 454068454541553
+					"sid": 302103293722705,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl9_PA\""
+					]
 				}
 			],
 			"sid": 623839683492358
@@ -199,6 +214,40 @@
 				}
 			],
 			"sid": 410570001362244
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 872547208547108,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 699494321177853,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl9_PA\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 825705768678855,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 244510285407265
 		}
 	],
 	"sid": 179605079219124

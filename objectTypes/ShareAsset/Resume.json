@@ -1,0 +1,68 @@
+{
+	"name": "Resume",
+	"plugin-id": "Sprite",
+	"sid": 481463415621596,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "SizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 635876712579117
+		},
+		{
+			"name": "SizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 218972525144135
+		},
+		{
+			"name": "isClickable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 899741893685386
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 203340735176567
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 141,
+						"height": 151,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8057039,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 186036295769251,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

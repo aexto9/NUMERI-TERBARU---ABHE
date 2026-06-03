@@ -55,10 +55,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 307825243274674,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -128,10 +124,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 489653662965751,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -165,10 +157,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 193185191458140,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -202,10 +190,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 641096811682673,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -242,7 +226,9 @@
 						"PostX": 0,
 						"Target_Lay_Buku": "",
 						"SizeX": 0,
-						"SizeY": 0
+						"SizeY": 0,
+						"isClickable": true,
+						"isMatched": false
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -256,10 +242,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 231495755496212,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -294,10 +276,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 953817356060115,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -339,10 +317,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 280609649344743,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -535,10 +509,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 505236561365448,
 	"nonworld-instances": [],
 	"effectTypes": [],

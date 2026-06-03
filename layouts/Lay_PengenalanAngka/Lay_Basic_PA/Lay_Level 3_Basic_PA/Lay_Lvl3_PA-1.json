@@ -20,10 +20,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 718934676225067,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -104,10 +100,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 651123572138436,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -151,10 +143,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 792191822870606,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -200,10 +188,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 487453686504934,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -211,52 +195,6 @@
 						"y": 626,
 						"width": 113.53724781118176,
 						"height": 120.80810604539536,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "Music",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 920,
-					"sid": 434875835454777,
-					"tags": "",
-					"instanceVariables": {
-						"SIzeX": 0,
-						"SizeY": 0
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 434875835454777,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1175,
-						"y": 85,
-						"width": 104.92579903215456,
-						"height": 110.002853824033,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -406,10 +344,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 165601736519439,
 	"nonworld-instances": [],
 	"effectTypes": [],

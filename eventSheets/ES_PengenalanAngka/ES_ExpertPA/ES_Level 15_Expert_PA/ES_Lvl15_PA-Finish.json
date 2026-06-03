@@ -16,6 +16,24 @@
 			],
 			"actions": [
 				{
+					"id": "tween-two-properties",
+					"objectClass": "pause",
+					"sid": 232464604811135,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "0",
+						"end-y": "0",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "Text_Finish_Lvl15PA",
 					"sid": 389534209080334,
@@ -230,17 +248,18 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 173050977676667,
+					"sid": 584086837415320,
 					"parameters": {
-						"seconds": "2",
+						"seconds": "5",
 						"use-timescale": true
 					}
 				},
 				{
 					"callFunction": "winGame",
-					"sid": 393159063276143,
+					"sid": 896097484692563,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_RoadMap_Level1\"",
+						"1"
 					]
 				}
 			],

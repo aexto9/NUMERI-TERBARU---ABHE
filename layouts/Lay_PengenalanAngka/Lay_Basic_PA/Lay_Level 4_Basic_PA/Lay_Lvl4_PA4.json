@@ -55,10 +55,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 170895815205469,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -128,10 +124,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 577338125937944,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -165,10 +157,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 869298055718484,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -202,10 +190,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 399904696652992,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -239,10 +223,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 749343214351877,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -276,10 +256,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 220967630605128,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -364,10 +340,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 415916912975264,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -415,10 +387,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 268399453614756,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -468,10 +436,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 280453482687579,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -519,10 +483,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 284769111971031,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -572,10 +532,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 797359148487238,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -623,10 +579,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 744133330133374,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -676,10 +628,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 379748922105205,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -727,10 +675,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 454648032683694,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -780,10 +724,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 851227868067168,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -832,10 +772,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 602384558286227,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -883,10 +819,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 440282879822789,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1044,10 +976,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 727495672907151,
 	"nonworld-instances": [],
 	"effectTypes": [],

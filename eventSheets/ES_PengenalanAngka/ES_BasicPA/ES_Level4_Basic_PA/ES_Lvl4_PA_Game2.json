@@ -52,6 +52,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 776933405125083,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "Btn_Back_Lvl4_PA",
 					"sid": 436812379906545,
@@ -139,6 +148,15 @@
 											"sid": 842876042463538,
 											"parameters": {
 												"opacity": "0"
+											}
+										},
+										{
+											"id": "set-size",
+											"objectClass": "Drag_Buku_Lvl4_PA",
+											"sid": 303173620648301,
+											"parameters": {
+												"width": "0",
+												"height": "0"
 											}
 										},
 										{
@@ -306,6 +324,24 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Drag_Buku_Lvl4_PA",
+									"sid": 616554592306650,
+									"parameters": {
+										"instance-variable": "isMatched",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Drag_Buku_Lvl4_PA",
+									"sid": 545416264846675,
+									"parameters": {
+										"instance-variable": "isClickable",
+										"value": "false"
+									}
+								},
+								{
 									"id": "play",
 									"objectClass": "Audio",
 									"sid": 295470257519784,
@@ -415,17 +451,18 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 822500980354408,
+											"sid": 551484213814868,
 											"parameters": {
-												"seconds": "2.0",
+												"seconds": "2",
 												"use-timescale": true
 											}
 										},
 										{
 											"callFunction": "winGame",
-											"sid": 254010145916824,
+											"sid": 144021422447127,
 											"parameters": [
-												"\"Lay_RoadMap_Pengenalan_Angka\""
+												"\"Lay_Lvl5_PA\"",
+												"1"
 											]
 										},
 										{
@@ -580,11 +617,28 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap-object",
+					"id": "on-double-tap-object",
 					"objectClass": "Touch",
-					"sid": 556565311834660,
+					"sid": 868855539691511,
 					"parameters": {
 						"object": "Drag_Buku_Lvl4_PA"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 455606643985665,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 262267073807927,
+					"parameters": {
+						"instance-variable": "isClickable"
 					}
 				}
 			],
@@ -626,15 +680,6 @@
 					}
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 584335260400610,
-					"parameters": {
-						"seconds": "0.2",
-						"use-timescale": true
-					}
-				},
-				{
 					"id": "tween-two-properties",
 					"objectClass": "Drag_Buku_Lvl4_PA",
 					"sid": 337106701102333,
@@ -660,17 +705,36 @@
 						"seconds": "0.2",
 						"use-timescale": true
 					}
-				},
-				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 444361213862456,
-					"parameters": {
-						"layout": "Drag_Buku_Lvl4_PA.Target_Lay_Buku"
-					}
 				}
 			],
-			"sid": 847730152743086
+			"sid": 847730152743086,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 407118605518815,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 491537893229774,
+							"parameters": {
+								"layout": "Drag_Buku_Lvl4_PA.Target_Lay_Buku"
+							}
+						}
+					],
+					"sid": 239766378942739
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -756,17 +820,205 @@
 						"seconds": "0.2",
 						"use-timescale": true
 					}
+				}
+			],
+			"sid": 184564510845120,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 548834526360882,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 228967630890405,
+							"parameters": {
+								"layout": "Lay_Lvl4_PA6"
+							}
+						}
+					],
+					"sid": 830522268698160
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 435327030328496,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
 				},
 				{
-					"id": "go-to-layout",
+					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 881907086211425,
+					"sid": 262301471106630,
 					"parameters": {
-						"layout": "Lay_Lvl4_PA6"
+						"variable": "score",
+						"comparison": 0,
+						"value": "5"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 194513176619883,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 930753641491085,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"callFunction": "LoseGame",
+					"sid": 368765499380212,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl4_PA\""
+					]
+				}
+			],
+			"sid": 653579728465671
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 977017555774601,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 141690205297577,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 847521776147100,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl4_PA\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 959070114190545,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 536197226901387,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
 					}
 				}
 			],
-			"sid": 184564510845120
+			"sid": 288138991118178
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 821078328524437,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 898629583217136,
+					"parameters": {
+						"instance-variable": "isMatched"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 413111118821717,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 963834446068615,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 208730683012405,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 496603787155714,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 125829888744479
 		}
 	],
 	"sid": 846711003890996

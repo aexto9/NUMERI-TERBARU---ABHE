@@ -34,6 +34,24 @@
 					}
 				},
 				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_2",
+					"sid": 465059481548611,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_2",
+					"sid": 984528275989363,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 622836093662545,
@@ -60,6 +78,24 @@
 					"id": "move-to-top",
 					"objectClass": "Drag_2",
 					"sid": 134293547754177
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Drag_2",
+					"sid": 524745501336052,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX/2",
+						"end-y": "Self.SizeY/2",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
 				}
 			],
 			"sid": 411928311109035
@@ -107,6 +143,24 @@
 							],
 							"actions": [
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 173582923771787,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Correct_PA"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 407602129327085
+								},
+								{
 									"id": "tween-two-properties",
 									"objectClass": "Drag_2",
 									"sid": 441049644758704,
@@ -152,22 +206,13 @@
 									}
 								},
 								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 493235890023026,
+									"id": "set-boolean-instvar",
+									"objectClass": "Drag_2",
+									"sid": 188546714542178,
 									"parameters": {
-										"audio-file": {
-											"path": "Pengenalan_Angka/Correct_PA"
-										},
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"sfx\""
+										"instance-variable": "isMatched",
+										"value": "true"
 									}
-								},
-								{
-									"callFunction": "SyncAudio",
-									"sid": 663542395909405
 								},
 								{
 									"id": "add-to-eventvar",
@@ -234,6 +279,24 @@
 										"ping-pong": "no",
 										"repeat-count": "1"
 									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_2",
+									"sid": 975062305989845,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Self.SizeX",
+										"end-y": "Self.SizeY\n",
+										"time": "0.2",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
 								}
 							],
 							"sid": 392675435412099
@@ -285,6 +348,24 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Drag_2",
+							"sid": 430322615111850,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "Self.SizeX",
+								"end-y": "Self.SizeY\n",
+								"time": "0.2",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
 						}
 					],
 					"sid": 369189032878320
@@ -316,8 +397,21 @@
 			],
 			"actions": [
 				{
+					"id": "set-enabled",
+					"objectClass": "Drag_2",
+					"sid": 145676745615569,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
 					"callFunction": "LoseGame",
-					"sid": 346340524531879
+					"sid": 204054129056873,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl1_PA\""
+					]
 				}
 			],
 			"sid": 685227531373735
@@ -375,13 +469,128 @@
 				},
 				{
 					"callFunction": "winGame",
-					"sid": 305634334558457,
+					"sid": 383225457048153,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_Lvl2_PA\"",
+						"1"
 					]
 				}
 			],
 			"sid": 638771924813578
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 405461519418975,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 352893196164760,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 708096782725608,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 280683293917572,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl1_PA\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_2",
+					"sid": 427142216997407,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 936222250136051
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 501434054335129,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 640384996329216,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Drag_2",
+					"sid": 519904404730240,
+					"parameters": {
+						"instance-variable": "isMatched"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 235074983230422,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 374025426664437,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_2",
+					"sid": 854879727201680,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 689331837763308
 		}
 	],
 	"sid": 683589493757249

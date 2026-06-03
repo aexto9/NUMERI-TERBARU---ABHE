@@ -18,7 +18,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 101535131103264,
+					"sid": 553869241703263,
 					"parameters": {
 						"audio-file": {
 							"path": "MainTheme"
@@ -26,8 +26,12 @@
 						"loop": "looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"MainTheme\""
+						"tag-optional": "\"bgm\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 443288218210599
 				},
 				{
 					"id": "set-instvar-value",
@@ -59,9 +63,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 255554313298641,
+					"sid": 864731400557465,
 					"parameters": {
-						"seconds": "1.7",
+						"seconds": "2.2",
 						"use-timescale": true
 					}
 				},
@@ -110,7 +114,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 270191525360043,
+					"sid": 546694455171882,
 					"parameters": {
 						"audio-file": {
 							"path": "Pengenalan_Angka/Click_PA"
@@ -118,8 +122,12 @@
 						"loop": "not-looping",
 						"volume": "1",
 						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag-optional": "\"sfx\""
 					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 269237896735034
 				},
 				{
 					"id": "tween-two-properties",
@@ -168,9 +176,9 @@
 				},
 				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 360424151408153,
+					"sid": 536263911244336,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_RoadMap_Level1\""
 					]
 				}
 			],

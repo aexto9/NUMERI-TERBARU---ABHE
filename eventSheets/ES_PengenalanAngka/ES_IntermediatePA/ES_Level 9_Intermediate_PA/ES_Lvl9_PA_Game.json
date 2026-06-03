@@ -17,6 +17,15 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 584384453776385,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "Bubble_Lvl9_PA",
 					"sid": 252928938606459,
@@ -142,17 +151,36 @@
 								{
 									"callFunction": "SyncAudio",
 									"sid": 750033284836350
-								},
-								{
-									"id": "go-to-nextprevious-layout",
-									"objectClass": "System",
-									"sid": 329585274461022,
-									"parameters": {
-										"which": "next"
-									}
 								}
 							],
-							"sid": 983415487170183
+							"sid": 983415487170183,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 191001594683154,
+											"parameters": {
+												"variable": "IsGameOver"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-nextprevious-layout",
+											"objectClass": "System",
+											"sid": 198489696618255,
+											"parameters": {
+												"which": "next"
+											}
+										}
+									],
+									"sid": 232544489537776
+								}
+							]
 						}
 					]
 				},

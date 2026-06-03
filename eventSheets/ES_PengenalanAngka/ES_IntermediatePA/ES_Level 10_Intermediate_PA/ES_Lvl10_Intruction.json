@@ -14,7 +14,17 @@
 					"sid": 628592822956957
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl10_PA",
+					"sid": 412899236311779,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				}
+			],
 			"sid": 993030431340254
 		},
 		{
@@ -24,9 +34,26 @@
 					"id": "on-tap",
 					"objectClass": "Touch",
 					"sid": 499755669609539
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bg_Lvl10_PA",
+					"sid": 674784055933550,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl10_PA",
+					"sid": 861598416901589,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
 				{
 					"callFunction": "GoToLayoutFunction",
 					"sid": 915791797918883,

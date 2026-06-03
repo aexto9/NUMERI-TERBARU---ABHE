@@ -1045,7 +1045,8 @@
 									"callFunction": "winGame",
 									"sid": 625332431216884,
 									"parameters": [
-										"\"Lay_Level2_T5\""
+										"\"Lay_Level2_T5\"",
+										"1"
 									]
 								}
 							],
@@ -1969,7 +1970,11 @@
 						},
 						{
 							"callFunction": "LoseGame",
-							"sid": 896683272693388
+							"sid": 896683272693388,
+							"parameters": [
+								"1",
+								"\"\""
+							]
 						}
 					],
 					"sid": 689940727937687

@@ -9,12 +9,69 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap",
-					"objectClass": "Touch",
-					"sid": 722792331750988
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 122695093089874
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Level2_Open",
+					"sid": 381067954398221,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 162481659149196,
+					"parameters": {
+						"seconds": "2.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Level2_Open",
+					"sid": 390468994515091,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 934108173473421
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 722792331750988
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bg_Level2_Open",
+					"sid": 814150855929507,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Level2_Open",
+					"sid": 444776168949312,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
 				{
 					"id": "play",
 					"objectClass": "Audio",

@@ -4,7 +4,15 @@
 	"sid": 448222741956849,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "isClickable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 223914739725572
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",

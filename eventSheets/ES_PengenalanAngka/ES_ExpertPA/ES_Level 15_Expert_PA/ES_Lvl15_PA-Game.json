@@ -20,6 +20,33 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 538234582328085,
+					"parameters": {
+						"variable": "score",
+						"value": "0"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 644598273419458,
+					"parameters": {
+						"audio-file": {
+							"path": "Level2/dikamar tidur"
+						},
+						"loop": "not-looping",
+						"volume": "1.5",
+						"stereo-pan": "0",
+						"tag-optional": "\"bgm\""
+					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 971224906821490
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "Card_Lvl15_PA",
 					"sid": 317690500895117,
@@ -141,6 +168,15 @@
 					"parameters": {
 						"object": "Card_Lvl15_PA"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 659655412382870,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
@@ -362,6 +398,17 @@
 					}
 				},
 				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 494047384092585,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "40"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 313175018120162,
@@ -374,7 +421,11 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 282364500231506
+					"sid": 493817214415648,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl15_PA\""
+					]
 				}
 			],
 			"sid": 598962364048774
@@ -431,6 +482,40 @@
 				}
 			],
 			"sid": 362161864251902
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 883774458493356,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 324137293427418,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl15_PA\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 329873346573837,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 402208927616507
 		}
 	],
 	"sid": 718567126565813

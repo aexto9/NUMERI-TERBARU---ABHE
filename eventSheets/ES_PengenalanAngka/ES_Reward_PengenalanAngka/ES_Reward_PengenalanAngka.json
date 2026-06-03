@@ -71,9 +71,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 515048253964798,
+					"sid": 321185101268634,
 					"parameters": {
-						"seconds": "1.7",
+						"seconds": "2.2",
 						"use-timescale": true
 					}
 				},
@@ -282,9 +282,9 @@
 				},
 				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 909685082025209,
+					"sid": 704535680505147,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_RoadMap_Level1\""
 					]
 				}
 			],

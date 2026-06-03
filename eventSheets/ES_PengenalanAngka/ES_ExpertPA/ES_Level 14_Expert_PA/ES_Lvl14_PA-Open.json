@@ -16,6 +16,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Btn_Play_Lvl14_Pa",
+					"sid": 242385671362778,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 178128193690915,
@@ -50,6 +59,24 @@
 						"instance-variable": "SizeY",
 						"value": "Self.Height"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 332100434893476,
+					"parameters": {
+						"seconds": "2.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Btn_Play_Lvl14_Pa",
+					"sid": 314149689458414,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 663038790936542
@@ -64,9 +91,26 @@
 					"parameters": {
 						"object": "Btn_Play_Lvl14_Pa"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Btn_Play_Lvl14_Pa",
+					"sid": 667335573322869,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Btn_Play_Lvl14_Pa",
+					"sid": 673947718065502,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
 				{
 					"id": "play",
 					"objectClass": "Audio",

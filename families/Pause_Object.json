@@ -1,0 +1,16 @@
+{
+	"name": "Pause_Object",
+	"plugin-id": "Sprite",
+	"sid": 264145826710828,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"home_Pause",
+		"pause",
+		"Retry_Pause",
+		"Header_Jeda",
+		"Asset_Jeda",
+		"Resume"
+	]
+}

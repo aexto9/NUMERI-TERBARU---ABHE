@@ -9,17 +9,65 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap",
-					"objectClass": "Touch",
-					"sid": 413696860300534
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 216354238873645
 				}
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "StartButton",
+					"sid": 999425246277799,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 341572959807060
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 413696860300534
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "StartButton",
+					"sid": 334279824216255,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "StartButton",
+					"sid": 378418465235032,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 390035244947098,
+					"parameters": {
+						"seconds": "0.5",
+						"use-timescale": true
+					}
+				},
+				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 247686501092739,
+					"sid": 102962606522293,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_RoadMap_Level1\""
 					]
 				}
 			],

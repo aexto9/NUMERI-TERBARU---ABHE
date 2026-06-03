@@ -36,6 +36,15 @@
 						"instance-variable": "PostY",
 						"value": "Self.Y"
 					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Lvl2",
+					"sid": 392491393571756,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
 				}
 			],
 			"sid": 570314351852395,
@@ -150,11 +159,138 @@
 			],
 			"actions": [
 				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Lvl2",
+					"sid": 595063552853859,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
 					"callFunction": "LoseGame",
-					"sid": 492756072165587
+					"sid": 530211417329462,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl2_PA\""
+					]
 				}
 			],
 			"sid": 505712462455104
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 522196037815504,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 589259671400916,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 571457879151818,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 242356090170883,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl2_PA\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Lvl2",
+					"sid": 639819231388734,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 705750855891734
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 312895067638289,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 129438999826990,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Drag_Lvl2",
+					"sid": 493810529667501,
+					"parameters": {
+						"instance-variable": "isMatched"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 714550370128616,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 691136077858324,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Lvl2",
+					"sid": 388550390610760,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 851090220221759
 		}
 	],
 	"sid": 537935422348586

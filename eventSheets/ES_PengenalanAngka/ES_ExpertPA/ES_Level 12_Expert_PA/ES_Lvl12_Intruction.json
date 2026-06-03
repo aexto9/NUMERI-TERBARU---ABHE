@@ -16,6 +16,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 580881700012590,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				},
+				{
 					"id": "set-animation-frame",
 					"objectClass": "Bg_Lvl12_PA",
 					"sid": 286446777055133,
@@ -35,6 +44,14 @@
 					"sid": 398165110823107
 				},
 				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 959526047499973,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				},
+				{
 					"id": "compare-animation-frame",
 					"objectClass": "Bg_Lvl12_PA",
 					"sid": 619188829570112,
@@ -46,11 +63,38 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 944365734442822,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 451206090171653,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
 					"id": "set-animation-frame",
 					"objectClass": "Bg_Lvl12_PA",
 					"sid": 757223209578014,
 					"parameters": {
 						"frame-number": "2"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 229754445657171,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
 					}
 				}
 			],
@@ -65,6 +109,14 @@
 					"sid": 890889849365682
 				},
 				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 553049202687665,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				},
+				{
 					"id": "compare-animation-frame",
 					"objectClass": "Bg_Lvl12_PA",
 					"sid": 176555339775382,
@@ -75,6 +127,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl12_PA",
+					"sid": 195005457675689,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
 				{
 					"callFunction": "GoToLayoutFunction",
 					"sid": 886663890468248,

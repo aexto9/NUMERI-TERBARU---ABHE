@@ -176,17 +176,36 @@
 												"seconds": "0.5",
 												"use-timescale": true
 											}
-										},
-										{
-											"id": "go-to-nextprevious-layout",
-											"objectClass": "System",
-											"sid": 754666812541013,
-											"parameters": {
-												"which": "next"
-											}
 										}
 									],
-									"sid": 364534554889579
+									"sid": 364534554889579,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 517620363390677,
+													"parameters": {
+														"variable": "IsGameOver"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 313013244376115,
+													"parameters": {
+														"which": "next"
+													}
+												}
+											],
+											"sid": 655184335515703
+										}
+									]
 								}
 							]
 						},

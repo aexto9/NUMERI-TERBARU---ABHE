@@ -59,6 +59,15 @@
 						"variable": "score",
 						"value": "0"
 					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 874755019278714,
+					"parameters": {
+						"instance-variable": "isMatched",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 257775389881944,
@@ -120,7 +129,7 @@
 						},
 						{
 							"callFunction": "Timer",
-							"sid": 198526155678560,
+							"sid": 262069924889369,
 							"parameters": [
 								"120"
 							]
@@ -228,6 +237,33 @@
 							],
 							"actions": [
 								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 663705038235489,
+									"parameters": {
+										"variable": "score",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Drag_Card_Lvl14_PA",
+									"sid": 955955950475966,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Drag_Card_Lvl14_PA",
+									"sid": 604211031991782,
+									"parameters": {
+										"instance-variable": "isMatched",
+										"value": "true"
+									}
+								},
+								{
 									"id": "play",
 									"objectClass": "Audio",
 									"sid": 614833583555712,
@@ -280,24 +316,6 @@
 										"ping-pong": "no",
 										"repeat-count": "1"
 									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "Drag_Card_Lvl14_PA",
-									"sid": 970037798282806,
-									"behaviorType": "DragDrop",
-									"parameters": {
-										"state": "disabled"
-									}
-								},
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 539080946737005,
-									"parameters": {
-										"variable": "score",
-										"value": "1"
-									}
 								}
 							],
 							"sid": 380025416494507,
@@ -318,11 +336,12 @@
 									],
 									"actions": [
 										{
-											"id": "go-to-nextprevious-layout",
+											"id": "wait",
 											"objectClass": "System",
-											"sid": 270132719492031,
+											"sid": 317018153017692,
 											"parameters": {
-												"which": "next"
+												"seconds": "1.0",
+												"use-timescale": true
 											}
 										}
 									],
@@ -331,16 +350,6 @@
 										{
 											"eventType": "block",
 											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 409170871716277,
-													"parameters": {
-														"first-value": "LayoutName",
-														"comparison": 0,
-														"second-value": "\"Lay_Lvl14_PA-5\""
-													}
-												},
 												{
 													"id": "compare-boolean-eventvar",
 													"objectClass": "System",
@@ -530,11 +539,138 @@
 			],
 			"actions": [
 				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 223010669898373,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
 					"callFunction": "LoseGame",
-					"sid": 780465794943726
+					"sid": 666499594083420,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl14_PA\""
+					]
 				}
 			],
 			"sid": 426314713169474
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 563617366980971,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 851698955167202,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 190295976968634,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 194816617215585,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl14_PA\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 201702477878499,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 581007121409565
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 940906601984756,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 847492398249585,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 253624608927654,
+					"parameters": {
+						"instance-variable": "isMatched"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 918915481174725,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 284375384118642,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Card_Lvl14_PA",
+					"sid": 834285920228572,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 942090168409924
 		}
 	],
 	"sid": 620154243073205

@@ -1,0 +1,68 @@
+{
+	"name": "Lanjut_Lvl12_PA",
+	"plugin-id": "Sprite",
+	"sid": 267165895779196,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "SizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 313206452858716
+		},
+		{
+			"name": "SizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 792747198969062
+		},
+		{
+			"name": "isClickable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 458518655343562
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 406775002744015
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 228,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7540196,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 476005364371455,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

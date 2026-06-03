@@ -9,30 +9,141 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 210748181699174
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 381719495214845,
+					"parameters": {
+						"object": "Lanjut_Lvl12_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Lanjut_Lvl12_PA",
+					"sid": 175070583034347,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
 				{
+					"id": "set-instvar-value",
+					"objectClass": "Lanjut_Lvl12_PA",
+					"sid": 497044743209839,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Lanjut_Lvl12_PA",
+					"sid": 962957603939013,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "pause",
+					"sid": 860249378611105,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "0",
+						"end-y": "0",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 708278729802087,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Click_PA"
+						},
+						"loop": "not-looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"sfx\""
+					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 269233421877128
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Lanjut_Lvl12_PA",
+					"sid": 473657631476590,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 836816613495947,
+					"sid": 721250576097803,
 					"parameters": {
-						"seconds": "5",
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Lanjut_Lvl12_PA",
+					"sid": 444776782222695,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.5",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 744217556063325,
+					"parameters": {
+						"seconds": "1.0",
 						"use-timescale": true
 					}
 				},
 				{
 					"callFunction": "winGame",
-					"sid": 352974582692297,
+					"sid": 537786864451021,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_Lvl13_PA\"",
+						"1"
 					]
 				}
 			],
-			"sid": 437487189199231
+			"sid": 649711737939642
 		}
 	],
 	"sid": 367599803817436

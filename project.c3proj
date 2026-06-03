@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 47604,
+	"savedWithRelease": 48700,
 	"name": "NUMERI",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -144,7 +144,8 @@
 			"DataReward",
 			"Sprite2",
 			"level",
-			"level2"
+			"level2",
+			"Sprite4"
 		],
 		"subfolders": [
 			{
@@ -250,7 +251,10 @@
 									"Drop_Buku_Lvl4_PA",
 									"Btn_Back_Lvl4_PA",
 									"Kartu_Buku_Lvl4_PA",
-									"DataLevel4_PA"
+									"DataLevel4_PA",
+									"Sprite6",
+									"Bayangan_Lvl4_PA",
+									"JudulBuku_Lvl4_PA"
 								],
 								"subfolders": [],
 								"name": "Level 4"
@@ -281,7 +285,7 @@
 									"bebek_lvl7",
 									"Sprite3",
 									"BTN_Play_Lvl7",
-									"Sprite4"
+									"aNGKA_Lvl7_PA"
 								],
 								"subfolders": [],
 								"name": "Level 7"
@@ -393,7 +397,8 @@
 									"TextSatuan_Lvl12_PA",
 									"AngkaAcak",
 									"anima",
-									"UntitledDesign"
+									"UntitledDesign",
+									"Lanjut_Lvl12_PA"
 								],
 								"subfolders": [],
 								"name": "Level 12"
@@ -808,7 +813,6 @@
 							"monyet",
 							"numaT2",
 							"numiT2",
-							"pause",
 							"referensi2",
 							"BabiB2",
 							"anjingLaut",
@@ -866,7 +870,13 @@
 					"LoseNotif",
 					"TImer",
 					"next",
-					"close"
+					"close",
+					"pause",
+					"Asset_Jeda",
+					"Header_Jeda",
+					"Resume",
+					"home_Pause",
+					"Retry_Pause"
 				],
 				"subfolders": [],
 				"name": "ShareAsset"
@@ -912,7 +922,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Fam_Lvl6"
+			"Fam_Lvl6",
+			"Pause_Object"
 		],
 		"subfolders": []
 	},
@@ -1031,8 +1042,8 @@
 							},
 							{
 								"items": [
-									"Lay_Lvl5_PA",
 									"Lay_Lvl5_PA1",
+									"Lay_Lvl5_PA",
 									"Lay_Lvl5_PA2"
 								],
 								"subfolders": [],
@@ -1190,7 +1201,7 @@
 					},
 					{
 						"items": [
-							"Lay_RoadMap_Pengenalan_Angka"
+							"Lay_RoadMap_Level1"
 						],
 						"subfolders": [],
 						"name": "Lay_RoadMap_PengenalanAngka"
@@ -1851,7 +1862,7 @@
 		"authorWebsite": "",
 		"appId": "",
 		"pixelRounding": false,
-		"zAxisScale": "normalized",
+		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "scale-inner",

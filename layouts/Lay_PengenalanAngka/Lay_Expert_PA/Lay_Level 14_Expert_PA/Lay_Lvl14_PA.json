@@ -18,12 +18,10 @@
 					"uid": 796,
 					"sid": 819566079545377,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 819566079545377,
-						"expanded": true
+					"instanceVariables": {
+						"isClickable": false
 					},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -59,7 +57,8 @@
 						"PostY": 0,
 						"PostX": 0,
 						"SizeY": 0,
-						"SizeX": 0
+						"SizeX": 0,
+						"isMatched": false
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -73,10 +72,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 848591315258731,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -121,10 +116,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 723808138923925,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -159,7 +150,7 @@
 					"instanceVariables": {
 						"SizeX": 0,
 						"SizeY": 0,
-						"isClickable": 0
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -167,10 +158,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 869410077878416,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -258,10 +245,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 704989443202440,
 	"nonworld-instances": [],
 	"effectTypes": [],

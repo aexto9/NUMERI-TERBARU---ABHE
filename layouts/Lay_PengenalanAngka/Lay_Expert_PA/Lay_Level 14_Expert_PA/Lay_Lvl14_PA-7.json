@@ -53,12 +53,10 @@
 					"uid": 1012,
 					"sid": 472248634014948,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 472248634014948,
-						"expanded": true
+					"instanceVariables": {
+						"isClickable": false
 					},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -113,7 +111,51 @@
 			"name": "Btn",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Btn_Next_Lvl14_PA",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1692,
+					"sid": 591938634642479,
+					"tags": "",
+					"instanceVariables": {
+						"SizeX": 0,
+						"SizeY": 0,
+						"isClickable": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1136,
+						"y": 646,
+						"width": 191.90996530302613,
+						"height": 77.43735442051931,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				}
+			],
 			"sid": 913386612201613,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -129,6 +171,41 @@
 				0.5019607843137255,
 				0.5019607843137255,
 				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "OverlayInGame",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 243717835509772,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
 				1
 			],
 			"isTransparent": true,
@@ -178,47 +255,8 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": false
-		},
-		{
-			"name": "OverlayInGame",
-			"overriden": 1,
-			"subLayers": [],
-			"instances": [],
-			"sid": 243717835509772,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"sampling": "auto",
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 429637601952152,
 	"nonworld-instances": [],
 	"effectTypes": [],

@@ -18,6 +18,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 901986141469164
+		},
+		{
+			"name": "isMatched",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 241617923678426
 		}
 	],
 	"behaviorTypes": [

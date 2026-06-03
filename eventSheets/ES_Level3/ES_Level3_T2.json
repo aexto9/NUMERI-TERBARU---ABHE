@@ -446,7 +446,8 @@
 					"callFunction": "winGame",
 					"sid": 734442070794341,
 					"parameters": [
-						"\"Lay_Level3_T3\""
+						"\"Lay_Level3_T3\"",
+						"1"
 					]
 				}
 			],
@@ -469,7 +470,11 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 468517883027379
+					"sid": 468517883027379,
+					"parameters": [
+						"1",
+						"\"\""
+					]
 				}
 			],
 			"sid": 180916866255268

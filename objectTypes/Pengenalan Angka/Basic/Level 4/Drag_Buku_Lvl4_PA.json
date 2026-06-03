@@ -39,6 +39,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 467951881983272
+		},
+		{
+			"name": "isClickable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 323729861865169
+		},
+		{
+			"name": "isMatched",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 363457539248342
 		}
 	],
 	"behaviorTypes": [

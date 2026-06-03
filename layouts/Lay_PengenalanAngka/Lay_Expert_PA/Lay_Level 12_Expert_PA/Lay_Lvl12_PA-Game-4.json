@@ -53,12 +53,10 @@
 					"uid": 1509,
 					"sid": 349590082771831,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 349590082771831,
-						"expanded": true
+					"instanceVariables": {
+						"isClickable": true
 					},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -128,10 +126,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 862138493608370,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -174,10 +168,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 401854991223841,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -222,10 +212,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 643038205659965,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -268,10 +254,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 884401508746756,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -316,10 +298,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 889725439383088,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -362,10 +340,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 910442996671323,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -410,10 +384,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 520676971391275,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -456,10 +426,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 864215397072326,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -504,10 +470,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 596671349497254,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -551,10 +513,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 973959817150802,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -588,10 +546,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 109163450730814,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -625,10 +579,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 228638827707561,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -662,10 +612,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 510247566747739,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -715,10 +661,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 602581116216486,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -768,10 +710,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 363769090759248,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -805,10 +743,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 144985343680189,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -842,10 +776,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 693690445030709,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -959,10 +889,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 452407390132480,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -1120,10 +1046,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 939512268544558,
 	"nonworld-instances": [],
 	"effectTypes": [],

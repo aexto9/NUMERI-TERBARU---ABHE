@@ -46,6 +46,30 @@
 			],
 			"actions": [
 				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 794513688785784,
+					"parameters": {
+						"variable": "KartuKedua_ID"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 439819482765739,
+					"parameters": {
+						"variable": "KartuPertama_ID"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 917633598362601,
+					"parameters": {
+						"variable": "KartuTerbuka"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "Card_Lvl11_PA",
 					"sid": 997738637399189,
@@ -109,6 +133,23 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 509762703512812,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 498182713340719,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
 					"callFunction": "startGame",
 					"sid": 578534163903432
 				},
@@ -136,6 +177,148 @@
 						"seconds": "5.3",
 						"use-timescale": true
 					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 102581991644263,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 578830830433794,
+					"parameters": {
+						"audio-file": {
+							"path": "Pengenalan_Angka/Pop_PA"
+						},
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"sfx\""
+					}
+				},
+				{
+					"callFunction": "SyncAudio",
+					"sid": 431636959211441
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 272410213584537,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 334885592381950,
+					"parameters": {
+						"frame-number": "Self.Id_Angka"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 117775396085964,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 208206239479627,
+					"parameters": {
+						"seconds": "4",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 844775839902547,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 757405656432251,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 516083650892249,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 977721255797443,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 788967580501819,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 772885851890074
@@ -149,6 +332,23 @@
 					"sid": 205005951435240,
 					"parameters": {
 						"object": "Card_Lvl11_PA"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 735331728267579,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Card_Lvl11_PA",
+					"sid": 625260954328760,
+					"parameters": {
+						"instance-variable": "isClickable"
 					}
 				},
 				{
@@ -647,6 +847,24 @@
 										"instance-variable": "isMatched",
 										"value": "true"
 									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 587038943381645,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Correct_PA"
+										},
+										"loop": "not-looping",
+										"volume": "10",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 905343621397830
 								}
 							],
 							"sid": 753557508163401
@@ -681,6 +899,24 @@
 								"variable": "KartuTerbuka",
 								"value": "0"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 762323658413677,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Wrong_PA"
+								},
+								"loop": "not-looping",
+								"volume": "10",
+								"stereo-pan": "0",
+								"tag-optional": "\"sfx\""
+							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 940374962193729
 						},
 						{
 							"id": "tween-two-properties",
@@ -761,20 +997,6 @@
 								}
 							],
 							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 857904854486201,
-									"parameters": {
-										"audio-file": {
-											"path": "Pengenalan_Angka/Pop_PA"
-										},
-										"loop": "not-looping",
-										"volume": "-10",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								},
 								{
 									"id": "tween-two-properties",
 									"objectClass": "Card_Lvl11_PA",
@@ -910,13 +1132,83 @@
 				},
 				{
 					"callFunction": "winGame",
-					"sid": 126585121746057,
+					"sid": 988241666283193,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_Lvl12_PA\"",
+						"1"
 					]
 				}
 			],
 			"sid": 710393639097195
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 438716572087276,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 536845136316068,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 344520614736450,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl11_PA\""
+					]
+				}
+			],
+			"sid": 988811753899773
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 875799382083693,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 164638573260836,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl11_PA\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 489287881181319,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 650680940710954
 		}
 	],
 	"sid": 972654532860676

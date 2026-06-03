@@ -120,17 +120,36 @@
 						"seconds": "0.3",
 						"use-timescale": true
 					}
-				},
-				{
-					"id": "go-to-nextprevious-layout",
-					"objectClass": "System",
-					"sid": 191160707888256,
-					"parameters": {
-						"which": "next"
-					}
 				}
 			],
-			"sid": 259574964526219
+			"sid": 259574964526219,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 661763686263844,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 455367331326358,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 569527423508000
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -158,7 +177,11 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 348078692266000
+					"sid": 762324701882604,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl14_PA\""
+					]
 				}
 			],
 			"sid": 546469810550695

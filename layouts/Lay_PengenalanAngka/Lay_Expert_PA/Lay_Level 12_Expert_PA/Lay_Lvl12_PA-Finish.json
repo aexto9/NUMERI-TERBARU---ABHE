@@ -18,12 +18,10 @@
 					"uid": 1663,
 					"sid": 897875251925548,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 897875251925548,
-						"expanded": true
+					"instanceVariables": {
+						"isClickable": true
 					},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -31,6 +29,49 @@
 						"y": 359.8364239949152,
 						"width": 1280,
 						"height": 720,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Lanjut_Lvl12_PA",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1691,
+					"sid": 692244691110285,
+					"tags": "",
+					"instanceVariables": {
+						"SizeY": 0,
+						"SizeX": 0,
+						"isClickable": true
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 609,
+						"y": 627,
+						"width": 198.8794697254115,
+						"height": 80.24961059095551,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -145,10 +186,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 272816428854099,
 	"nonworld-instances": [],
 	"effectTypes": [],

@@ -20,10 +20,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 349501614575499,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -93,10 +89,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 722240948053252,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -130,10 +122,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 528783175916728,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -167,10 +155,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 117353338436446,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -213,10 +197,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 851822226638903,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -374,10 +354,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 439773411590958,
 	"nonworld-instances": [],
 	"effectTypes": [],

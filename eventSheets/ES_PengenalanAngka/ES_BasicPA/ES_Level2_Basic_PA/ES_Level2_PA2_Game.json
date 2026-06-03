@@ -130,6 +130,15 @@
 									"sid": 309632148854496
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Drag_Lvl2",
+									"sid": 455804228069238,
+									"parameters": {
+										"instance-variable": "isMatched",
+										"value": "true"
+									}
+								},
+								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
 									"sid": 892568905610421,
@@ -153,15 +162,6 @@
 												"comparison": 1,
 												"value": "11"
 											}
-										},
-										{
-											"id": "compare-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 455855405243418,
-											"parameters": {
-												"variable": "IsGameOver"
-											},
-											"isInverted": true
 										}
 									],
 									"actions": [
@@ -177,22 +177,41 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 223119480548655,
+											"sid": 974513779869383,
 											"parameters": {
-												"seconds": "0.5",
+												"seconds": "1",
 												"use-timescale": true
-											}
-										},
-										{
-											"id": "go-to-nextprevious-layout",
-											"objectClass": "System",
-											"sid": 534530044776826,
-											"parameters": {
-												"which": "next"
 											}
 										}
 									],
-									"sid": 445824855500194
+									"sid": 445824855500194,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 858116272550501,
+													"parameters": {
+														"variable": "IsGameOver"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "go-to-nextprevious-layout",
+													"objectClass": "System",
+													"sid": 434587006412956,
+													"parameters": {
+														"which": "next"
+													}
+												}
+											],
+											"sid": 668989133042229
+										}
+									]
 								}
 							]
 						},

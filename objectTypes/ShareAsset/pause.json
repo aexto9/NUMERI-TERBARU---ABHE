@@ -4,8 +4,36 @@
 	"sid": 414662568281854,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "SizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 474173076416496
+		},
+		{
+			"name": "SizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 826775726402746
+		},
+		{
+			"name": "isClickable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 773630043979551
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 730260225931648
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

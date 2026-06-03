@@ -20,10 +20,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 375935765978452,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -93,10 +89,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 916153587766454,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -176,10 +168,6 @@
 							}
 						}
 					},
-					"instanceFolderItem": {
-						"sid": 650473222258188,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -213,10 +201,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 636845125968096,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -250,10 +234,6 @@
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 250054018054717,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -289,10 +269,6 @@
 						"Reward_Pengenalan_Angka": 14
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 903182120890044,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -328,10 +304,6 @@
 						"Reward_Pengenalan_Angka": 13
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 935715606924113,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -367,10 +339,6 @@
 						"Reward_Pengenalan_Angka": 12
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 627819690831900,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -406,10 +374,6 @@
 						"Reward_Pengenalan_Angka": 11
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 948956378739127,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -445,10 +409,6 @@
 						"Reward_Pengenalan_Angka": 6
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 671025163582731,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -484,10 +444,6 @@
 						"Reward_Pengenalan_Angka": 1
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 958402485783603,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -523,10 +479,6 @@
 						"Reward_Pengenalan_Angka": 2
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 612380012597453,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -562,10 +514,6 @@
 						"Reward_Pengenalan_Angka": 3
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 351563124502784,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -601,10 +549,6 @@
 						"Reward_Pengenalan_Angka": 4
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 207677881131766,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -640,10 +584,6 @@
 						"Reward_Pengenalan_Angka": 5
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 777530849972447,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -679,10 +619,6 @@
 						"Reward_Pengenalan_Angka": 7
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 583674608909335,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -718,10 +654,6 @@
 						"Reward_Pengenalan_Angka": 8
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 380113698396567,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -757,10 +689,6 @@
 						"Reward_Pengenalan_Angka": 9
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 530862136272705,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -796,10 +724,6 @@
 						"Reward_Pengenalan_Angka": 10
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 862101704216430,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -871,10 +795,6 @@
 						"Reward_Pengenalan_Angka": 15
 					},
 					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 755816333748147,
-						"expanded": true
-					},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -961,10 +881,6 @@
 			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 974488316135605,
 	"nonworld-instances": [],
 	"effectTypes": [],

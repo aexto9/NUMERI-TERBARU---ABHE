@@ -17,6 +17,15 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 535318407419759,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "bebek_lvl7",
 					"sid": 458595256331322,
@@ -80,6 +89,42 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "bebek_lvl7",
+							"sid": 310034346983077,
+							"parameters": {
+								"instance-variable": "Answer",
+								"comparison": 1,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 347778684413541,
+							"parameters": {
+								"audio-file": {
+									"path": "Pengenalan_Angka/Wrong_PA"
+								},
+								"loop": "not-looping",
+								"volume": "1",
+								"stereo-pan": "0",
+								"tag-optional": "\"sfx\""
+							}
+						},
+						{
+							"callFunction": "SyncAudio",
+							"sid": 926255329163655
+						}
+					],
+					"sid": 421249219673142
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "bebek_lvl7",
 							"sid": 276917382796811,
 							"parameters": {
 								"instance-variable": "Answer",
@@ -99,12 +144,12 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
+							"id": "set-boolean-instvar",
 							"objectClass": "bebek_lvl7",
-							"sid": 381460978375203,
+							"sid": 854242484856310,
 							"parameters": {
-								"instance-variable": "Answer",
-								"value": "0"
+								"instance-variable": "isClick",
+								"value": "false"
 							}
 						}
 					],
@@ -140,6 +185,15 @@
 									}
 								},
 								{
+									"id": "set-instvar-value",
+									"objectClass": "bebek_lvl7",
+									"sid": 646866310384966,
+									"parameters": {
+										"instance-variable": "Answer",
+										"value": "0"
+									}
+								},
+								{
 									"callFunction": "SyncAudio",
 									"sid": 887873087702388
 								},
@@ -151,55 +205,100 @@
 										"seconds": "2.0",
 										"use-timescale": true
 									}
-								},
+								}
+							],
+							"sid": 543564625000806,
+							"children": [
 								{
-									"id": "go-to-nextprevious-layout",
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 579192416041550,
+											"parameters": {
+												"variable": "IsGameOver"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-nextprevious-layout",
+											"objectClass": "System",
+											"sid": 313098390795651,
+											"parameters": {
+												"which": "next"
+											}
+										}
+									],
+									"sid": 606470956459300
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 174497148381385,
+									"sid": 441609949276494,
 									"parameters": {
-										"which": "next"
+										"variable": "score",
+										"comparison": 0,
+										"value": "5"
 									}
 								}
 							],
-							"sid": 543564625000806
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "aNGKA_Lvl7_PA",
+									"sid": 218047607668685,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 327388586377327,
+									"parameters": {
+										"audio-file": {
+											"path": "Pengenalan_Angka/Correct_PA"
+										},
+										"loop": "not-looping",
+										"volume": "1",
+										"stereo-pan": "0",
+										"tag-optional": "\"sfx\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "bebek_lvl7",
+									"sid": 596276302219403,
+									"parameters": {
+										"instance-variable": "Answer",
+										"value": "0"
+									}
+								},
+								{
+									"callFunction": "SyncAudio",
+									"sid": 302443509202436
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 214133811141886,
+									"parameters": {
+										"seconds": "2.0",
+										"use-timescale": true
+									}
+								}
+							],
+							"sid": 408069171415968
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "bebek_lvl7",
-							"sid": 906861155499656,
-							"parameters": {
-								"instance-variable": "Answer",
-								"comparison": 1,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 482409625255048,
-							"parameters": {
-								"audio-file": {
-									"path": "Pengenalan_Angka/Wrong_PA"
-								},
-								"loop": "not-looping",
-								"volume": "1",
-								"stereo-pan": "0",
-								"tag-optional": "\"sfx\""
-							}
-						},
-						{
-							"callFunction": "SyncAudio",
-							"sid": 942787101236146
-						}
-					],
-					"sid": 262333664907998
 				}
 			]
 		}

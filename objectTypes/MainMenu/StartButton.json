@@ -4,7 +4,15 @@
 	"sid": 848691924396166,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "isClickable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 666879338601327
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Anchor",

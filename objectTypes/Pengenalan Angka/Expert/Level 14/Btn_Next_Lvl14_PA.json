@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "isClickable",
-			"type": "number",
+			"type": "boolean",
 			"desc": "",
 			"show": true,
 			"sid": 741644822458204

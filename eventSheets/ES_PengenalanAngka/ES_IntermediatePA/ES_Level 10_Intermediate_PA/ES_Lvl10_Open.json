@@ -11,28 +11,79 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 962241306859594
+					"sid": 802460725120348
 				}
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl10_PA",
+					"sid": 796534738235568,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 330098924259769,
+					"sid": 605925235285026,
 					"parameters": {
 						"seconds": "2",
 						"use-timescale": true
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl10_PA",
+					"sid": 176578328834792,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 177712253416927
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 210636265478425,
+					"parameters": {
+						"object": "Bg_Lvl10_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bg_Lvl10_PA",
+					"sid": 515540961917783,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl10_PA",
+					"sid": 276284563361667,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 779068657691092,
+					"sid": 501721567236774,
 					"parameters": [
 						"\"Lay_Lvl10_PA-Play\""
 					]
 				}
 			],
-			"sid": 465895196840445
+			"sid": 477262902582318
 		}
 	],
 	"sid": 347425325090659

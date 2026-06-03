@@ -1,0 +1,61 @@
+{
+	"name": "Header_Jeda",
+	"plugin-id": "Sprite",
+	"sid": 805882070641483,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "SizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 926821664921737
+		},
+		{
+			"name": "SizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 848256506533853
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 132962080717824
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 317,
+						"height": 106,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7972076,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 363062290509953,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -9,19 +9,70 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap",
-					"objectClass": "Touch",
-					"sid": 952456464792040
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 241085650974897
 				}
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl14_PA",
+					"sid": 684831847759059,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 207476014583357,
+					"sid": 909394060109115,
 					"parameters": {
-						"seconds": "1.0",
+						"seconds": "1.7",
 						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl14_PA",
+					"sid": 718969590980849,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 956820118593540
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 823379000859527,
+					"parameters": {
+						"object": "Bg_Lvl14_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bg_Lvl14_PA",
+					"sid": 921606004599199,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl14_PA",
+					"sid": 917058135191622,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
 					}
 				},
 				{

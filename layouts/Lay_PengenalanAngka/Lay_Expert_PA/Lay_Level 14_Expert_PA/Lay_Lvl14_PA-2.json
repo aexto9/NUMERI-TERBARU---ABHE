@@ -53,12 +53,10 @@
 					"uid": 832,
 					"sid": 498237952628584,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 498237952628584,
-						"expanded": true
+					"instanceVariables": {
+						"isClickable": false
 					},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
@@ -129,7 +127,7 @@
 					"instanceVariables": {
 						"SizeX": 0,
 						"SizeY": 0,
-						"isClickable": 0
+						"isClickable": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -137,10 +135,6 @@
 								"enabled": true
 							}
 						}
-					},
-					"instanceFolderItem": {
-						"sid": 984746395832885,
-						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
@@ -183,41 +177,6 @@
 			"sampling": "auto",
 			"parallaxX": 1,
 			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "TransitionLayer",
-			"overriden": 1,
-			"subLayers": [],
-			"instances": [],
-			"sid": 730385310453748,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"sampling": "auto",
-			"parallaxX": 0,
-			"parallaxY": 0,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
@@ -296,12 +255,43 @@
 			"blendMode": "normal",
 			"zElevation": 0,
 			"global": false
+		},
+		{
+			"name": "TransitionLayer",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 730385310453748,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"sampling": "auto",
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
 		}
 	],
-	"scene-graphs-folder-root": {
-		"items": [],
-		"subfolders": []
-	},
 	"sid": 640632966746681,
 	"nonworld-instances": [],
 	"effectTypes": [],

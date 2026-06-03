@@ -18,6 +18,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 425046777854036
+		},
+		{
+			"name": "SizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 521380487029178
+		},
+		{
+			"name": "SizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 849918363459148
+		},
+		{
+			"name": "isMatched",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 826267273292119
 		}
 	],
 	"behaviorTypes": [

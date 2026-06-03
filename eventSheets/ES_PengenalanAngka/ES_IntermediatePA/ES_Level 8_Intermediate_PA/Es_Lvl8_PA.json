@@ -61,6 +61,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Drag_Bubble_Lvl8_PA",
+					"sid": 429110516417545,
+					"parameters": {
+						"instance-variable": "isMatched",
+						"value": "false"
+					}
+				},
+				{
 					"id": "set-enabled",
 					"objectClass": "Drag_Bubble_Lvl8_PA",
 					"sid": 135097959516274,
@@ -84,7 +93,7 @@
 				},
 				{
 					"callFunction": "Timer",
-					"sid": 246145553821510,
+					"sid": 958639550219757,
 					"parameters": [
 						"120"
 					]
@@ -209,6 +218,33 @@
 							],
 							"actions": [
 								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 615746461039780,
+									"parameters": {
+										"variable": "score",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Drag_Bubble_Lvl8_PA",
+									"sid": 237641628799967,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Drag_Bubble_Lvl8_PA",
+									"sid": 610043915969635,
+									"parameters": {
+										"instance-variable": "isMatched",
+										"value": "true"
+									}
+								},
+								{
 									"id": "play",
 									"objectClass": "Audio",
 									"sid": 816796331539291,
@@ -260,24 +296,6 @@
 										"loop": "no",
 										"ping-pong": "no",
 										"repeat-count": "1"
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "Drag_Bubble_Lvl8_PA",
-									"sid": 669413683964087,
-									"behaviorType": "DragDrop",
-									"parameters": {
-										"state": "disabled"
-									}
-								},
-								{
-									"id": "add-to-eventvar",
-									"objectClass": "System",
-									"sid": 185044301884778,
-									"parameters": {
-										"variable": "score",
-										"value": "1"
 									}
 								}
 							],
@@ -443,6 +461,17 @@
 					}
 				},
 				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 332041187462382,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "5"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 175414265143968,
@@ -454,8 +483,21 @@
 			],
 			"actions": [
 				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Bubble_Lvl8_PA",
+					"sid": 674678418342879,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
 					"callFunction": "LoseGame",
-					"sid": 596799387986088
+					"sid": 442561614027491,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl8_PA\""
+					]
 				}
 			],
 			"sid": 323362867719500
@@ -504,13 +546,128 @@
 				},
 				{
 					"callFunction": "winGame",
-					"sid": 808944883346383,
+					"sid": 722250856585155,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_Lvl9_PA\"",
+						"1"
 					]
 				}
 			],
 			"sid": 588961361483154
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 651903709387752,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 712466043205455,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 898402178315496,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 713857237407934,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl8_PA\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Bubble_Lvl8_PA",
+					"sid": 927974783462172,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 556921990002527
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 996239492478378,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 281755735812595,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Drag_Bubble_Lvl8_PA",
+					"sid": 969425757807026,
+					"parameters": {
+						"instance-variable": "isMatched"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 985157517723455,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 661919578786123,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Bubble_Lvl8_PA",
+					"sid": 434335796837087,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 829508913163086
 		}
 	],
 	"sid": 192895955456497

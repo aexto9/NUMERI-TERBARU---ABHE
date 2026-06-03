@@ -108,6 +108,42 @@
 					}
 				},
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 655382205052803,
+					"parameters": {
+						"variable": "NyawaPengenalanAngka",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 745280745258549,
+					"parameters": {
+						"variable": "TargetAngka",
+						"value": "21"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 110954809523492,
+					"parameters": {
+						"variable": "score",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fam_Lvl6",
+					"sid": 920810864140259,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"callFunction": "startGame",
 					"sid": 214354134398985
 				},
@@ -122,7 +158,7 @@
 				},
 				{
 					"callFunction": "Timer",
-					"sid": 136534565041720,
+					"sid": 832976443399799,
 					"parameters": [
 						"120"
 					]
@@ -145,12 +181,12 @@
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 917302011970880,
+					"id": "set-boolean-instvar",
+					"objectClass": "Fam_Lvl6",
+					"sid": 569700341921425,
 					"parameters": {
-						"variable": "NyawaPengenalanAngka",
-						"value": "3"
+						"instance-variable": "isClickable",
+						"value": "true"
 					}
 				}
 			],
@@ -168,6 +204,15 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 735340532168363,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "Lantai_Lvl6_PA",
 					"sid": 737053780394338,
@@ -181,6 +226,15 @@
 					"id": "move-to-top",
 					"objectClass": "Lantai_Lvl6_PA",
 					"sid": 842411995618461
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fam_Lvl6",
+					"sid": 309244021611625,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
 				},
 				{
 					"id": "tween-two-properties",
@@ -256,12 +310,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Fam_Lvl6",
-							"sid": 442429659466203,
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 155470164308359,
 							"parameters": {
-								"instance-variable": "isClickable",
-								"value": "false"
+								"variable": "score",
+								"value": "1"
 							}
 						},
 						{
@@ -301,24 +355,6 @@
 							}
 						},
 						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 979082482866577,
-							"parameters": {
-								"variable": "score",
-								"value": "1"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 133958352510385,
-							"parameters": {
-								"variable": "TargetAngka",
-								"value": "1"
-							}
-						},
-						{
 							"id": "tween-two-properties",
 							"objectClass": "Lantai_Lvl6_PA",
 							"sid": 925242685038145,
@@ -355,20 +391,38 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Fam_Lvl6",
-							"sid": 548298533183813,
-							"parameters": {
-								"instance-variable": "isClickable",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
 							"objectClass": "Lantai_Lvl6_PA",
 							"sid": 172481974696975,
 							"parameters": {
 								"instance-variable": "isClickable",
 								"value": "false"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 154734350068693,
+							"parameters": {
+								"seconds": "1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 258546886313752,
+							"parameters": {
+								"variable": "TargetAngka",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Fam_Lvl6",
+							"sid": 598927617820262,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "true"
 							}
 						}
 					],
@@ -415,7 +469,90 @@
 									}
 								}
 							],
-							"sid": 530600063147175
+							"sid": 530600063147175,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 979651780490843,
+											"parameters": {
+												"variable": "score",
+												"comparison": 0,
+												"value": "10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Fam_Lvl6",
+											"sid": 666014190691736,
+											"parameters": {
+												"instance-variable": "isClickable",
+												"value": "false"
+											}
+										},
+										{
+											"id": "add-key",
+											"objectClass": "DataReward",
+											"sid": 849380607475227,
+											"parameters": {
+												"key": "\"Level_6\"",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 926842555001022,
+											"parameters": {
+												"key": "\"SaveDataReward\"",
+												"value": "DataReward.AsJSON"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 658494489671603,
+											"parameters": {
+												"seconds": "1.5",
+												"use-timescale": true
+											}
+										}
+									],
+									"sid": 850286147737674,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 457171172768150,
+													"parameters": {
+														"variable": "IsGameOver"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "winGame",
+													"sid": 850033912297642,
+													"parameters": [
+														"\"Lay_Lvl7_PA\"",
+														"1"
+													]
+												}
+											],
+											"sid": 944420516666124
+										}
+									]
+								}
+							]
 						}
 					]
 				},
@@ -446,6 +583,15 @@
 						{
 							"callFunction": "SyncAudio",
 							"sid": 886263462632050
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Fam_Lvl6",
+							"sid": 641852063211579,
+							"parameters": {
+								"instance-variable": "isClickable",
+								"value": "true"
+							}
 						},
 						{
 							"id": "add-to-eventvar",
@@ -528,6 +674,17 @@
 					}
 				},
 				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 279356059294059,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "10"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 903165906119963,
@@ -540,7 +697,20 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 758529643752058
+					"sid": 446526524084364,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl6_PA\""
+					]
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fam_Lvl6",
+					"sid": 802886374616056,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 433261644412752
@@ -571,7 +741,20 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 207257660215429
+					"sid": 586650378818667,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl6_PA\""
+					]
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Fam_Lvl6",
+					"sid": 172240917736624,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 724599406438667
@@ -580,62 +763,35 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 940400277849154,
-					"parameters": {
-						"variable": "score",
-						"comparison": 0,
-						"value": "10"
-					}
-				},
-				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 389983605485491,
+					"sid": 902110688428921,
 					"parameters": {
-						"variable": "IsGameOver"
-					},
-					"isInverted": true
+						"variable": "isPaused"
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "add-key",
-					"objectClass": "DataReward",
-					"sid": 587670776176915,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 605127152256691,
 					"parameters": {
-						"key": "\"Level_6\"",
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl6_PA\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 534644946224894,
+					"parameters": {
+						"variable": "RoadmapLevel",
 						"value": "1"
 					}
-				},
-				{
-					"id": "set-item",
-					"objectClass": "LocalStorage",
-					"sid": 621816338489482,
-					"parameters": {
-						"key": "\"SaveDataReward\"",
-						"value": "DataReward.AsJSON"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 823934746106388,
-					"parameters": {
-						"seconds": "1",
-						"use-timescale": true
-					}
-				},
-				{
-					"callFunction": "winGame",
-					"sid": 187389639839121,
-					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
-					]
 				}
 			],
-			"sid": 984302275724788
+			"sid": 620916720090876
 		}
 	],
 	"sid": 303389109085064

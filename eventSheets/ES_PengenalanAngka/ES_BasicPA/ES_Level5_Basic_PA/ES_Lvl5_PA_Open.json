@@ -16,9 +16,18 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Play_BTN_Lvl5_PA",
+					"sid": 535572139664308,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 231903171620989,
+					"sid": 430940205485950,
 					"parameters": {
 						"audio-file": {
 							"path": "Level2/dikamar tidur"
@@ -26,7 +35,7 @@
 						"loop": "not-looping",
 						"volume": "1.5",
 						"stereo-pan": "0",
-						"tag-optional": "\"bg,\""
+						"tag-optional": "\"bgm\""
 					}
 				},
 				{
@@ -50,6 +59,24 @@
 						"instance-variable": "SizeY",
 						"value": "Self.Height"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 183850567233471,
+					"parameters": {
+						"seconds": "2.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Play_BTN_Lvl5_PA",
+					"sid": 127943654298003,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 885644009570345
@@ -64,9 +91,26 @@
 					"parameters": {
 						"object": "Play_BTN_Lvl5_PA"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Play_BTN_Lvl5_PA",
+					"sid": 525419775411201,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Play_BTN_Lvl5_PA",
+					"sid": 831874834702508,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
 				{
 					"id": "play",
 					"objectClass": "Audio",

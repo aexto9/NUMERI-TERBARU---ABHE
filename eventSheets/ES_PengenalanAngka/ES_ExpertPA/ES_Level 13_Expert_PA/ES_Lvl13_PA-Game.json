@@ -319,6 +319,15 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 173138577841640,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "BtnBalokPuluhan_Lvl13_PA",
 					"sid": 410475400980446,
@@ -433,6 +442,15 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 173138577841640,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "BtnBalokSatuan_Lvl13_PA",
 					"sid": 551194011041647,
@@ -545,6 +563,15 @@
 					"parameters": {
 						"object": "HapusBalok_Lvl13_PA"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 173138577841640,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -775,15 +802,6 @@
 								"comparison": 0,
 								"second-value": "\"Lay_Lvl13_PA-6\""
 							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 438787876878428,
-							"parameters": {
-								"variable": "IsGameOver"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
@@ -813,16 +831,36 @@
 								"seconds": "1.0",
 								"use-timescale": true
 							}
-						},
-						{
-							"callFunction": "winGame",
-							"sid": 223953782217838,
-							"parameters": [
-								"\"Lay_RoadMap_Pengenalan_Angka\""
-							]
 						}
 					],
-					"sid": 323400396668970
+					"sid": 323400396668970,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 623552398599671,
+									"parameters": {
+										"variable": "IsGameOver"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "winGame",
+									"sid": 170732773512440,
+									"parameters": [
+										"\"Lay_Lvl14_PA\"",
+										"1"
+									]
+								}
+							],
+							"sid": 121408088213889
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -871,6 +909,15 @@
 					"parameters": {
 						"object": "Btn_Next_Lvl13_PA"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 173138577841640,
+					"parameters": {
+						"variable": "isPaused"
+					},
+					"isInverted": true
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
@@ -946,15 +993,43 @@
 					}
 				},
 				{
-					"id": "go-to-nextprevious-layout",
+					"id": "wait",
 					"objectClass": "System",
-					"sid": 223449073108794,
+					"sid": 554079939859807,
 					"parameters": {
-						"which": "next"
+						"seconds": "1",
+						"use-timescale": true
 					}
 				}
 			],
-			"sid": 126997288164444
+			"sid": 126997288164444,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 862823197684098,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 884864036195940,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 419107221864732
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -982,10 +1057,48 @@
 			"actions": [
 				{
 					"callFunction": "LoseGame",
-					"sid": 830985548565197
+					"sid": 731120842402125,
+					"parameters": [
+						"1",
+						"\"Lay_Lvl13_PA\""
+					]
 				}
 			],
 			"sid": 908978724585528
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 535217653439524,
+					"parameters": {
+						"variable": "isPaused"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 729039310017032,
+					"parameters": {
+						"variable": "RetryToLevel",
+						"value": "\"Lay_Lvl12_PA\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 577590499622921,
+					"parameters": {
+						"variable": "RoadmapLevel",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 774327273340277
 		}
 	],
 	"sid": 677507431564353

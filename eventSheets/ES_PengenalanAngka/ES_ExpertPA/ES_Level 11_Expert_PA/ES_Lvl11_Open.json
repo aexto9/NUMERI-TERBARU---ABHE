@@ -16,6 +16,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Btn_Play_Lvl11_PA",
+					"sid": 698126605399695,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "Btn_Play_Lvl11_PA",
 					"sid": 359174263028847,
@@ -50,6 +59,24 @@
 				{
 					"callFunction": "SyncAudio",
 					"sid": 228861371769207
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 887677023283313,
+					"parameters": {
+						"seconds": "2.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Btn_Play_Lvl11_PA",
+					"sid": 537601904793243,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 544844118803496
@@ -75,15 +102,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "Btn_Play_Lvl11_PA",
-					"sid": 862442044763835,
-					"parameters": {
-						"instance-variable": "isClickable",
-						"value": "false"
-					}
-				},
 				{
 					"id": "play",
 					"objectClass": "Audio",

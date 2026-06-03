@@ -9,16 +9,58 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap",
-					"objectClass": "Touch",
-					"sid": 639057456430286
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 431133146994363
 				}
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl15_PA",
+					"sid": 864650171503170,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 651703748795472
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 842494697106840,
+					"parameters": {
+						"object": "Bg_Lvl15_PA"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Bg_Lvl15_PA",
+					"sid": 960292714247618,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Bg_Lvl15_PA",
+					"sid": 576239463765167,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 635663088013177,
+					"sid": 501080633894432,
 					"parameters": {
 						"seconds": "1",
 						"use-timescale": true
@@ -26,7 +68,7 @@
 				},
 				{
 					"callFunction": "GoToLayoutFunction",
-					"sid": 903576889308693,
+					"sid": 828527786549219,
 					"parameters": [
 						"\"Lay_Lvl15_PA-Game\""
 					]

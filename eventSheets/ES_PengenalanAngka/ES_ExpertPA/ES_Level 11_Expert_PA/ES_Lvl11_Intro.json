@@ -16,6 +16,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "BG_Lvl11",
+					"sid": 470717403022753,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "true"
+					}
+				},
+				{
 					"id": "set-animation-frame",
 					"objectClass": "BG_Lvl11",
 					"sid": 333545510151787,
@@ -42,9 +51,26 @@
 						"comparison": 0,
 						"number": "1"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BG_Lvl11",
+					"sid": 797018414240523,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 173023464032937,
+					"parameters": {
+						"seconds": "1",
+						"use-timescale": true
+					}
+				},
 				{
 					"id": "set-animation-frame",
 					"objectClass": "BG_Lvl11",
@@ -72,9 +98,26 @@
 						"comparison": 0,
 						"number": "2"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BG_Lvl11",
+					"sid": 164219286525734,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 716341638718228,
+					"parameters": {
+						"seconds": "1",
+						"use-timescale": true
+					}
+				},
 				{
 					"id": "set-animation-frame",
 					"objectClass": "BG_Lvl11",
@@ -102,9 +145,26 @@
 						"comparison": 0,
 						"number": "3"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "BG_Lvl11",
+					"sid": 991295001030113,
+					"parameters": {
+						"instance-variable": "isClickable"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "BG_Lvl11",
+					"sid": 109234837630054,
+					"parameters": {
+						"instance-variable": "isClickable",
+						"value": "false"
+					}
+				},
 				{
 					"id": "wait",
 					"objectClass": "System",

@@ -16,6 +16,24 @@
 			],
 			"actions": [
 				{
+					"id": "tween-two-properties",
+					"objectClass": "pause",
+					"sid": 178817698694296,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "0",
+						"end-y": "0",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
 					"id": "add-key",
 					"objectClass": "DataReward",
 					"sid": 693856276748848,
@@ -53,9 +71,10 @@
 				},
 				{
 					"callFunction": "winGame",
-					"sid": 877462170104892,
+					"sid": 587298984720435,
 					"parameters": [
-						"\"Lay_RoadMap_Pengenalan_Angka\""
+						"\"Lay_Lvl3_PA\"",
+						"1"
 					]
 				}
 			],
